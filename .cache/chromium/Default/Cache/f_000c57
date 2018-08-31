@@ -1,0 +1,962 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="X-UA-Compatible" content="IE=4" />
+<!-- IE5 mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=7.5" />
+<!-- IE7 mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=100" />
+<!-- IE8 mode -->
+<meta http-equiv="X-UA-Compatible" content="IE=a" />
+<!-- IE5 mode -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><link rel="shortcut icon" href="../favicon.ico" /><link rel="icon" type="image/gif" href="../animated_favicon1.png" /><title>
+	Kendriya Vidyalaya Sangathan
+</title><link href="css/stylesheet.css" rel="stylesheet" type="text/css" /><link href="css/MenuMain.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/swfobject.js"></script>
+
+    <script src="js/EnlargeText.js" type="text/javascript"></script>
+  
+
+    <script language="javascript" type="text/javascript">
+        function SearchSite() {
+            if (document.getElementById('q').value == "" || document.getElementById('q').value.length == 0) {
+                return false;
+            } else {
+                document.getElementById('btnsearch').focus();
+                document.location.href = 'http://kvsangathan.nic.in/SearchResult.aspx?cx=009588453489510557425%3Aguggkoiviw0&cof=FORID%3A9&ie=UTF-8&q=' + document.getElementById('q').value + '&sa=Search';
+            }
+        }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+    var INIT_SZ, MAX, MIN;
+
+var init = function() {
+    INIT_SZ = 13;
+    MAX = 15;
+    MIN = 11;  
+    var elem = document.getElementsByTagName("body");
+    elem[0].style.fontSize = 13;
+}
+
+var enlarge = function() { 
+var elem = document.getElementsByTagName("body");
+var size = parseInt(elem[0].style.fontSize.replace("px", ""));
+if(size < MAX)
+ {  
+  elem[0].style.fontSize = (size + 1) + "px";       
+ }
+}   
+  
+var shrink = function(){  
+var elem = document.getElementsByTagName("body");   
+var size = parseInt(elem[0].style.fontSize.replace("px", "")); 
+if(size > MIN) {  
+   elem[0].style.fontSize = (size - 1) + "px"; 
+   }    
+}
+     </script>
+
+<style type="text/css">
+	.ctl00_MainMenu_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_MainMenu_1 { font-weight:normal;text-decoration:none; }
+	.ctl00_MainMenu_2 { font-weight:normal;height:21px;width:100%; }
+	.ctl00_MainMenu_3 { border-style:none; }
+	.ctl00_MainMenu_4 {  }
+	.ctl00_MainMenu_5 { border-style:none; }
+	.ctl00_MainMenu_6 {  }
+	.ctl00_MainMenu_7 { border-style:none; }
+	.ctl00_MainMenu_8 {  }
+	.ctl00_MainMenu_9 { border-style:none; }
+	.ctl00_MainMenu_10 {  }
+	.ctl00_Menufooter_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_Menufooter_1 { color:White;font-size:Small;font-weight:normal;text-decoration:none; }
+	.ctl00_Menufooter_2 { color:White;font-size:Small;font-weight:normal;text-decoration:none;width:90%; }
+	.ctl00_Menufooter_3 { border-style:none; }
+	.ctl00_Menufooter_4 {  }
+	.ctl00_Menufooter_5 { border-style:none; }
+	.ctl00_Menufooter_6 {  }
+#MainMenu a.static {
+   
+    border-style: inset !important;
+      padding-left: 10px  !important;
+    padding-right: 10px !important;
+}
+
+#Menufooter a.static {
+   
+   
+      padding-left: 10px  !important;
+    padding-right: 10px !important;
+}
+
+#Menufooter { background:#af7817;}
+
+#MainMenu a {
+   
+    margin: 0 2px;
+    padding: 4px 10px;
+}
+#MainMenu a.popout-dynamic {   
+    color: #5c000b !important;
+}
+
+#MainMenu a:hover {
+    background: #5c000b;
+    color: #fff;
+}
+.dynamic {border:solid 1px #d7a02d;
+background:#fff;
+}
+.mainmenuhindi{}
+
+</style><style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
+/** reset styling **/
+.firebugResetStyles {
+    z-index: 2147483646 !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: block !important;
+    border: 0 none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    position: fixed !important;
+    transform: rotate(0deg) !important;
+    transform-origin: 50% 50% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent none !important;
+    pointer-events: none !important;
+    white-space: normal !important;
+}
+
+.firebugBlockBackgroundColor {
+    background-color: transparent !important;
+}
+
+.firebugResetStyles:before, .firebugResetStyles:after {
+    content: "" !important;
+}
+/**actual styling to be modified by firebug theme**/
+.firebugCanvas {
+    display: none !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBox {
+    width: auto !important;
+    position: static !important;
+}
+
+.firebugLayoutBoxOffset {
+    opacity: 0.8 !important;
+    position: fixed !important;
+}
+
+.firebugLayoutLine {
+    opacity: 0.4 !important;
+    background-color: #000000 !important;
+}
+
+.firebugLayoutLineLeft, .firebugLayoutLineRight {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+.firebugLayoutLineTop, .firebugLayoutLineBottom {
+    width: 100% !important;
+    height: 1px !important;
+}
+
+.firebugLayoutLineTop {
+    margin-top: -1px !important;
+    border-top: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineRight {
+    border-right: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineBottom {
+    border-bottom: 1px solid #999999 !important;
+}
+
+.firebugLayoutLineLeft {
+    margin-left: -1px !important;
+    border-left: 1px solid #999999 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.firebugLayoutBoxParent {
+    border-top: 0 none !important;
+    border-right: 1px dashed #E00 !important;
+    border-bottom: 1px dashed #E00 !important;
+    border-left: 0 none !important;
+    position: fixed !important;
+    width: auto !important;
+}
+
+.firebugRuler{
+    position: absolute !important;
+}
+
+.firebugRulerH {
+    top: -15px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 14px !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%13%88%00%00%00%0E%08%02%00%00%00L%25a%0A%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%04%F8IDATx%DA%EC%DD%D1n%E2%3A%00E%D1%80%F8%FF%EF%E2%AF2%95%D0D4%0E%C1%14%B0%8Fa-%E9%3E%CC%9C%87n%B9%81%A6W0%1C%A6i%9A%E7y%0As8%1CT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AATE9%FE%FCw%3E%9F%AF%2B%2F%BA%97%FDT%1D~K(%5C%9D%D5%EA%1B%5C%86%B5%A9%BDU%B5y%80%ED%AB*%03%FAV9%AB%E1%CEj%E7%82%EF%FB%18%BC%AEJ8%AB%FA'%D2%BEU9%D7U%ECc0%E1%A2r%5DynwVi%CFW%7F%BB%17%7Dy%EACU%CD%0E%F0%FA%3BX%FEbV%FEM%9B%2B%AD%BE%AA%E5%95v%AB%AA%E3E5%DCu%15rV9%07%B5%7F%B5w%FCm%BA%BE%AA%FBY%3D%14%F0%EE%C7%60%0EU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5JU%88%D3%F5%1F%AE%DF%3B%1B%F2%3E%DAUCNa%F92%D02%AC%7Dm%F9%3A%D4%F2%8B6%AE*%BF%5C%C2Ym~9g5%D0Y%95%17%7C%C8c%B0%7C%18%26%9CU%CD%13i%F7%AA%90%B3Z%7D%95%B4%C7%60%E6E%B5%BC%05%B4%FBY%95U%9E%DB%FD%1C%FC%E0%9F%83%7F%BE%17%7DkjMU%E3%03%AC%7CWj%DF%83%9An%BCG%AE%F1%95%96yQ%0Dq%5Dy%00%3Et%B5'%FC6%5DS%95pV%95%01%81%FF'%07%00%00%00%00%00%00%00%00%00%F8x%C7%F0%BE%9COp%5D%C9%7C%AD%E7%E6%EBV%FB%1E%E0(%07%E5%AC%C6%3A%ABi%9C%8F%C6%0E9%AB%C0'%D2%8E%9F%F99%D0E%B5%99%14%F5%0D%CD%7F%24%C6%DEH%B8%E9rV%DFs%DB%D0%F7%00k%FE%1D%84%84%83J%B8%E3%BA%FB%EF%20%84%1C%D7%AD%B0%8E%D7U%C8Y%05%1E%D4t%EF%AD%95Q%BF8w%BF%E9%0A%BF%EB%03%00%00%00%00%00%00%00%00%00%B8vJ%8E%BB%F5%B1u%8Cx%80%E1o%5E%CA9%AB%CB%CB%8E%03%DF%1D%B7T%25%9C%D5(%EFJM8%AB%CC'%D2%B2*%A4s%E7c6%FB%3E%FA%A2%1E%80~%0E%3E%DA%10x%5D%95Uig%15u%15%ED%7C%14%B6%87%A1%3B%FCo8%A8%D8o%D3%ADO%01%EDx%83%1A~%1B%9FpP%A3%DC%C6'%9C%95gK%00%00%00%00%00%00%00%00%00%20%D9%C9%11%D0%C0%40%AF%3F%EE%EE%92%94%D6%16X%B5%BCMH%15%2F%BF%D4%A7%C87%F1%8E%F2%81%AE%AAvzr%DA2%ABV%17%7C%E63%83%E7I%DC%C6%0Bs%1B%EF6%1E%00%00%00%00%00%00%00%00%00%80cr%9CW%FF%7F%C6%01%0E%F1%CE%A5%84%B3%CA%BC%E0%CB%AA%84%CE%F9%BF)%EC%13%08WU%AE%AB%B1%AE%2BO%EC%8E%CBYe%FE%8CN%ABr%5Dy%60~%CFA%0D%F4%AE%D4%BE%C75%CA%EDVB%EA(%B7%F1%09g%E5%D9%12%00%00%00%00%00%00%00%00%00H%F6%EB%13S%E7y%5E%5E%FB%98%F0%22%D1%B2'%A7%F0%92%B1%BC%24z3%AC%7Dm%60%D5%92%B4%7CEUO%5E%F0%AA*%3BU%B9%AE%3E%A0j%94%07%A0%C7%A0%AB%FD%B5%3F%A0%F7%03T%3Dy%D7%F7%D6%D4%C0%AAU%D2%E6%DFt%3F%A8%CC%AA%F2%86%B9%D7%F5%1F%18%E6%01%F8%CC%D5%9E%F0%F3z%88%AA%90%EF%20%00%00%00%00%00%00%00%00%00%C0%A6%D3%EA%CFi%AFb%2C%7BB%0A%2B%C3%1A%D7%06V%D5%07%A8r%5D%3D%D9%A6%CAu%F5%25%CF%A2%99%97zNX%60%95%AB%5DUZ%D5%FBR%03%AB%1C%D4k%9F%3F%BB%5C%FF%81a%AE%AB'%7F%F3%EA%FE%F3z%94%AA%D8%DF%5B%01%00%00%00%00%00%00%00%00%00%8E%FB%F3%F2%B1%1B%8DWU%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*UiU%C7%BBe%E7%F3%B9%CB%AAJ%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5J%95*U%AAT%A9R%A5*%AAj%FD%C6%D4%5Eo%90%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5%86%AF%1B%9F%98%DA%EBm%BBV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%ADV%AB%D5j%B5Z%AD%D6%E4%F58%01%00%00%00%00%00%00%00%00%00%00%00%00%00%40%85%7F%02%0C%008%C2%D0H%16j%8FX%00%00%00%00IEND%AEB%60%82") repeat-x !important;
+    border-top: 1px solid #BBBBBB !important;
+    border-right: 1px dashed #BBBBBB !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.firebugRulerV {
+    top: 0 !important;
+    left: -15px !important;
+    width: 14px !important;
+    height: 100% !important;
+    background: url("data:image/png,%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00%0E%00%00%13%88%08%02%00%00%00%0E%F5%CB%10%00%00%00%04gAMA%00%00%D6%D8%D4OX2%00%00%00%19tEXtSoftware%00Adobe%20ImageReadyq%C9e%3C%00%00%06~IDATx%DA%EC%DD%D1v%A20%14%40Qt%F1%FF%FF%E4%97%D9%07%3BT%19%92%DC%40(%90%EEy%9A5%CB%B6%E8%F6%9Ac%A4%CC0%84%FF%DC%9E%CF%E7%E3%F1%88%DE4%F8%5D%C7%9F%2F%BA%DD%5E%7FI%7D%F18%DDn%BA%C5%FB%DF%97%BFk%F2%10%FF%FD%B4%F2M%A7%FB%FD%FD%B3%22%07p%8F%3F%AE%E3%F4S%8A%8F%40%EEq%9D%BE8D%F0%0EY%A1Uq%B7%EA%1F%81%88V%E8X%3F%B4%CEy%B7h%D1%A2E%EBohU%FC%D9%AF2fO%8BBeD%BE%F7X%0C%97%A4%D6b7%2Ck%A5%12%E3%9B%60v%B7r%C7%1AI%8C%BD%2B%23r%00c0%B2v%9B%AD%CA%26%0C%1Ek%05A%FD%93%D0%2B%A1u%8B%16-%95q%5Ce%DCSO%8E%E4M%23%8B%F7%C2%FE%40%BB%BD%8C%FC%8A%B5V%EBu%40%F9%3B%A72%FA%AE%8C%D4%01%CC%B5%DA%13%9CB%AB%E2I%18%24%B0n%A9%0CZ*Ce%9C%A22%8E%D8NJ%1E%EB%FF%8F%AE%CAP%19*%C3%BAEKe%AC%D1%AAX%8C*%DEH%8F%C5W%A1e%AD%D4%B7%5C%5B%19%C5%DB%0D%EF%9F%19%1D%7B%5E%86%BD%0C%95%A12%AC%5B*%83%96%CAP%19%F62T%86%CAP%19*%83%96%CA%B8Xe%BC%FE)T%19%A1%17xg%7F%DA%CBP%19*%C3%BA%A52T%86%CAP%19%F62T%86%CA%B0n%A9%0CZ%1DV%C6%3D%F3%FCH%DE%B4%B8~%7F%5CZc%F1%D6%1F%AF%84%F9%0F6%E6%EBVt9%0E~%BEr%AF%23%B0%97%A12T%86%CAP%19%B4T%86%CA%B8Re%D8%CBP%19*%C3%BA%A52huX%19%AE%CA%E5%BC%0C%7B%19*CeX%B7h%A9%0C%95%E1%BC%0C%7B%19*CeX%B7T%06%AD%CB%5E%95%2B%BF.%8F%C5%97%D5%E4%7B%EE%82%D6%FB%CF-%9C%FD%B9%CF%3By%7B%19%F62T%86%CA%B0n%D1R%19*%A3%D3%CA%B0%97%A12T%86uKe%D0%EA%B02*%3F1%99%5DB%2B%A4%B5%F8%3A%7C%BA%2B%8Co%7D%5C%EDe%A8%0C%95a%DDR%19%B4T%C66%82fA%B2%ED%DA%9FC%FC%17GZ%06%C9%E1%B3%E5%2C%1A%9FoiB%EB%96%CA%A0%D5qe4%7B%7D%FD%85%F7%5B%ED_%E0s%07%F0k%951%ECr%0D%B5C%D7-g%D1%A8%0C%EB%96%CA%A0%A52T%C6)*%C3%5E%86%CAP%19%D6-%95A%EB*%95q%F8%BB%E3%F9%AB%F6%E21%ACZ%B7%22%B7%9B%3F%02%85%CB%A2%5B%B7%BA%5E%B7%9C%97%E1%BC%0C%EB%16-%95%A12z%AC%0C%BFc%A22T%86uKe%D0%EA%B02V%DD%AD%8A%2B%8CWhe%5E%AF%CF%F5%3B%26%CE%CBh%5C%19%CE%CB%B0%F3%A4%095%A1%CAP%19*Ce%A8%0C%3BO*Ce%A8%0C%95%A12%3A%AD%8C%0A%82%7B%F0v%1F%2FD%A9%5B%9F%EE%EA%26%AF%03%CA%DF9%7B%19*Ce%A8%0C%95%A12T%86%CA%B8Ze%D8%CBP%19*Ce%A8%0C%95%D1ae%EC%F7%89I%E1%B4%D7M%D7P%8BjU%5C%BB%3E%F2%20%D8%CBP%19*Ce%A8%0C%95%A12T%C6%D5*%C3%5E%86%CAP%19*Ce%B4O%07%7B%F0W%7Bw%1C%7C%1A%8C%B3%3B%D1%EE%AA%5C%D6-%EBV%83%80%5E%D0%CA%10%5CU%2BD%E07YU%86%CAP%19*%E3%9A%95%91%D9%A0%C8%AD%5B%EDv%9E%82%FFKOee%E4%8FUe%A8%0C%95%A12T%C6%1F%A9%8C%C8%3D%5B%A5%15%FD%14%22r%E7B%9F%17l%F8%BF%ED%EAf%2B%7F%CF%ECe%D8%CBP%19*Ce%A8%0C%95%E1%93~%7B%19%F62T%86%CAP%19*Ce%A8%0C%E7%13%DA%CBP%19*Ce%A8%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4h%A9%0C%B3E%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%A9%0CZf%8B%16-Z%B4h%D1R%19f%8B%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1R%19%B4%CC%16-Z%B4h%D1%A2%A52%CC%16-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2%A52h%99-Z%B4h%D1%A2EKe%98-Z%B4h%D1%A2EKe%D02%5B%B4h%D1%A2EKe%D02%5B%B4h%D1%A2E%8B%96%CA0%5B%B4h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%96%CA%A0e%B6h%D1%A2E%8B%16-%95a%B6h%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-%95A%CBl%D1%A2E%8B%16-Z*%C3l%D1%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z*%83%96%D9%A2E%8B%16-Z%B4T%86%D9%A2E%8B%16-Z%B4T%06-%B3E%8B%16-Z%B4%AE%A4%F5%25%C0%00%DE%BF%5C'%0F%DA%B8q%00%00%00%00IEND%AEB%60%82") repeat-y !important;
+    border-left: 1px solid #BBBBBB !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px dashed #BBBBBB !important;
+}
+
+.overflowRulerX > .firebugRulerV {
+    left: 0 !important;
+}
+
+.overflowRulerY > .firebugRulerH {
+    top: 0 !important;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.fbProxyElement {
+    position: fixed !important;
+    pointer-events: auto !important;
+}
+            .style1
+            {
+                color: #FF9933;
+                font-weight: bold;
+            }
+            .style2
+            {
+                color: #FF9900;
+            }
+            .style5
+            {
+                color: #FF9933;
+            }
+        </style>
+<style type="text/css">
+	/* <![CDATA[ */
+	#MainMenu { height:21px;width:100%; }
+	#MainMenu img.icon { border-style:none;vertical-align:middle; }
+	#MainMenu img.separator { border-style:none;display:block; }
+	#MainMenu img.horizontal-separator { border-style:none;vertical-align:middle; }
+	#MainMenu ul { list-style:none;margin:0;padding:0;width:auto; }
+	#MainMenu ul.dynamic { z-index:1; }
+	#MainMenu a { font-weight:normal;text-decoration:none;white-space:nowrap;display:block; }
+	#MainMenu a.static { text-decoration:none;border-style:none;padding-left:0.15em;padding-right:0.15em; }
+	#MainMenu a.popout-dynamic { background:url("/WebResource.axd?d=ZbY0BA31FtuyU6jeQBKng1eDYCcTOWnzxiE02SyFKtjAjyxdeetlDPidJVH3Y00tSTfb0iBgH0AHECyUJL9b1C4JZ1ahZbNM1vtu_F1ZI7Y1&t=635793216349294682") no-repeat right center;padding-right:14px; }
+	#MainMenu a.dynamic { text-decoration:none;border-style:none; }
+	/* ]]> */
+</style><style type="text/css">
+	/* <![CDATA[ */
+	#Menufooter { width:100%; }
+	#Menufooter img.icon { border-style:none;vertical-align:middle; }
+	#Menufooter img.separator { border-style:none;display:block; }
+	#Menufooter img.horizontal-separator { border-style:none;vertical-align:middle; }
+	#Menufooter ul { list-style:none;margin:0;padding:0;width:auto; }
+	#Menufooter ul.dynamic { z-index:1; }
+	#Menufooter a { color:White;font-size:Smaller;font-weight:normal;text-decoration:none;white-space:nowrap;display:block; }
+	#Menufooter a.static { text-decoration:none;border-style:none;padding-left:0.15em;padding-right:0.15em; }
+	#Menufooter a.popout-dynamic { background:url("/WebResource.axd?d=ZbY0BA31FtuyU6jeQBKng1eDYCcTOWnzxiE02SyFKtjAjyxdeetlDPidJVH3Y00tSTfb0iBgH0AHECyUJL9b1C4JZ1ahZbNM1vtu_F1ZI7Y1&t=635793216349294682") no-repeat right center;padding-right:14px; }
+	#Menufooter a.dynamic { text-decoration:none;border-style:none; }
+	/* ]]> */
+</style></head>
+<body onload="init();">
+    <div id="mainblock">
+        <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="5N2RR3So6qcR3i6nkR3J702GIZECMVhUbS8fO0JwjdC+zGExrEjTe2dsuyVA4zkTyKFkO0AkiSo9ub4tdtoKyBpPUIARCV5OCrE3pYhfWu6ICSkpM+OYGXiTBgj07C7jrbjjVP+Tgx+hwFEKhsO48WchzWzF5nt9k7Kseh1hV+d2VzgSfSccDgvz/OJ1lK4qgR4obpF8JN7fV0H69Rq80G2DSVxWzhMhK+ZL1qWzgqVTmE87BWB1Y3rD/csvF2fOazSypzu4reY2WwnyAYWROcwKlodY0MVaNAFJPsC+D6t/LBRC6uon6W8A+8mIJUC2MVdm7njygwuBJgTdeK0FTw0+yWhJSAYGo0B/R3O36YaDyueB3adOeIC9E/19rywFrr/jncH0j6p+7OtBaL0M7GyXHXc8Vqb3OmeqiDKm50xbE8pwnucpcsWHn7wwBs2+0LsNOtanjsAGYhuoNQPr6jkJzm++5aAOQ3w2xdkIj/g4QPdrkVYQMIv20aZeYULVjREJXWT6ltaoXEgoD+ZdSve0DTEUOV2rISeKloseKTJOOJ5/PCHJqgkgnS8TPenZe4QCCsynrnkguzcr4V+TR7PPw2eeT9BV8Un90mUYoP0Ux9TSDQjMhjp/MPZ+4HoCRsSZFyy1p3XWTIYsWcqv2N3iuTH3d52HLN5ChifSfhd3ICVEYJygCViyQ6AYRN3+ceoq1B6G6v5kqxr/fjf6BCnETGFPrdurrUPyqWlEs6LYNOVmLNiXTjZwz0+gMKBV6Kp3laMv/tgqywZdhBSHkRzYEy33pCbLpSaWymwINXVMVUQWyAa9EEWWgaYvpg6ATe3UgCCKqMmwKFA3G8YcvItJ4Ba0w2s4KGyLYg6dzAEyA1RgG+AOMdig4IWRoziozakgcF1j/DTxZBm8oWGaCxnOoBzIOU7eq2kBqGeUOsH4989JmyujygVkBWgm/py8iqN38bKMUiimtoYsA6TAZTGEUkstMrbl19yH3tGk8YRkvaGY4ILUj8wb9f5yPUpDGYqwTbr53WiC3rVO91pA4FOKbGm3JDJPAg8tJKkb/bEaPS5Bb0AroycZOz5SD+PA7rvvtFS8now/oHLemUYaJZ5stQjYUBtgJKcEpCTeJQA/Js3QNfHlOPAyOArLJHd43/4ZtDuZmgIdAvcd8BQE9t5ZWYmJYYhq/kQJBC3LNWw+nkjtsAZ4AA41wU9XsgTHrHJq44Dbx+7prgkiWel5T8B2OoyafkctO9pA4WUJoxknWQ+Rl0eqDHxcwkfHjMNPWUmWXIrjZAnWKhLNGreSha5UfHUXHJsgQ2fBXfJtLmIe+Eq0m7pxb7tNPqv5bdQYcJ7vlg3yv6OPtyx2zo8c8W/+XG+EiwstAj5ufdtoahlpPc4gtYk+6LEwIhfisb65lXO27H2qfjTfDDiEr8jV9pG/LNzQGrmHDwSZwUyftoV8lMZMCb1gn/3FRaubdYQkel8c83daZDZzUe7x1CGvyS8KIml2z12xSul2vZeBoCYiRKnqSvEVBUtsNAEu1axbEkg66Kia1vE+F8sI/ijosYFS0Tvlu2zI9JppHuKArucRVe/KM1glHhgKnL1H2nj3U/owWPGb0Ct4waEQ9F6RpHgjCnlnPNtOgo3P02EvbTwrwN+YVjWc2cbFEC5Y6j7KWGZxipzd4pVANfYdoYCHFrQA2mtyaK5ikVhYl4BrJFQPZnKkxW9mSm5bGiESValos9HRqm4jc9b00rl5BLC+fhBleYNxgLrSJYLYeiXhgVupfpNr4st2cpvHYyaOKi9kih31Gb9yhcdHBacrF1AeRRBZuF9XcAzNIgjdVQCgBhfQAH2D1LGDHwfOBv32Ww/4FLHlaoRlabTgI6EfpiP/pOk1R9jeGb96GIdCw13F2xYmILyOc+WItj6auXaNy4oAkpycN7KxK+RC2RnxEf1Il5ELWCgv+t58Zh+PHS7OWxdoRWmumAFDdpP+XXnVgui6oKzTJ6CgWo9hxXGdb/cAx2yNkmrBqw+mAzsTMbda+SGwv9ykbPRI83vDNDwmzdYAFoUlt/efAzcjO856AIyGSdM9176cfuiuwSZauJl1gFSeLUsZBIwn5HLHgwaq4WxvRQnzWrbvlQRy2jiRD2i5nWf9FkJQTB7fsoBzDv9q341QBKJnV0Z0p1kIECFfekl05p+535ZKTtoqgljLi5q9dxMSuDow2nO+KpOZ5xj4mCV3mKflF57FiV931B3z+Do1+1pa1l5BZE5WLZIkkY0dbcKT2BFwAigWWgRnCxWE10Y=" />
+</div>
+
+
+<script src="/WebResource.axd?d=gStesyoUVjKwo5E7imoWv-GRLF1UbtptZ1whau6AUKY2mhX7P7Y2cUSlXJlmRxG4nzJGiYfiXOMsdqiSCd-44gCuHogGKuBGZaZW75Uymvw1&amp;t=635793216349294682" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="0zFfhY5cmvvhbcd0VOwAGXYl4/9SEzT/Myro3Si7iMsf7C7HH9OD+LsYWTx0Wja7LeLLkU2zlUqO1V75iglUNnKJap5QYOrXUxktn2s9bpp4LwUWvDtOQf2SdXElPtXfcGS4Eh3WbMjzayvc7E2P9AR+cy2kfBsTvEB184gd2JgpOKvr/8mvAuXmze5JFvKoNvKHQs2kzYDaqudc7yJARLXAtyafSvJ1uHpcteNs8VnrgEUV4pSRKAf1/NS9gtYz++G4H4pGx5ZW7uTnQGvslgBISgZVL1eSAQkjgZTSRautL1bV5tv9KEkgTkRnEFbvFEIh45RByvvqfMlYAStIFQtR0xtnjrvVVdz2Y3AI3AE=" />
+</div>
+        
+        <!--start Top-->
+        <div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0">
+                <tr>
+
+                     <td style="width: 25%;background:#5C000B;">
+                        <div style="float:left;padding-left:22px;height:150px;"  class="logo"><img height="150px" src="Kendriya Vidyalaya Sangathan_files/log.jpg"></div>
+						</td>
+					 <td style="width: 40%;background:#5C000B;">
+                        <div style="float:left;height:150px;padding-left:0px;" class="middleheaer"><img height="150px" src="Kendriya Vidyalaya Sangathan_files/content.jpg"></div>
+						</td>
+					 <td style="width: 35%;background:#5C000B;" align="right">
+					 <div style="float:right;padding-right:5px;padding-top:10px;height:75px;"  class="logo"><img height="75px" src="Kendriya Vidyalaya Sangathan_files/Swachh.jpg"></div>
+					    <div style="float:right;padding-right:5px;padding-top:10px;height:70px;"  class="logo"><img height="70px" src="Kendriya Vidyalaya Sangathan_files/digitalindia1.png"></div>
+						
+					    </td>
+					</tr>
+					<tr>
+					<td style="background:#5C000B;" colspan="1">
+                        <div style="float:left;height:50px;" class="middleheaer">
+                          <div class="fonts" style="padding-top:20px;padding-left:0px">
+                           <a href=""><img height="20px" src="AppImage/big.jpg" onclick="enlarge(); return false;" alt="" /></a><a href="" style="padding-left:10px;"><img height="20px" src="AppImage/normal.jpg" onclick="init(); return false;" alt="" /></a><a href="" style="padding-left:10px;"><img height="20px" src="AppImage/small.jpg" onclick="shrink(); return false;" /></a></div>
+                           <div style="float: left;padding-left: 0px;padding-top: 0px;text-align: center;"><a  href="" onclick="window.open('PopupScreen.htm','child','titlebar=no,toolbar=no,height=600,width=600,resizable=yes,status=no'); return false" style="text-decoration:underline;color:#fff;font-size:14px;" >Screen&nbsp;Reader&nbsp;Access</a>
+                           
+                           </div>
+                        </div>
+                    </td>
+					<td style="background:#5C000B;" align="center" colspan="2">
+					<img src="https://cbpssubscriber.mygov.in/assets/uploads/X0qP81f7lg3YqNFI" id="_camdVEvKaV3usFRh" onclick="javascript:window.open('https://cbpssubscriber.mygov.in/aff/camdVEvKaV3usFRh')" style="cursor:pointer" onload="javascript:(function(){if(typeof _done == 'undefined' || !_done){this.setAttribute('src', this.getAttribute('src')+'?'+Math.floor((Math.random() * 100) + 1)); _done=true;}}).call(this)" >
+					    </td>
+                </tr>
+				<tr>
+					<td style="background:#5C000B;" colspan="2">
+						   
+                           <div style="padding-left:0px;padding-bottom:20px;padding-top:20px;color:#fff;font-size:14px;">Search For<input type="text" size="30">
+                            <input id="btnsearch" type="image" src="Kendriya Vidyalaya Sangathan_files/images3.jpg" name="sa" value="Search"
+                                            style="height: 21px" onclick="SearchSite();return false;" tabindex="0" />
+                           
+                           </div>
+                           
+                        </div>
+                    </td>
+					<td style="background:#5C000B;" align="right">
+					
+					</td>
+                </tr>
+				
+            </table>
+			
+        </div>
+        <!--End Top-->
+        <!--Start Navigation-->
+        <div style="background:none; height: 34px;" align="center">
+            <table style="padding-top: 0; padding-left: 0; margin-top: 0; float: left;">
+                <tr>
+                    <td style="width: 98%; padding-left: -9999px;">
+                        <a href="#MainMenu_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=yqHeF0_lYxAWHSjlDwIWVuYMlo6ONmnOoEhHHl1MObTQ7HuD5qrl4MKysU59Nj1dcXZFsaQ_oKb0muxtg5_RUe7P8xdwkHpvbbsJDUdlAz41&amp;t=635793216349294682" width="0" height="0" style="border-width:0px;" /></a><div id="MainMenu">
+	<ul class="level1">
+		<li><a class="level1 menuItem" href="Index.aspx">Home</a></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;About KVS&#39;)">About KVS</a><ul class="level2">
+			<li><a class="level2 menuItem" href="CommissionerMsg.aspx">Commissioner's Msg</a></li><li><a class="level2 menuItem" href="Mission.aspx">Mission</a></li><li><a class="level2 menuItem" href="ObjectiveofKvs.aspx">Objectives Of KVS</a></li><li><a class="level2 menuItem" href="TopOfficer.aspx">Top Officers Of KVS</a></li><li><a class="level2 menuItem" href="Organisationalchart.aspx">Organizational Chart</a></li><li><a class="level2 menuItem" href="Management.aspx">Management</a></li><li><a class="popout-dynamic level2 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;About KVS\\Directories&#39;)">Directories</a><ul class="level3">
+				<li><a class="level3 menuItem" href="LinktoRO.aspx">Link to Ros & ZIETs</a></li><li><a class="level3 menuItem" href="Dirkv.htm">Directory of KVS</a></li><li><a class="level3 menuItem" href="DirPrincipal.htm">Principals of KVS</a></li><li><a class="level3 menuItem" href="Dirchairman.htm">Chairman of KVS</a></li><li><a class="level3 menuItem" href="SearchForKVs.aspx">Search For KVs</a></li>
+			</ul></li><li><a class="level2 menuItem" href="ICTInfrastructure.aspx">ICT Infrastructure</a></li>
+		</ul></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Works&#39;)">Works</a><ul class="level2">
+			<li><a class="level2 menuItem" href="Construction.aspx">Construction Activities</a></li>
+		</ul></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Academic&#39;)">Academic</a><ul class="level2">
+			<li><a class="level2 menuItem" href="FactsFigures.aspx">Facts & Figures</a></li><li><a class="level2 menuItem" href="PrimaryEducation.aspx">Primary Education</a></li><li><a class="popout-dynamic level2 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Academic\\Admission Under MP Quota&#39;)">Admission Under MP Quota</a><ul class="level3">
+				<li><a class="level3 menuItem" href="MPQuotaLSAdmissions.aspx">Lok Sabha</a></li><li><a class="level3 menuItem" href="MPQuotaRSAdmissions.aspx">Rajya Sabha</a></li>
+			</ul></li><li><a class="level2 menuItem" href="http://aeparc.org">Adolescence Education Programme</a></li><li><a class="level2 menuItem" href="AdmissionGuideLine.aspx">Admission Guidelines</a></li><li><a class="level2 menuItem" href="FeeStructure.aspx">Fee Structure</a></li><li><a class="level2 menuItem" href="StudentAchieves.aspx">Student Achieves</a></li><li><a class="level2 menuItem" href="TeacherAchieve.aspx">Teacher Achieves</a></li><li><a class="level2 menuItem" href="Result_Analysis.aspx">Result Analysis</a></li>
+		</ul></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Publications&#39;)">Publications</a><ul class="level2">
+			<li><a class="level2 menuItem" href="Annual_report.htm">Annual Reports</a></li><li><a class="level2 menuItem" href="Annual_Accounts.htm">Annual Accounts</a></li><li><a class="level2 menuItem" href="News_letter.htm">Newsletter</a></li>
+		</ul></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Administration&#39;)">Administration</a><ul class="level2">
+			<li><a class="level2 menuItem" href="NewKVNorms.aspx">Opening New KVs Norms</a></li><li><a class="level2 menuItem" href="AnnualTransfer.aspx">Annual Transfer</a></li><li><a class="level2 menuItem" href="SeniorityList.aspx">Seniority List</a></li><li><a class="level2 menuItem" href="kvpis/kvlogin.aspx">Personal Information System</a></li><li><a class="level2 menuItem" href="PBRLogin.aspx">Post Based Roster</a></li><li><a class="level2 menuItem" href="NewLogin.aspx">Court Case Application</a></li><li><a class="level2 menuItem" href="GeneralDocuments/rec-rules8.pdf">Recruitment Rules</a></li><li><a class="level2 menuItem" href="Promotion.aspx">Promotion</a></li><li><a class="level2 menuItem" href="Vigilance.aspx">Vigilance</a></li>
+		</ul></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Finance&#39;)">Finance</a><ul class="level2">
+			<li><a class="level2 menuItem" href="Budget.aspx">Budget</a></li><li><a class="level2 menuItem" href="NPS.PDF">National Pension Scheme</a></li><li><a class="level2 menuItem" href="Expenditures.aspx">Expenditure</a></li><li><a class="level2 menuItem" href="CostOfEducationPerStudent.aspx">Cost Of Education Per Student</a></li>
+		</ul></li><li><a class="level1 menuItem" href="RightToInfoAct.aspx">RTI</a></li><li><a class="level1 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Miscellaneous&#39;)">Miscellaneous</a><ul class="level2">
+			<li><a class="level2 menuItem" href="InitiativeandMOU.aspx">Initiative & MOUs</a></li><li><a class="level2 menuItem" href="ProjectShiksha.aspx">Project Shiksha</a></li><li><a class="level2 menuItem" href="ProjectThinkQuest.aspx">Oracle Academy</a></li><li><a class="popout-dynamic level2 menuItem" href="#" onclick="__doPostBack(&#39;ctl00$MainMenu&#39;,&#39;Miscellaneous\\Intel Initiatives&#39;)">Intel Initiatives</a><ul class="level3">
+				<li><a class="level3 menuItem" href="HTMLPages/Intel&#39;s%20initiatives%20with%20KVS.htm">With KVS</a></li><li><a class="level3 menuItem" href="http://www.intel.com/about/corporateresponsibility/education/programs/elements.htm">Courses</a></li><li><a class="level3 menuItem" href="GeneralDocuments/KVS%20and%20Intel_Excellence%20in%20Education%20Awards-2011_English.doc">KVS-Intel Award</a></li>
+			</ul></li><li><a class="level2 menuItem" href="KVSInNews.aspx">KVS In News</a></li><li><a class="level2 menuItem" href="Resources.aspx">Resources</a></li>
+		</ul></li><li><a class="level1 menuItem" href="ContactUs.aspx">Contact Us</a></li>
+	</ul>
+</div><a id="MainMenu_SkipLink"></a>
+                    </td>
+                    <td style="width: 2%;">
+                        <input type="submit" name="ctl00$btnChangeCulture" value="हिन्दी में" id="btnChangeCulture" style="color:#5A272A;border-color:#FFCC00;height:28px;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            
+    <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <title>s3Slider jQuery plugin</title>
+            <!-- CSS -->
+            <style type="text/css" media="screen">
+            #slider {
+               width: 530px; /* important to be same as image width */
+               height: 380px; /* important to be same as image height */
+               position:relative; /* important */
+               overflow: hidden; /* important */
+               padding:0;
+            }
+            #sliderContent {
+               width: 530px; /* important to be same as image width or wider */
+               position: relative; /* important */
+               top: 0; /* important */
+               margin: 0; /* important */
+               padding:0;
+            }
+            .sliderImage {
+               float: left; /* important */
+               position: relative; /* important */
+               display: none; /* important */
+               padding:10px;
+            }
+            .sliderImage span {
+                position: absolute;
+	            font: 10px/15px Arial, Helvetica, sans-serif;
+                padding: 10px 13px;
+                width: 530px;
+                background-color: #000;
+                filter: alpha(opacity=70);
+                -moz-opacity: 0.7;
+	            -khtml-opacity: 0.7;
+                opacity: 0.7;
+                color: #fff;
+                display: none;
+            }
+            .clear {
+	            clear: both;
+            }
+            .sliderImage span strong {
+                font-size: 10px;
+            }
+            .top {
+	            top: 0;
+	            left: 0;
+            }
+            .bottom {
+	            bottom: 0;
+                left: 0;
+            }
+            .imgsize
+            {
+                width:530px;
+                height:380px;
+            ul 
+            { list-style-type: none;}
+            </style>
+            <!-- JavaScripts-->
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+			<script type="text/javascript" src="https://www.mygov.in/overlay/overlay.js"></script>
+            <script src="js/s3Slider.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#slider').s3Slider({
+                       timeOut: 3000,
+                        fx: 'fade',
+                        speed: 3000
+                        
+                    });
+                });
+            </script>
+</head>
+
+    <div>
+        <table border="1" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td id="leftblock">
+                    <div id="left-ads">
+                        <span id="ContentPlaceHolder1_lblAnnouncement" style="color:#78560D;font-weight:bold;font-style:normal;">Announcements</span>
+                    </div>
+                    <div style="width: 100%; text-align: Left; border: solid 1px #ccc;">
+                        
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="https://cbseitms.nic.in/kvs_static/home.html">
+                                        Click here to apply online for KVS Recruitment of Principal, Vice-Principal, PGTs, TGTs, Librarian and PRTs in KVS. (24.08.2018) </a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(1)-24-08-2018.PDF">
+                                        Implementation of Public Procurement (Preference to Make in India) order (PPP-MII Order), 2017 - reg. (24-08-2018)</a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(1)-27-08-2018.PDF">
+                                        Filling up the post of Joint Commissioner(Finance) and Deputy Commissioner (Finance) in KVS on deputation basis.(27-08-2018)</a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(E)-27-08-2018.PDF">
+                                        National Award to Teachers, 2017 - Teachers selected for conferment of National Award - regarding. (27-08-2018)</a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(02)-23-08-2018.pdf">
+                                        टीजीटी (कार्य अनुभव शिक्षक) की अनंतिम अखिल भारतीय वरिष्ठता सूची 01-01-2017 का संचालन ।(23-08-2018) </a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(1)-23-08-2018.PDF">
+                                        Implementation of the recommendation of the 7th CPC- Option regarding commutation of additional amount of pension.(23-08-2018)</a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(E)-17-08-2018.PDF">
+                                        Detailed advertisement no. - 14 for Direct Recruitment of Principals, Vice-Principals, PGTs, TGTs, Librarian and PRTs in Kendriya Vidyalaya Sangathan. (17-08-2018) </a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                                <div style="background: #fff; border: solid 1px #F2F2F2;">
+                                    <a target="_blank" style="text-decoration: none; font-size: smaller;" href="../GeneralDocuments/ANN(1)-21-08-2018.PDF">
+                                        Invitation of Online applications for request transfers against No Taker Vacancies and Mutual Transfers for 2018 - reg.(21-08-2018)</a><img src="AppImage/newicon.gif"
+                                alt="" />
+
+                                </div>
+                            
+                    </div>
+                    <div align="left">
+                        <a href="OldRecords.aspx?uiculture=English (United States)&pagesource=ann" target="_blank">Old Announcements / पुरानी घोषणाएं</a>
+                    </div>
+                </td>
+             
+               <td id="rightblock">
+               
+                    <div id="slider">
+                        <ul id="sliderContent">
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(14-08-2018).jpg" alt="Inauguration of 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inauguration of Newly Constructed Building of KV Mohali (Punjab) by Union Minister Sh. Vijay Sampla. (14.08.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(20-08-2018).jpg" alt="Inauguration of 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Newly Constructed Building of KV Mohali, Punjab  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(20-08-2018).jpg" alt="Inauguration of 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inauguration of Newly Constructed Building of KV Chamrajnagar, Karnataka, by Union Minister Sh. Ananth Kumar. (13.8.2018)  </strong><br />.</span>
+                        </li>
+            <li class="sliderImage"> 
+                                <img src="Gallary/04(20-08-2018).jpg" alt="Inauguration of 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Newly Constructed Building of KV Chamrajnagar, Karnataka.  </strong><br />.</span>
+                        </li>						
+					
+					
+			
+            <li class="sliderImage"> 
+                                <img src="Gallary/01(20-08-2018).jpeg" alt="Kanishka Shriwas, Class-VI, Student of Kendriya Vidyalaya No.1, Raipur" class="imgsize"/>
+                                <span class="bottom"> <strong>    Kanishka Shriwas, Class-VI, Student of Kendriya Vidyalaya No.1, Raipur (Shift-2) won Silver Medal (in the Junior 10-11 Female - 30 Kg category) in Youth World Muay Thai Championship-2018 held in Bangkok from <br />4th to 8th August 2018.  </strong><br />.</span>
+                        </li>						
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(20-07-2018).jpg" alt="Inauguration of 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inauguration of 49th KVS National Sports Meet at Delhi Venue  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(20-07-2018).jpg" alt="March-past at 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    March-past at 49th KVS National Sports Meet at Delhi Venue  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(20-07-2018).jpg" alt="March-past at 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    March-past at 49th KVS National Sports Meet at Delhi Venue  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/04(20-07-2018).jpg" alt="March-past at 49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    March-past at 49th KVS National Sports Meet at Delhi Venue  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/05(20-07-2018).jpg" alt="KV Students on Track" class="imgsize"/>
+                                <span class="bottom"> <strong>    KV Students on Track  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/06(20-07-2018).jpg" alt="Cultural event at ​49th KVS National Sports Meet at Delhi Venue" class="imgsize"/>
+                                <span class="bottom"> <strong>    Cultural event at ​49th KVS National Sports Meet at Delhi Venue  </strong><br />.</span>
+                        </li>
+						
+						
+						
+						
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(17-07-2018).jpg" alt="Union Minister of State for HRD Sh. Upendra Kushwaha inaugurates Kendriya Vidyalaya NPGCL" class="imgsize"/>
+                                <span class="bottom"> <strong>    Union Minister of State for HRD Sh. Upendra Kushwaha inaugurates Kendriya Vidyalaya NPGCL, Nabinagar <br />in Aurangabad District of Bihar. (14.7.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(10-07-2018).jpg" alt="Inaugural Ceremony of three-day KVS 7th Deputy Commissioner's Conference" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inaugural Ceremony of three-day KVS 7th Deputy Commissioner's Conference at Hotel Samrat, New Delhi. <br />(9 July 2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(10-07-2018).jpg" alt="Inaugural Ceremony of three-day KVS 7th Deputy Commissioner's Conference" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inaugural Ceremony of three-day KVS 7th Deputy Commissioner's Conference at Hotel Samrat, New Delhi. <br />(9 July 2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(10-07-2018).jpg" alt="Inaugural Ceremony of three-day KVS 7th Deputy Commissioner's Conference" class="imgsize"/>
+                                <span class="bottom"> <strong>    Opening Ceremony of 49th KVS National Sports Meet for Lawn Tennis at RK Khanna Stadium in New Delhi. <br />(9 July 2018)  </strong><br />.</span>
+                        </li>
+			
+			
+			<li class="sliderImage"> 
+                                <img src="Gallary/6(12-07-2018).jpg" alt="Telescope Making Workshop in collaboration" class="imgsize"/>
+                                <span class="bottom"> <strong> Telescope Making Workshop in collaboration with Vigyan Prasar held at KV No. 1 Uppal. (2-6 July 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/7(12-07-2018).jpg" alt="Telescope Making Workshop in collaboration" class="imgsize"/>
+                                <span class="bottom"> <strong> Telescope Making Workshop in collaboration with Vigyan Prasar held at KV No. 1 Uppal. (2-6 July 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/8(12-07-2018).jpg" alt="Telescope Making Workshop in collaboration" class="imgsize"/>
+                                <span class="bottom"> <strong> Telescope Making Workshop in collaboration with Vigyan Prasar held at KV No. 1 Uppal. (2-6 July 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(16-07-2018).jpg" alt="Union Minister Shri Pon. Radhakrishanan inaugurates newly constructed building of Kendriya Vidyalaya" class="imgsize"/>
+                                <span class="bottom"> <strong> Union Minister Shri Pon. Radhakrishanan inaugurates newly constructed building of Kendriya Vidyalaya Virudhunagar, Tamil Nadu. (3 July 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(16-07-2018).jpg" alt="Newly constructed building of Kendriya Vidyalaya Virudhunagar" class="imgsize"/>
+                                <span class="bottom"> <strong> Newly constructed building of Kendriya Vidyalaya Virudhunagar, Tamil Nadu. (3 July 2018) </strong><br />.</span>
+                        </li>
+						
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(16-07-2018).jpg" alt="Union Minister Dr. Jitendra Singh inaugurates newly constructed building of Kendriya Vidyalaya Kathua" class="imgsize"/>
+                                <span class="bottom"> <strong> Union Minister Dr. Jitendra Singh inaugurates newly constructed building of Kendriya Vidyalaya Kathua, Jammu &amp; Kashmir (28 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/04(16-07-2018).jpg" alt="Newly constructed building of KV Kathua" class="imgsize"/>
+                                <span class="bottom"> <strong> Newly constructed building of KV Kathua, Jammu &amp; Kashmir (28 June 2018) </strong><br />.</span>
+                        </li>			
+
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(12-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase V at Naval Base Karwar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/2(12-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase V at Naval Base Karwar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/3(12-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase V at Naval Base Karwar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/4(12-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase V at Naval Base Karwar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/5(12-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase V at Naval Base Karwar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/6(13-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase VI at Army Base Jamnagar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/7(13-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase VI at Army Base Jamnagar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/8(13-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase VI at Army Base Jamnagar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/9(13-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase VI at Army Base Jamnagar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/10(13-07-2018).jpg" alt="KV students participating in Seema Darshan" class="imgsize"/>
+                                <span class="bottom"> <strong> KV students participating in Seema Darshan Programme Phase VI at Army Base Jamnagar. (25-29 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/IMG_113(21-06-2018).jpg" alt="4th International Yoga Day Celebrated in all the Kendriya Vidyalayas" class="imgsize"/>
+                                <span class="bottom"> <strong> 4th International Yoga Day Celebrated in all the Kendriya Vidyalayas throughout the Country. Pictures from <br />KV Paschim Vihar, New Delhi. (21 June 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/IMG_0109(21-06-2018).jpg" alt="4th International Yoga Day Celebrated in all the Kendriya Vidyalayas" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day Celebrated in all the Kendriya Vidyalayas throughout the Country. Pictures from <br />KV Paschim Vihar, New Delhi. (21 June 2018)  </strong><br />.</span>
+                        </li>
+             <li class="sliderImage"> 
+                                <img src="Gallary/DSC_9408(21-06-2018).jpg" alt="4th International Yoga Day Celebrated in all the Kendriya Vidyalayas" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day Celebrated in all the Kendriya Vidyalayas throughout the Country. Pictures from <br />KV Paschim Vihar, New Delhi. (21 June 2018)  </strong><br />.</span>
+                        </li>
+            <li class="sliderImage"> 
+                                <img src="Gallary/1(22-06-2018).jpg" alt="4th International Yoga Day at KV Tehran" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day at KV Tehran (21.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/2(22-06-2018).jpg" alt="4th International Yoga Day at KV Tehran" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day at KV Tehran (21.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/3(22-06-2018).jpg" alt="4th International Yoga Day at KV Kathmandu" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day at KV Kathmandu (21.6.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/4(22-06-2018).jpg" alt="4th International Yoga Day at KV Kathmandu" class="imgsize"/>
+                                <span class="bottom"> <strong>    4th International Yoga Day at KV Kathmandu (21.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/5(22-06-2018).jpg" alt="4th International Yoga Day at KV Moscow" class="imgsize"/>
+                                <span class="bottom"> <strong> 4th International Yoga Day at KV Moscow (21.6.2018) </strong><br />.</span>
+                        </li>
+
+
+						
+						
+						
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(20-06-2018).jpeg" alt="Hon'ble Union Minister of State for HRD Sh. Upendra Kushwaha" class="imgsize"/>
+                                <span class="bottom"> <strong>    Hon'ble Union Minister of State for HRD Sh. Upendra Kushwaha inaugurates newly constructed building of <br />KV Sasaram, Bihar. (15.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(20-06-2018).jpeg" alt="Hon'ble Union Minister of State for HRD Sh. Upendra Kushwaha" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inaugural Ceremony of newly constructed building of KV Sasaram, Bihar. (15.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(20-06-2018).jpeg" alt="Hon'ble Union Minister of State for HRD Sh. Upendra Kushwaha" class="imgsize"/>
+                                <span class="bottom"> <strong>    Newly constructed building of KV Sasaram, Bihar. (15.6.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(23-05-2018).JPG" alt="3rd KVS National Subroto Cup U-17 (GIRLS)" class="imgsize"/>
+                                <span class="bottom"> <strong>   3rd KVS National Subroto Cup U-17 (GIRLS) held at KV IMA Dehradun: Additional Commissioner (Acad) Sh. U.N. Khaware awards the Winner Trophy to Bengaluru Region. (18 May 2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(23-05-2018).JPG" alt="3rd KVS National Subroto Cup U-17 (GIRLS)" class="imgsize"/>
+                                <span class="bottom"> <strong>   3rd KVS National Subroto Cup U-17 (GIRLS) held at KV IMA Dehradun: Additional Commissioner (Acad) Sh. U.N. Khaware awards Runner-Up Trophy to Bhopal Region. (18 May 2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(17-05-2018).JPG" alt="A Delegation from Iran visited Kendriya Vidyalaya JNU, New Delhi" class="imgsize"/>
+                                <span class="bottom"> <strong>   A Delegation from Iran visited Kendriya Vidyalaya JNU, New Delhi to explore Digital Initiatives in School System of India. (17.5.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(17-05-2018).JPG" alt="A Delegation from Iran visited Kendriya Vidyalaya JNU, New Delhi" class="imgsize"/>
+                                <span class="bottom"> <strong>   A Delegation from Iran visited Kendriya Vidyalaya JNU, New Delhi to explore Digital Initiatives in School System of India. (17.5.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(14-05-2018).JPG" alt="Inauguration of New Buildings of KV Jajpur and KV Kendrapara in Odisha" class="imgsize"/>
+                                <span class="bottom"> <strong>   Honourble Minister of State for Railways Sh. Rajen Gohain inaugurates new building of KV Mangaldoi in <br />Assam  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(14-05-2018).JPG" alt="Inauguration of New Buildings of KV Jajpur and KV Kendrapara in Odisha" class="imgsize"/>
+                                <span class="bottom"> <strong>   Inauguration Ceremony of KV Mangaldoi at Darrang in Assam  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/03(14-05-2018).JPG" alt="Inauguration of New Buildings of KV Jajpur and KV Kendrapara in Odisha" class="imgsize"/>
+                                <span class="bottom"> <strong>   Newly Constructed building of KV Mangaldoi, Darrang  </strong><br />.</span>
+                        </li>
+			
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(20-04-2018).jpg" alt="Inauguration of New Buildings of KV Jajpur and KV Kendrapara in Odisha" class="imgsize"/>
+                                <span class="bottom"> <strong>   Inauguration of New Buildings of KV Jajpur and KV Kendrapara in Odisha, by Hon'ble Union Minister for <br />Tribal Affairs Sh. Jual Oram. (10.04.2018)  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(11-04-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   Rajanya Dutta of  KV No.1 Salt Lake, Kolkata won bronze medal in U-10 category of Asian Youth Chess Championship held at Thailand.  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/2(11-04-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   Rajanya Dutta of  KV No.1 Salt Lake, Kolkata won bronze medal in U-10 category of Asian Youth Chess Championship held at Thailand.  </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(05-04-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   Inaugural Ceremony of KV No. 5 and KV No. 6 at Bhubaneswar by Hon'ble Minister for Petroleum and Natural Gas Sh. Dharmendra Pradhan. </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/2(05-04-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   Inaugural Ceremony of KV No. 5 and KV No. 6 at Bhubaneswar. </strong><br />.</span>
+                        </li>			
+			<li class="sliderImage"> 
+                                <img src="Gallary/3(05-04-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>    Inaugural Ceremony of KV No. 5 and KV No. 6 at Bhubaneswar. </strong><br />.</span>
+                        </li>			
+						
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(19-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/02(19-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+		    <li class="sliderImage"> 
+                                <img src="Gallary/2(19-02-2018).png" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/3(19-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/4(19-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/5(19-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   ‘Pariksha Par Charcha’ with Hon’ble Prime Minister Sh. Narendra Modi (16.2.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/01(20-02-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>   Sh. U.N. Khaware, Additional Commissioner (Acad), KVS addressing the TRAINING PROGRAMME FOR IMPLEMENTATION OF ‘LEARNING OUTCOMES’ AND ‘BACK TO BASICS’ IN KENDRIYA VIDYALAYAS, <br />organized at Regional Institute of Education in Mysore (19-20 February 2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/1(29-01-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>  Union HRD Minister Sh. Prakash Javadekar at the Foundation Stone Laying Ceremony of Pt. Deen Dayal Upadhyay Multi-purpose Auditorium at K.V. Mughalsarai (27.01.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/2(29-01-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>  Union HRD Minister Sh. Prakash Javadekar at the Foundation Stone Laying Ceremony of Pt. Deen Dayal Upadhyay Multi-purpose Auditorium at K.V. Mughalsarai (27.01.2018) </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/DS(25-01-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>  KVS (HQ) on the occasion of Republic Day-2018 </strong><br />.</span>
+                        </li>
+			<li class="sliderImage"> 
+                                <img src="Gallary/KVS(16-01-2018).jpg" class="imgsize"/>
+                                <span class="bottom"> <strong>  Group Photo of KVS State BS&amp;G Trainers' Meet 2017-18 held in Bhubaneswar (7-8 January 2018). </strong><br />.</span>
+                        </li>
+
+                        </ul>
+                        
+                    </div>
+                    <!-- gallary ends here.-->
+                </td>
+                
+            </tr>
+        </table>
+        <div style="height: 10px;">
+            <span id="ContentPlaceHolder1_Label1" style="color:#0033CC;"><marquee width='100%' direction='left' loop='infinite' scrollamount='3' COLOR=Green><b>*** Apply online for KVS Recruitment of Principal, Vice-Principal, PGTs, TGTs, Librarian and PRTs in KVS. *** 
+	</font></marquee></span>
+        </div>
+    </div>
+
+        </div>
+        <div class="clear">
+        </div>
+        &nbsp;<!--End Container--><!--Start Footer-->
+        <div class="footer" align="center">
+            <br />
+            <a href="#Menufooter_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=yqHeF0_lYxAWHSjlDwIWVuYMlo6ONmnOoEhHHl1MObTQ7HuD5qrl4MKysU59Nj1dcXZFsaQ_oKb0muxtg5_RUe7P8xdwkHpvbbsJDUdlAz41&amp;t=635793216349294682" width="0" height="0" style="border-width:0px;" /></a><div align="center" id="Menufooter">
+	<ul class="level1">
+		<li><a class="level1 FmenuItem" href="charter.pdf">Citizens' Charter</a></li><li><a class="level1 FmenuItem" href="EmployementNotice.aspx">Employment Notice</a></li><li><a class="level1 FmenuItem" href="https://epay.unionbankofindia.co.in/kvfee/">UBI Online Fee Coll.</a></li><li><a class="level1 FmenuItem" href="FAQs.aspx">FAQ's</a></li><li><a class="level1 FmenuItem" href="Circulars.aspx">Circulars</a></li><li><a class="level1 FmenuItem" href="UsefulLinks.aspx">Useful Links</a></li><li><a class="level1 FmenuItem" href="Tender.aspx">Tender Notice</a></li><li><a class="level1 FmenuItem" href="VVNExpenditure.pdf">VVN Expenditure</a></li><li><a class="level1 FmenuItem" href="http://pgportal.gov.in/">CPGRAM</a></li><li><a class="level1 FmenuItem" href="UsefulForm.aspx">Useful Forms</a></li>
+	</ul>
+</div><a id="Menufooter_SkipLink"></a>
+            
+            <span class="style2">
+            
+           
+            <table align="center" width="90%">
+            <tr>
+            <td> <a href="http://61.0.172.139" style="text-align: left; "
+                target="_blank" class="style1">KVS Online Transfer Application 2018</a><a 
+                href="">&#39;</a><img src="AppImage/newicon.gif" alt="" 
+                style="height: 13px; width: 22px" /><span 
+                class="style5"> </span></td>
+            <td> <a href="KVSStateInfra.aspx" style="text-align: left; "
+                target="_blank" class="style1">Existing Infrastructure of KV&#39;s</a><a 
+                href="KVSInfra.aspx"><span class="style5">&#39;</span></a><img src="AppImage/newicon.gif" alt="" 
+                style="height: 13px; width: 22px" /> </td>
+            <td><a href="http://www.kvsauditorium.com" style="text-align: left; "
+                target="_blank" class="style5">KVS Auditorium</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <b></td>
+            </tr>
+            
+			
+			<tr>
+            <td><a href="http://ncpcr.gov.in/index2.php" style="text-align: left; "
+                target="_blank" class="style5"><b>POCSO e-box</b></a> <img src="AppImage/newicon.gif" alt="" 
+                style="height: 13px; width: 22px" /><span 
+                class="style5"> </span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <b></td>
+			<td colspan=2 align="center"> Wednesday, August 29, 2018 9:47:04 AM</td>
+            </tr>
+            </table>
+             </span>
+            
+            
+            
+            
+                
+                 
+            
+                </b>
+            <div align="center" style="text-align: center; color: #461B7E;">
+                <table style="width: 96%;" align="center">
+                    <tr>
+                        <td style="text-align: left;"><a href="Video/Dharchula.mp4">
+                            <font color="orange"><b>Films on Seema Darshan Phase-I</b></font></a> 
+                        <a href="Video/Seema1.m4v">
+                            <font color="orange"><b>& Phase-II</b></font></a><img src="AppImage/newicon.gif" alt="" />
+
+                        </td>
+                        <td style="text-align: right;">
+                            <font color="orange"><b>
+                                <span id="Label1">You are Visitor No. :</span></b></font>
+                        </td>
+                        <td style="text-align: left;">
+                           <div align='center'><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=MTMyOTA4Nw==' border='0' alt='Web Counter'></a><BR></a></div>
+                        </td>
+                        <td align="right">
+                            <font color="orange"><b>
+                                <span id="lblHindiHit">Hindi Hits(Since 29/09/11):</span></b></font>
+                        </td>
+                        <td align="left">
+                            <font color="orange"><b>
+                                <span id="lblHindiCounter">215801</span></b></font>
+                        </td>
+                    </tr>
+                </table>
+                <span id="lblTotalNumberOfUsers" style="font-weight:bold;"></span>
+            </div>
+        </div>
+        <!--End Footer-->
+        
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script type='text/javascript'>new Sys.WebForms.Menu({ element: 'MainMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script><script type='text/javascript'>new Sys.WebForms.Menu({ element: 'Menufooter', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script></form>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        if ($("#btnChangeCulture").val() == "हिन्दी में") {
+            $("#MainMenu").removeClass("mainmenuhindi");
+	    $("#Menufooter").removeClass("menufooterhindi");
+            
+        }
+        else {
+            $("#MainMenu").addClass("mainmenuhindi");
+	    $("#Menufooter").addClass("menufooterhindi");
+        }
+
+    });
+</script>
+
+</html>

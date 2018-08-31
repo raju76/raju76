@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Git GUI
+Exec=env WINEPREFIX="/home/eswecha/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/eswecha/.wine/dosdevices/c:/users/Public/Start\\ Menu/Programs/Git/Git\\ GUI.lnk
+Type=Application
+StartupNotify=true
+Path=/home/eswecha/.wine/dosdevices/c:/users/eswecha
+Icon=B4DC_git-for-windows.0

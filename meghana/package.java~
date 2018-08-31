@@ -1,0 +1,10 @@
+import java.util.*;
+package mypack;
+public class simple
+{
+public void msg()
+{
+System.out.print("welcome to package");
+}
+}
+

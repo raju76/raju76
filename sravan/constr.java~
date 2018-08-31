@@ -1,0 +1,22 @@
+import java.io.*;
+class test
+{
+test()
+{
+System.out.println("am the constructor");
+}
+void mf()
+{
+System.out.println("am the method");
+}
+};
+class demo
+{
+public static void main(String argv[]);
+{
+test p=new test();
+p.mf();
+test q=new test();
+q.mf();
+}
+}

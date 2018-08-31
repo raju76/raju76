@@ -1,0 +1,21 @@
+import java.lang.*;
+class Bike
+{
+final void run()
+{
+System.out.print("Running----");
+}
+}
+class Honda extends Bike
+{
+void run()
+{
+System.out.print("final method");
+}
+public static void main(String args[])
+{
+Honda h=new Honda();
+h.run();
+}
+}
+

@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/sccl.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Singareni Collieries Company Limited (A Government Company)</title>
+<!-- InstanceEndEditable -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+	<div id="main_wrapper">
+		
+		<!--top links start-->
+		<div class="header-top">
+		<!--<div class="counter" valign=middle>
+			VISITORS: <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3158324&c=9475285">
+		</div>-->
+			<div class="top_links">
+			<a href="index.asp">Home</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="rti.asp">RTI Act,2005</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="sitemap.asp">Sitemap</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="https://mail.scclmines.com/owa">Mail</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="contact-us.asp">Contact</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='https://www.facebook.com/SingareniCMD'><img src='images/f7.jpg' width=120 height=20></a></span>
+			<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='company_Singareni_samacharam.asp'><img src='images/ICON.jpg' width=120 height=20></a></span></div>
+		</div>
+		
+		<!--Header start-->
+		<div id="header_wrapper">
+			<div class="header">
+				<div class="logo"><img src="images/sccl-logo.jpg" alt="sccl logo" /></div>
+				<div class="top_right_img"><img src="images/top-right-img.jpg" alt="sccl" /></div>
+			</div>
+		</div>
+		
+		<!--Navgation start-->
+		<div class="navigation">
+			<div class="nav_panel">
+			<nav id="smoothmenu1" class="ddsmoothmenu">
+				  <ul>
+				  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+				  <li><a href="#nogo">Company</a>
+				  	<ul>
+					<li><a href="company_about-us.asp">About Us</a>
+						<ul>
+						<li><a href="company_about-us_godavari-valley-map.asp">Godavari Valley Map</a></li>
+						<li><a href="company_about-us_coalreserves.asp">Coal Reserves</a></li>
+						</ul>
+					</li>
+				  	<li><a href="company_board-of-directors.asp">Board</a></li>
+				  	<li><a href="company_history.asp">History</a></li>
+				   	<li><a href="company_cmds.asp">C&amp;MD Desk</a></li>
+					<li><a href="company_mission.asp">Mission </a></li>
+					<li><a href="company_policies.asp">Policies</a></li>
+					<li><a href="company_joint-ventures.asp">Joint Ventures</a></li>
+					<li><a href="company_awards-rewards.asp">Awards &amp; Rewards</a></li>
+<li><a href="company_Singareni_poster.asp">Singareni Poster</a></li>
+<li><a href="company_Singareni_samacharam.asp">Singareni Samacharam</a></li>
+<li><a href="company_related_sites.asp">Quick Links</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Our Business</a>
+				   <ul>
+					<li><a href="#x">Products & Services</a>
+						<ul>
+						<li><a href="our-business_products-and-services_introduction.asp">Introduction</a></li>
+						<li><a href="our-business_products-and-services_definitions.asp">Definitions</a></li>
+						<li><a href="our-business_products-and-services_quality-of-coal.asp">Quality of Coal</a></li>
+						<li><a href="our-business_products-and-services_grade-specification.asp">Grade Specifications</a></li>
+						<li><a href="our-business_products-and-services_coal-grades.asp">Coal Grades - Despatch Points</a></li>
+						<li><a href="our-business_products-and-services_procedure-for-allotment-of-coal.asp">Procedure for Allotment of Coal</a></li>
+						<!--<li><a href="our-business_products-and-services_sector-mode-wise-dispatches.asp">Sector &amp; Mode wise Dispatches</a></li>-->
+						<li><a href="our-business_products-and-services_what-is-fsagreement.asp">What is FS Agreement</a></li>
+						<!--<li><a href="our-business_products-and-services_present-fsagreement.asp">Present FS Agreement</a></li>-->
+						<li><a href="our-business_products-and-services_application-formats.asp">Application Formats</a></li>
+						<li><a href="our-business_products-and-services_marketing-notices.asp">Marketing Notices</a></li>
+
+<li><a href="our-business_products-and-services_inVESTORS.asp" >Investor Opportunities</a></li>
+						</ul>
+					</li>
+				   <li><a href="our-business_coal-prices.asp">Coal Price</a></li>
+				   <li><a href="#x">e-Auction</a>
+				   		<ul>
+						<li><a href="our-business_e-auction_e-auction-current-month.asp">e-Auction Current Month</a></li>
+												<li><a href="our-business_e-auction_e-auction-procedures-formats.asp">e-Auction Procedures &amp; Formats</a></li>
+<li><a href="our-business_auction_linkages.asp">Auction of Linkages</a></li>
+						</ul>
+				   </li>
+				   <li><a href="http://www.scclmines.com/scclerp">Customer Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Tenders</a>
+				  <ul>
+					<li><a href="#x">MATERIAL PROCUREMENT</a>
+						<ul>
+						<!--<li><a href="tenders_material-procurement_current-tenders.asp">CONVENTIONAL TENDERS</a></li>
+						<li><a href="tenders_material-procurement_tenders-cancelled.asp">CANCELLED TENDERS</a></li>
+						<li><a href="tenders_material-procurement_upcoming-tenders.asp" >Upcoming Tenders</a></li>
+						-->
+<li><a href="tenders_material-procurement_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+<li><a href="tenders_material-procurement_upcoming-tenders.asp">UPCOMING TENDERS</a></li>
+<li><a href="tenders_material_procurement_conv_tenders.asp">CONVENTIONAL TENDERS</a></li>
+
+
+						
+						
+						<li><a href="images/pdfs/Vendor-Registration.pdf" target="_blank">VENDOR REGISTRATION FORMAT</a></li>
+						
+						<li><a href="tenders_material-procurement_area-purchase-tenders.asp">AREA TENDERS</a></li>
+						<li><a href="tenders_material-procurement_hyderabad-tenders.asp">HYDERABAD TENDERS </a></li>
+						
+						<li><a href="tenders_material-procurement_identified-eprocurement-items.asp">IDENTIFIED EPROCUREMENT ITEMS </a></li>
+						
+						</ul>
+					</li>
+						<li><a href="tenders_material-procurement_nit.asp">NIT</a></li>
+		  				<li><a href="tenders_material-procurement_eoi.asp">EOI</a></li>
+<li><a href="tenders_material-procurement_stpp.asp">2X600MW STPP Tenders</a>			 		
+<li><a href="#x">CIVIL</a>
+						<ul>
+						<li><a href="tenders_civil_civil-tenders.asp">CONVENTIONAL TENDERS</a></li>
+<li><a href="tenders_CIVIL_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+						<li><a href="tenders_civil_execution.asp">EXECUTION</a></li>
+						<li><a href="tenders_civil_methods-of-evaluation.asp">METHOD OF EVALUATION</a></li>
+						<li><a href="tenders_civil_registration-of-contractors.asp">REGISTRATION OF CONTRACTORS</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="tenders_forestry.asp">FORESTRY</a></li>
+					<li><a href="#">CONTRACTS</a>
+						<ul>
+						<li><a href="http://scclmines.com/puruploads/obr.xls" target="_blank">OBR</a></li>
+						<li><a href="http://scclmines.com/puruploads/coal.xls" target="_blank">COAL</a></li>
+						<li><a href="http://scclmines.com/puruploads/sand.xls" target="_blank">SAND</a></li>
+						</ul>
+					</li>
+<li><a href="#">DEPARTMENTAL LOGIN</a>
+						<ul>
+						<!--<li><a href="tenders_MaterialTenderLogin.asp" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="http://www.scclmines.com/tendercancel" >CANCEL TENDERS</a></li>-->
+						<li><a href="../filesupload/CorMP/default.aspx" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="../filesupload/areaMP/frmAMPLogin.aspx" >AREA PURCHASE</a></li>
+<li><a href="../filesupload/civil/frmCvllogin.aspx" >CIVIL TENDERS</a></li>
+<li><a href="../filesupload/forest/frmlogin.aspx">FORESTRY TENDERS</a></li>
+
+						</ul>
+					</li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Performance</a>
+				  	<ul>
+					<li><a href="performance_production.asp">Production</a></li>
+					<li><a href="performance_financial.asp">Financial</a></li>
+					<li><a href="flashrep_login.asp">Flash Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="business-development.asp">Business Development</a></li>
+				   <li><a href="#x">Environment</a>
+				  	<ul>
+				  <li><a href="http://www.scclmines.com/env">Environment</a></li>
+					<li><a href="stpp_fly_ash.asp">Ash Availability</a></li>
+					<li><a href="bioMedicalDisposal.asp">Bio-Medical Disposal Report</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Careers</a>
+					<ul>
+				  <li><a href="careers.asp">Recruitment</a></li>
+                  <li><a href="careersDep.asp">Deputation</a></li>
+				  </ul></li>
+				  <li><a href="csr.asp">CSR</a></li>
+				  <li style="border:none;"><a href="news-and-events.asp">News & Events</a></li>
+
+				  </ul>
+      </nav>
+	  </div>
+		</div>
+		
+		<div class="clear_10"></div>
+		
+		<!--Mid Content start-->
+		<div class="mid_content_panel">
+		
+		<!--banner start-->
+			<div class="banner">
+				
+				<div id="loopedSlider">
+		<!--<ul class="pagination">
+		<li class="active"><a rel="1" href="#"></a></li>
+		<li class=""><a rel="2" href="#"></a></li>
+		<li class=""><a rel="3" href="#"></a></li>
+		<li class=""><a rel="4" href="#"></a></li>
+<li class=""><a rel="5" href="#"></a></li>
+<li class=""><a rel="6" href="#"></a></li>
+<li class=""><a rel="7" href="#"></a></li>-->
+		</ul>
+			<div class="container">
+				<div class="slides">
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/150820189.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/110820181.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/280620184.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/19062018.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/210620181.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/020620182.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/250520181.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/250520182.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/26012018.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/23122017.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/190820171.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=news-and-events.asp title='Click for Details'><img src="images/news/15082017_harithaMithra.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/15082017.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/09082017.jpg" alt="SCCL" width="450" height="334" /></a></div>
+				<div style="display:block;"><a href=https://www.facebook.com/SingareniCMD title='Click for Details'><img src="images/news/18072017.jpg" alt="SCCL" width="450" height="334" /></a></div>				
+				
+				</div>
+		  </div>
+</div>
+
+			</div>
+			
+			<!--Latest News start-->
+			<div class="latest_happenings">
+			<h1>Latest happenings</h1>
+			<div class="jflow-content-slider">
+                        <div id="slides">
+    
+                      <div class="slide-wrapper">
+
+<h4><div>
+Expression of Interest for procuring various softwares for blast design in Opencast mines.<a href="images/nits/EOIblastingsw.pdf"  class="inner_head2"><font size=2>Details</font></a>
+</div></h4>
+
+<h4><div>
+Vendor Meet for Repairs / Re-winding of power & Distribution tansformers on rate contact basis for a period of two years is scheduled on 07.09.2018 at 11 AM at video conference hall, Head Office, Kothagudem. Contact Person - Sri Y Vijayasekhara Babu , Dy.GM. Mobile No: 9491145133
+</div></h4>
+
+
+
+<!--
+Expression of Interest for procuring of Blast Information Management System s/w,Blast Designer for Surface Mines, Wave front Reinforcement Predictor and Fragmentation Predictor Software for blast design in Opencast mines.
+
+
+<a href="images/pdfs/EOISolar.pdf"  class="inner_head2"><font size=2>Details</font></a>
+Inviting Expression of Interest for raising of Loan for funding of Nine Solar Power Projects at various areas of SCCL
+<a href="images/nits/EOI_SolarProject.pdf"  class="inner_head2"><font size=2>Details</font></a>
+
+Vendor meet for supply, erection and commissioning of Air Cooling System at Shanthikhani Mine.Venue:Singareni Bhavan, Red Hills, Lakadikapool, Hyderabad on 18.07.2018 at 11.00 AM <a href="images/nits/vendorsmeetUGM.pdf"  class="inner_head2"><font size=2>Details</font></a>
+
+<h4><div>
+Vendor meet for firming up the technical specifications for purchase of Optical Emission Spectrometer at Singareni Bhavan, Red Hills, Lakadikapool, Hyderabad on 16.07.2018 at 11.00 AM <a href="images/nits/vendorsmeetCWS.pdf"  class="inner_head2"><font size=2>Details</font></a>
+ </div></h4>
+
+<h4>
+<div>
+<font color=blue><b>Expression of Interest</b></font> for Longwall Technology at KTK-5 Inc, Bhoopalpally and Low capacity Continuous Miner at Vakilpalli Mine RG-II .  <a href="images/nits/KTK-5VKPLEoII.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+
+<h4>
+<div>Pre bid meeting on raising of Loan for funding of Nine Solar Power Projects at various areas of SCCL is scheduled on 29.06.2018 at 10.30 AM at Singareni Bhavan,Red Hills,Hyderabad.   
+<a href="images/nits/SolarPowerProject.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+
+Pre Tender Vendor meet on 3.0 Cu.M bucket capacity Hydraulic Shovels with long boom and arm configuration for loading into 60T dumpers will be held on 26.06.2018 at 10.00 AM at video conference hall, Head Office, Kothagudem.
+
+<h4>
+<div>
+<font color=blue><b>Expression of Interest</b></font> for exploring the possibilities of conducting, using unmanned air craft system technology and preparation of digital data. <a href="images/nits/EOI_SURVEY.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+<h4>
+<div>
+<font color=blue><b>Expression of Interest</b></font> for Empanelling of Agencies for Training & Placement Courses under Singareni Seva Samithi.
+ <a href="images/nits/EOISSS.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+<h4>
+<div>
+Vendor Meet on Hiring of Mobile Coal Crushing systems for evacuating coal stockpiles at Pit-Heads & Projects for a period of 3 years- for SCCL at Singareni Bhavan
+,Red Hills,Hyderabad on 10.05.2018 at 3.30PM.
+ <a href="images/nits/MCVENDORMEET.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+
+<h4>
+<div>
+It is proposed to conduct vendor meet on Operator Independent Truck Desptach System (OITDS) at Singareni Bhavan,Red Hills,Hyderabad on 20.04.2018 (Friday) at 10.30 AM. Vendors are requested to give brief technical and operational details of the proposed solution.<a href="images/nits/OITDSvendormeet.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+<h4>
+<div><font color=blue>
+Due to maintenance web and mail servers will be down from 07.00 AM to 07.00 PM on 14.04.2018</font>
+</div></h4>
+<h4>
+<div>					  
+Pre-Tender vendor meet on procurement of 27.00R49 Size (100T dumper application), 24.00R35 Size (60T dumper application) Radial tyres will be held at 10.00 AM on 07.04.2018 at Singareni Bhavan, Hyderabad.	</div></h4>			  
+
+
+					   <h4>
+<div>
+Pre-Tender vendor meet will be held at 10.30 A.M on 30.03.2018 at Video Conference hall, Singareni Bhavan,Red Hills, Hyderabad for Design, supply, erection, testing and commissioning of coal handling plant(10 MTPA capacity) on EPC model at JVR OCP, sathupalli, Khammam Dist and (04 MTPA capacity) at KK1 CHP.
+<a href="images/nits/VendorMeetJVRCHPKK1CHP.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+
+
+<h4>
+<div>
+Interest quotes for Bulk Deposits from Nationalised Banks and Public Sector Banks within Telangana State for the Deposit period a) from 181 days to 364 days or b) 365 days and above.
+<a href="images/nits/InterestQuotes.pdf"  class="inner_head2"><font size=2>Details</font></a>
+<div class="clear"></div></div></h4>
+
+<h4>
+<div>
+Vendor meet for supply, erection & commissioning of 3T capacity induction melting furnace on Trunkey basis for central workshop SCCL is scheduled to be held on 23.03.2018 at 11.00 AM at video conference hall, Head Office, Kothagudem.
+<a href="images/nits/3TFURNACE07032018.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+<h4>
+<div>
+THIRD TRANCHE AOL PREBID MEETING FOR CEMENT,CPP AND OTHERS SECTORS  ON 07.3.2018 AT 10.00 AM IN HOTEL GOLKONDA,HYDERABAD.
+<a href="our-business_auction_linkages.asp"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+<h4>
+<div>
+Vendor Meet for Procurement of Mono Rail System of transportation for KTK-5 Incline Long Wall Project at SCCL Bhavan, Hyderabad on 05.03.2018 at 10.30 A.M.
+<a href="images/nits/VenMeetMonoRailKTK5.pdf"  class="inner_head2"><font size=2>Details</font></a> 
+</div></h4>
+<h4>
+<div>
+Submission of Expression of Interest for raising of loan Rs.4116 Crores for funding of 1 X 800 MW Super Critical Thermal Power Plant at Pegadapalli Village, Jaipur Mandal, Mancherial District.<a href="images/nits/EOI_1x800MWPP1.pdf"  class="inner_head2"><font size=2>Details</font></a> 
+</div></h4>
+<h4>
+<div>
+Vendor Meet for Procurement of heavy duty150 mm diameter steel pipes at video conference hall, Kothagudem on 20.02.2018 at 10.30 A.M.
+<a href="images/nits/150mmHeavydutypipes.pdf"  class="inner_head2"><font size=2>Details</font></a> </div></h4>
+
+
+
+
+
+
+ at Goleti CHP on turnkey basis along with 3 years AMC after completion of warranty period one Year
+
+
+Submission of Expression of Interest for raising of loan Rs.4116 Crores for funding of 1 X 800 MW Super Critical Thermal Power Plant at Pegadapalli Village, Jaipur Mandal, Mancherial District.
+
+Pre-Tender Vendor meet will be held at 10.00 A.M on 07.02.2018 at Video Conference hall,Kothagudem, for Design, Engineering, Supply, Installation, Testing and Commissioning of Automatic Dust Suppression systems
+
+			  
+					  
+
+	<h4>
+<div>
+Pre-Tender Vendor meet will be held at 10.00 A.M on 07.02.2018 at Video Conference hall, Kothagudem for Dust Suppression systems
+<a href="images/nits/NITPTVM050217.pdf"  class="inner_head2"><font size=2>Details</font></a> 
+</div></h4>		-->		  
+
+
+</div>
+
+
+
+<div class="slide-wrapper">
+
+<!--
+<h4 style="background:white;"><span class="image"><img src="images/news/03062015.gif" alt="Latest Happennings" width=98 height=111 /></span><span class="txt">Sri N.Sridhar, IAS, C&MD started Week long "Telangana Formation Day" celebrations at Kothagudem on 02.06.2015 
+ <a href="02062015.asp" class="inner_head2">Details</a>                          </span><div class="clear"></div></h4>
+ 
+<h4 style="background:white;"><span class="image"><img src="images/arch/goldenPeacock.jpg" alt="Latest Happennings" width=98 height=111 /></span><span class="txt">Sri N.Sridhar, IAS, C&MD with "Golden Peacock Innovative Product/Service Award" for the year 2015 at Dubai on 20-Apr-2015 
+ <a href="20042015.asp" class="inner_head2">Details</a>                          </span><div class="clear"></div></h4>
+
+
+<h4 style="background:white;"><span class="image"><img src="images/news/03032015.jpg" alt="Latest Happennings" width=111 height=98 /></span><span class="txt">Sri K.Chandrasekhara Rao, Honourable Chief Minister of TS laid Foundation Stone on 03.03.15 for 600MW Stage-II STPP at Jaipur, Adilabad 
+  <a href="03032015.asp" class="inner_head2">Details</a>                         </span><div class="clear"></div></h4>
+
+<h4 style="background:white;"><span class="image"><img src="images/news/excise_award.jpg" alt="Latest Happennings" width=111 height=98 /></span><span class="txt">The Award for "Top Assessee of Central Excise" of Hyderabad Zone has been conferred on SCCL for the year 2013-14. 
+ <h5><a href="02032015.asp" class="inner_head2">Click here for details</a></h5>                        </span><div class="clear"></div></h4>
+
+ 
+<h4 style="background:white;"><span class="image"><img src="images/26012015.gif" alt="Latest Happennings" width=111 height=88 /></span><span class="txt">Sri N.Sridhar, IAS, C&MD, SCCL at 66th Republic Day Celebrations at Prakasam Stadium, Kothagudem 
+ <h5><a href="26012015.asp" class="inner_head2">Click here for details</a></h5>                        </span><div class="clear"></div></h4>
+
+
+
+
+<h4>
+<div>Report of Task Force on Energy. <a href="http://scclmines.com/scclnew/images/pdfs/Report_on_Energy.pdf" ><font size=2>Click for details</font></a>   
+<div class="clear"></div></div></h4>
+
+
+
+                         
+</div>
+
+
+<div class="slide-wrapper">
+<h4 style="background:white;"><span class="image"><img src="images/01012015.gif" alt="Latest Happennings" width=111 height=78 /></span><span class="txt">Sri N.Sridhar, IAS has taken charge as Chairman & Managing Director of SCCL on 01.01.2015. 
+                         </span><div class="clear"></div></h4>
+
+<!--<h4 style="background:white;"><span class="image"><img src="images/news/15082014T.gif" alt="Latest Happennings" width=111 height=98 /></span><span class="txt">Online Transfer Request software is launched by Sri Sutirtha Bhattacharya IAS, C&MD, SCCL on 15.08.2014.<h5><a href="15082014_treq.asp" class="inner_head2">Click here for details</a></h5> 
+                         </span><div class="clear"></div></h4>
+
+
+<h4 style="background:white;"><span class="image"><img src="images/news/06052014.gif" alt="Latest Happennings" width=111 height=88 /></span><span class="txt">SCCL has entered into an MOU with Indian School of Mines,Dhanbad on 04/04/2014 .<h5><a href="06052014.asp" class="inner_head2">Click here for details</a></h5> 
+                         </span><div class="clear"></div></h4>-->
+
+
+
+
+
+
+
+                          </div>
+                        </div>
+                      <div id="myController"> 
+                      <span class="jFlowControl"></span> 
+                      <span class="jFlowControl"></span> 
+                      <span class="jFlowControl"></span> 
+                      </div>
+                      <div class="clear"></div> </div>
+			</div>
+			
+			<!--Latest News start-->
+			<div class="mission">
+				<div class="mission_box">
+				<h1>Mission</h1>
+				<marquee behavior=scroll direction="up" HEIGHT=110 WIDTH=170 scrollamount="1" onmouseover="this.stop()"  onmouseout="this.start()" style="padding:0 0 0 15px; color:#fff;">			
+					
+					To retain our Strategic role of a premier Coal Producing Company in the country and excel in a competitive business Environment.<br /><br />
+To strive for Self-reliance by optimum utilization of existing resources and earn adequate returns on capital employed.<br /><br />To exploit the available mining blocks with maximum conservation and utmost safety by adopting suitable technologies and practices and constantly upgrading them against international benchmarks.<br /><br />To supply reliable and qualitative coal in adequate quantities and strive to satisfy customers needs by constantly sharing their experience and customizing our product.<br /><br />To emerge as a model employer and maintain harmonious industrial relations within the legal and social framework of the State.<br /><br />To emerge as a responsible Company through good Corporate Governance, by laying emphasis on protection of environment & ecology and with due regard for corporate social obligations.</marquee>
+				</div>
+				
+				<div class="cs_box">
+				<img src="images/cs_crner_icon.gif" alt="sccl" />
+				<a href="http://www.scclmines.com/scclerp">Customer Corner</a>				</div>
+				
+				<div class="e_auction_box">
+				<img src="images/e-auctions_icon.gif" alt="sccl" />
+				<a href="our-business_e-auction_e-auction-current-month.asp"><span style="text-transform:none; font-size:15px">e</span>- Auction</a>				</div>
+				
+				<div class="ex_employee_box">
+				<img src="images/ex-employee-icon.gif" alt="sccl" />
+				<a href="ex-employees.asp">Employees</a>				</div>
+				
+				<div class="career_box">
+				<img src="images/MEET.png" alt="sccl" />
+				<a href="tenders_material-procurement_nit.asp">VENDORS</a>				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="clear_10"></div>
+		
+		<!--News start-->
+		<div class="news_box">
+			<h1>In The News</h1>
+			<div class="news_scroll">
+			
+			<div class="ticker3 modern-ticker mt-round">
+			<div style="width: 780px;" class="mt-news">
+
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="10" scrollamount="1" onmouseover="this.stop()"  onmouseout="this.start()"> 
+
+
+1) Online applications invited for Filling up of Post of Executive Director (Coal Movement) on deputation basis from
+IRTS officers... Visit Careers --> Deputation for details.. 2) Syllabus of Management Trainee(E&M), Motor Mechanic Trainee Under Notification No 05/2017 is available in Careers--> Recruitment --> News ...
+
+
+ ..  </marquee>
+<!--
+ if (cdate(now)>=cdate("04-Jun-2018")) And (cdate(now)<cdate("11-Jun-2018"))  Then 
+ End if
+
+1) SCCL web site will be down on 14.04.2018 from 07.00 A.M. to 5.00 P.M.  Candidates who have not downloaded their halltickets of MT(Mining) exam scheduled on 15-04-2018 are advised to download immediately.  Website will be available only after 5.00 pm Of  14.04.2018. The candidates who could not download the callletters may contact  08744-249992 or 9848241704 for help. 2
+1) Online registration for ITI Trade Apprentices extended upto 14.03.2018 ...  visit the following address https://scclmines.com/apprenticeship for applying online  ...
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) VENDOR MEET FOR PROCUREMENT OF POLE MOUNTED TRANSFORMERS IS SCHEDULED TO BE HELD ON 15.12.2017 AT 11 AM AT VIDEO CONFERENCE HALL OF THE SCCL, HEAD OFFICE, KOTHAGUDEM.   VENDORS ARE REQUESTED TO  PARTICIPATE. CONTACT PERSON - SRI Y.VIJAYASEKHARA BABU, DY.G.M.MOBILE  NO.9491145133
+
+MANAGEMENT TRAINEE(F&A), E-2 GRADE (EXTERNAL) EXAM UNDER NOTIFICATION NO. 
+03/2017 IS SCHEDULED ON 05/11/2017. DOWNLOAD YOUR CALLLETTER FROM SCCLMINES.COM->CAREERS->HALLTICKETS DOWNLOAD
+
+Walk in Interview for Specialist Doctors .. Visit Careers for details .. 
+Online application for  the Post of  Badli Worker, Category-I (Under Ground)  for STs Under Special Recruitment Drive under
+Employment Notification No. 02/2017 ...Visit careers for details and to apply online...  
+
+<a href="images/nits/Format_Vendors_gst.doc" target='newwin' style=text-decoration:none;>
+As per directives of Government of India, GST will be implemented with effect from 1st July,2017.  In view of the above, all the SCCL vendors are requested to furnish GST details in the format for the E-Mail Id. ts_pd_crp@scclmines.com at the earliest to update SCCL Vendor Master and to provide Taxation accordingly for the service/ supply of material/spares/equipment etc.. Click here for Format...</a>
+<a href="images/nits/EOI_Cost_Auditor.pdf" target='newwin' style=text-decoration:none;>
+Expression of Interest for appointment of Cost Auditors in SCCL for 2017-18 to 2019-20. Last date of receipt 04.05.2017.. Click here for Details...</a>
+
+<a href='http://www.scclmines.com/uploads/CORPURTENDERS/012503201702.PDF' target='newwin' style=text-decoration:none;>Notice Inviting Tender for Hiring of consultants for implementation of “IND AS” in SCCL 
+
+ <marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="10" scrollamount="1" onmouseover="this.stop()"  onmouseout="this.start()">    
+Mail services will be down on 21.03.2017 from 5:00 PM to 12:00 AM due to maintenance</marquee>
+
+
+
+ ONLINE APPLICATIONS ARE INVITED FOR LATERAL ENTRY TO WORK AT STPP,JAIPUR.MANCHERIAL DIST. UNDER NOTIFICATION NO. 01/2017. VISIT CAREERS FOR DETAILS..  
+2)X-RAY TECHNICIAN (EXTERNAL)  EXAM UNDER NOTIFICATION NO. 01/2016 SCHEDULED ON 19/02/2017. DOWNLOAD YOUR CALLLETTER FROM SCCLMINES.COM->CAREERS->HALLTICKETS DOWNLOAD..    
+</marquee>
+
+EMPLOYMENT NOTIFICATION NO 04/2016.APPLICATIONS ARE INVITED FOR STPP FOR THE POST OF GM (OPERATIONS & MAINTENANCE). VISIT CAREERS->ONLINE REGISTRATION.. 
+
+Stock of each type of ash available at 2X600 MW STPP station on 30.11.2016 in compliance with MoEF notification, Amendment dated: 25.01.2016. Visit Environment -- Ash Availability for details
+
+<a href='images/pdfs/Notice_AGM_95.pdf' target='newwin' style=text-decoration:none;>
+95<sup>th</sup> Annual General Meeting of the company will be held on Friday the 30<sup>th</sup> of December, 2016 at 11:00 AM at the Registered office, Head office building, Kothagudem Collieries. Click for Details...</a>
+
+Auction of Coal Linkages for Sponge Iron under non-regulated Sector on 6.12.2016 from 11:00 AM on website of Ms. MSTC service provider http://www.mstcCommerce.com/auctionHome/CoalLinkages/webCasting.asp
+
+EXAM SCHEDULED ON 20.11.2016. DOWNLOAD YOUR MANAGEMENT TRAINEE(F&A) -NOTI NO.01/2016,  CALLLETTER FROM SCCLMINES.COM->CAREERS->HALLTICKETS DOWNLOAD
+
+<a href='images/pdfs/SELECTED_LIST_JRASSTS_CLASS-IV.pdf' target='newwin' style=text-decoration:none;>Selected candidates list for the posts of Jr.Assts and Class-IV on contract basis in SC High Schools held from 24.10.2016 to 26.10.2016 at SCWDC,Kothagudem .Click here to view details....
+1.Addendum to Specialist Doctor’s Walk-in-Interview Notification No 03/2016  .. Visit Careers  Notification..   2.Syllabus for the posts notified in Notification No.01/2016 is available in SCCL website CAREERS  News
+Employment Notification No. 02/2016 .. Visit Careers to apply Online...
+
+Employment Notification No. 01/2016 ..Date extended upto 26.07.2016.. Visit Careers for details and apply online..
+<a href=careers_Notification.asp>
+Applications are invited for Teaching & Non-Teaching staff in SC High Schools, S.C.Polytechnic, SCW Degree & PG College and SC Women's Junior College on Contract basis for the acedamic year 2016-17 .. click here for details
+</a>
+ SURVEYOR TRAINEE -T&S Gr.B(External) REVISED HALL TICKETS DOWNLOAD AVAILABLE  . Visit Careers -- HallTicket Download for details..
+
+<a href="http://www.scclmines.com/uploads/notices/2605201601.PDF" class="inner_head2">
+AUCTION OF COAL LINKAGES FOR NON REGULATED SECTOR.... Click here for Details			
+</a>
+
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="10" scrollamount="1" onmouseover="this.stop()"  onmouseout="this.start()"> 
+Web and Mail services will be down on 11.03.2016 from 5:00 PM to 10:00 PM due to maintenance
+</marquee>
+-->
+
+
+<!--
+a href="careers/docs/012016.pdf" class="inner_head2">
+Employment Notification No. 01/2016.. Walk in interview for Specialist Doctors on 25.02.2016 at Singareni Bhavan, Hyderabad.. Visit careers for details..
+</a>
+SURVEYOR TRAINEE -T&S Gr.B(External) EXAM POSTPONED ..  LATERAL ENTRY LEVEL POSITIONS FOR 2X600 MW STPP CALL LETTER DOWNLOAD AVAILABLE.. - visit careers .. 
+
+JUNIOR ASSISTANT GRADE-II PROVISIONAL MERIT LIST AVAILABLE . Visit Careers -- View Results.. for details..
+JUNIOR ASSISTANT GRADE-II HALL TICKETS DOWNLOAD AVAILABLE  . Visit Careers -- HallTicket Download for details.. WRITTEN TEST IS SCHEDULED ON 11.10.2015(SUNDAY)... FOR SYLLABUS & OTHER DETAILS PLEASE VISIT SCCL WEBSITE -- CAREERS/NEWS
+Applications are invited from elegible candidates for various posts in Singareni Collieries Educational Society on Contract basis.. Click for details.. </a> </marquee>
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="10" scrollamount="1" onmouseover="this.stop()"  onmouseout="this.start()">
+SUB-OVERSEER TRAINEE(CIVIL), TURNER / MACHINIST TRAINEE Written Test - HALL TICKETS DOWNLOAD AVAILABLE  . Visit Careers -- HallTicket Download for details..
+
+
+MT(E&M) Written test held on 28.06.2015, candidates performance marks can be viewed at careers   view results
+
+ RESULTS AVAILABLE  . Visit Careers -- View Results
+
+MT(E&M)  - HALL TICKETS DOWNLOAD AVAILABLE  . Visit Careers -- HallTicket Download for details..
+
+September month Singareni Magazine available on website. Please visit COMPANY  SINGARENI SAMACHARAM 
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="100" scrollamount="2" onmouseover="this.stop()"  onmouseout="this.start()"><a href='http://scclmines.com/scclnew/images/pdfs/SPECIALISTDOCTORS13112014.pdf' target='newwin' style=text-decoration:none;>Employment Notification 03/2014 Walk in Interview for Specialist Doctors at Singareni Bhavan, Hyderabad on 18.11.2014. 
+</marquee>
+
+
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="100" scrollamount="2" onmouseover="this.stop()"  onmouseout="this.start()"><a href='http://scclmines.com/scclnew/images/pdfs/contractJrASSIST08.09.2014.docx' target='newwin' style=text-decoration:none;>Applications are invited for Jr. Assistant in Singareni Collieries Educational Society
+on Contract basis.Click here to view details.... 
+</marquee> 
+
+
+<marquee scrollamount="2.0" id="scrolltest" behavior="scroll" scrolldelay="100" scrollamount="2" onmouseover="this.stop()"  onmouseout="this.start()">
+Due to maintenance web and mail servers will be down from 06.00 PM to 09.00 PM on 07.07.2014
+</marquee> -->
+
+			<!--<ul>
+			<li style="opacity: 1;" class=""><a href="http://www.scclmines.com/scclnew/careers.asp" target="_self">EMPLOYMENT NOTIFICATION NO.04/2013...Click here to view details and apply online</a></li>
+			<li class="mt-hide" style="opacity: 0;"><a href="#" target="_self">News 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news 1 news</a></li>
+			<li style="opacity: 0;" class="mt-hide"><a href="#" target="_self">News 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news 2 news</a></li>
+			<li style="opacity: 0;" class="mt-hide"><a href="http://scclmines.com/scclnew/images/pdfs/SCWDC12052014.doc" target="_self">Applications invited for teaching and non-teaching staff in Singareni Collieries Educational Society
+on Contract basis.Click for details....</a></li>
+			</ul>-->
+			</div>
+			<div class="mt-controls">
+			<div class="mt-prev"></div>
+			<div class="mt-next"></div>
+			</div>
+			</div>
+			
+			</div>
+		</div>
+		
+		
+		<div class="clear_10"></div>
+		<div class="clear_10"></div>
+		
+		
+		<!--Footer start-->
+		<div class="footer_wrapper">
+			<div class="footer">
+			&copy; 2013 SCCL Mines, All rights reserved.
+			<span style="padding-left:200px">Site last updated :28 Aug 2018 </span>
+			<span style="padding-left:280px">Designed by <a href="http://www.bitranet.com/" target="_blank">BitraNet</a></span>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>

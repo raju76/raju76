@@ -1,0 +1,9 @@
+package p1;
+public class square
+{
+int square(int a)
+{
+return a*a;
+}
+}
+

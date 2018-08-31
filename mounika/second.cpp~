@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int a,b,c;
+cout<<"enter a b values";
+cin>>a>>b;
+cout<<"a="<<a<<end1;
+cout<<"b="<<b<<end1;
+c=a+b;
+cout<<"c"<<c;
+return 0;
+}
+
+
+

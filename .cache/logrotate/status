@@ -1,0 +1,22 @@
+logrotate state -- version 2
+"/home/eswecha/.cache/upstart/gnome-keyring-ssh.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-sound.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/update-notifier-release.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/gnome-session-Unity.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/window-stack-bridge.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/im-config.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-printers.log" 2018-8-31-12:21:57
+"/home/eswecha/.cache/upstart/unity-settings-daemon.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/hud.log" 2018-8-31-12:21:57
+"/home/eswecha/.cache/upstart/unity7.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/at-spi2-registryd.log" 2018-8-29-9:23:18
+"/home/eswecha/.cache/upstart/dbus.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-messages.log" 2018-8-21-15:14:55
+"/home/eswecha/.cache/upstart/gnome-keyring-gpg.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-bluetooth.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-datetime.log" 2018-8-21-9:37:28
+"/home/eswecha/.cache/upstart/indicator-session.log" 2018-8-21-9:37:28
+"/home/eswecha/.cache/upstart/unity-panel-service.log" 2018-8-31-12:21:57
+"/home/eswecha/.cache/upstart/indicator-application.log" 2018-8-31-12:21:57
+"/home/eswecha/.cache/upstart/ssh-agent.log" 2018-8-31-12:7:21
+"/home/eswecha/.cache/upstart/indicator-power.log" 2018-8-31-12:7:21

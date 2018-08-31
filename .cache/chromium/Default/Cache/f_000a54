@@ -1,0 +1,877 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/sccl.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Singareni Collieries Company Limited (A Government Company)</title>
+<!-- InstanceEndEditable -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+	<div id="main_wrapper">
+		
+		<!--top links start-->
+		<div class="header-top">
+		<!--<div class="counter" valign=middle>
+			VISITORS: <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3158324&c=9475285">
+		</div>-->
+			<div class="top_links">
+			<a href="index.asp">Home</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="rti.asp">RTI Act,2005</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="sitemap.asp">Sitemap</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="https://mail.scclmines.com/owa">Mail</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="contact-us.asp">Contact</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='https://www.facebook.com/SingareniCMD'><img src='images/f7.jpg' width=120 height=20></a></span>
+			<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='company_Singareni_samacharam.asp'><img src='images/ICON.jpg' width=120 height=20></a></span></div>
+		</div>
+		
+		<!--Header start-->
+		<div id="header_wrapper">
+			<div class="header">
+				<div class="logo"><img src="images/sccl-logo.jpg" alt="sccl logo" /></div>
+				<div class="top_right_img"><img src="images/top-right-img.jpg" alt="sccl" /></div>
+			</div>
+		</div>
+		
+		<!--Navgation start-->
+		<div class="navigation">
+			<div class="nav_panel">
+			<nav id="smoothmenu1" class="ddsmoothmenu">
+				  <ul>
+				  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+				  <li><a href="#nogo">Company</a>
+				  	<ul>
+					<li><a href="company_about-us.asp">About Us</a>
+						<ul>
+						<li><a href="company_about-us_godavari-valley-map.asp">Godavari Valley Map</a></li>
+						<li><a href="company_about-us_coalreserves.asp">Coal Reserves</a></li>
+						</ul>
+					</li>
+				  	<li><a href="company_board-of-directors.asp">Board</a></li>
+				  	<li><a href="company_history.asp">History</a></li>
+				   	<li><a href="company_cmds.asp">C&amp;MD Desk</a></li>
+					<li><a href="company_mission.asp">Mission </a></li>
+					<li><a href="company_policies.asp">Policies</a></li>
+					<li><a href="company_joint-ventures.asp">Joint Ventures</a></li>
+					<li><a href="company_awards-rewards.asp">Awards &amp; Rewards</a></li>
+<li><a href="company_Singareni_poster.asp">Singareni Poster</a></li>
+<li><a href="company_Singareni_samacharam.asp">Singareni Samacharam</a></li>
+<li><a href="company_related_sites.asp">Quick Links</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Our Business</a>
+				   <ul>
+					<li><a href="#x">Products & Services</a>
+						<ul>
+						<li><a href="our-business_products-and-services_introduction.asp">Introduction</a></li>
+						<li><a href="our-business_products-and-services_definitions.asp">Definitions</a></li>
+						<li><a href="our-business_products-and-services_quality-of-coal.asp">Quality of Coal</a></li>
+						<li><a href="our-business_products-and-services_grade-specification.asp">Grade Specifications</a></li>
+						<li><a href="our-business_products-and-services_coal-grades.asp">Coal Grades - Despatch Points</a></li>
+						<li><a href="our-business_products-and-services_procedure-for-allotment-of-coal.asp">Procedure for Allotment of Coal</a></li>
+						<!--<li><a href="our-business_products-and-services_sector-mode-wise-dispatches.asp">Sector &amp; Mode wise Dispatches</a></li>-->
+						<li><a href="our-business_products-and-services_what-is-fsagreement.asp">What is FS Agreement</a></li>
+						<!--<li><a href="our-business_products-and-services_present-fsagreement.asp">Present FS Agreement</a></li>-->
+						<li><a href="our-business_products-and-services_application-formats.asp">Application Formats</a></li>
+						<li><a href="our-business_products-and-services_marketing-notices.asp">Marketing Notices</a></li>
+
+<li><a href="our-business_products-and-services_inVESTORS.asp" >Investor Opportunities</a></li>
+						</ul>
+					</li>
+				   <li><a href="our-business_coal-prices.asp">Coal Price</a></li>
+				   <li><a href="#x">e-Auction</a>
+				   		<ul>
+						<li><a href="our-business_e-auction_e-auction-current-month.asp">e-Auction Current Month</a></li>
+												<li><a href="our-business_e-auction_e-auction-procedures-formats.asp">e-Auction Procedures &amp; Formats</a></li>
+<li><a href="our-business_auction_linkages.asp">Auction of Linkages</a></li>
+						</ul>
+				   </li>
+				   <li><a href="http://www.scclmines.com/scclerp">Customer Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Tenders</a>
+				  <ul>
+					<li><a href="#x">MATERIAL PROCUREMENT</a>
+						<ul>
+						<!--<li><a href="tenders_material-procurement_current-tenders.asp">CONVENTIONAL TENDERS</a></li>
+						<li><a href="tenders_material-procurement_tenders-cancelled.asp">CANCELLED TENDERS</a></li>
+						<li><a href="tenders_material-procurement_upcoming-tenders.asp" >Upcoming Tenders</a></li>
+						-->
+<li><a href="tenders_material-procurement_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+<li><a href="tenders_material-procurement_upcoming-tenders.asp">UPCOMING TENDERS</a></li>
+<li><a href="tenders_material_procurement_conv_tenders.asp">CONVENTIONAL TENDERS</a></li>
+
+
+						
+						
+						<li><a href="images/pdfs/Vendor-Registration.pdf" target="_blank">VENDOR REGISTRATION FORMAT</a></li>
+						
+						<li><a href="tenders_material-procurement_area-purchase-tenders.asp">AREA TENDERS</a></li>
+						<li><a href="tenders_material-procurement_hyderabad-tenders.asp">HYDERABAD TENDERS </a></li>
+						
+						<li><a href="tenders_material-procurement_identified-eprocurement-items.asp">IDENTIFIED EPROCUREMENT ITEMS </a></li>
+						
+						</ul>
+					</li>
+						<li><a href="tenders_material-procurement_nit.asp">NIT</a></li>
+		  				<li><a href="tenders_material-procurement_eoi.asp">EOI</a></li>
+<li><a href="tenders_material-procurement_stpp.asp">2X600MW STPP Tenders</a>			 		
+<li><a href="#x">CIVIL</a>
+						<ul>
+						<li><a href="tenders_civil_civil-tenders.asp">CONVENTIONAL TENDERS</a></li>
+<li><a href="tenders_CIVIL_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+						<li><a href="tenders_civil_execution.asp">EXECUTION</a></li>
+						<li><a href="tenders_civil_methods-of-evaluation.asp">METHOD OF EVALUATION</a></li>
+						<li><a href="tenders_civil_registration-of-contractors.asp">REGISTRATION OF CONTRACTORS</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="tenders_forestry.asp">FORESTRY</a></li>
+					<li><a href="#">CONTRACTS</a>
+						<ul>
+						<li><a href="http://scclmines.com/puruploads/obr.xls" target="_blank">OBR</a></li>
+						<li><a href="http://scclmines.com/puruploads/coal.xls" target="_blank">COAL</a></li>
+						<li><a href="http://scclmines.com/puruploads/sand.xls" target="_blank">SAND</a></li>
+						</ul>
+					</li>
+<li><a href="#">DEPARTMENTAL LOGIN</a>
+						<ul>
+						<!--<li><a href="tenders_MaterialTenderLogin.asp" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="http://www.scclmines.com/tendercancel" >CANCEL TENDERS</a></li>-->
+						<li><a href="../filesupload/CorMP/default.aspx" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="../filesupload/areaMP/frmAMPLogin.aspx" >AREA PURCHASE</a></li>
+<li><a href="../filesupload/civil/frmCvllogin.aspx" >CIVIL TENDERS</a></li>
+<li><a href="../filesupload/forest/frmlogin.aspx">FORESTRY TENDERS</a></li>
+
+						</ul>
+					</li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Performance</a>
+				  	<ul>
+					<li><a href="performance_production.asp">Production</a></li>
+					<li><a href="performance_financial.asp">Financial</a></li>
+					<li><a href="flashrep_login.asp">Flash Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="business-development.asp">Business Development</a></li>
+				   <li><a href="#x">Environment</a>
+				  	<ul>
+				  <li><a href="http://www.scclmines.com/env">Environment</a></li>
+					<li><a href="stpp_fly_ash.asp">Ash Availability</a></li>
+					<li><a href="bioMedicalDisposal.asp">Bio-Medical Disposal Report</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Careers</a>
+					<ul>
+				  <li><a href="careers.asp">Recruitment</a></li>
+                  <li><a href="careersDep.asp">Deputation</a></li>
+				  </ul></li>
+				  <li><a href="csr.asp">CSR</a></li>
+				  <li style="border:none;"><a href="news-and-events.asp">News & Events</a></li>
+
+				  </ul>
+      </nav>
+	  </div>
+		</div>
+		
+		<div class="clear_10"></div>
+		
+		<!--Mid Content start-->
+		<!-- InstanceBeginEditable name="EditRegion1" -->
+		<div class="inner_mid_content_panel" align="center">
+		<h1>Business Development</h1>
+		</div>
+		<!-- InstanceEndEditable -->
+		
+		<!-- InstanceBeginEditable name="EditRegion2" -->
+		<div class="inner_mid_content_pane2">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="200" align="left" valign="top" style="border-right:solid 1px #EBEBEB">
+	<div class="inner_head">Business Development</div>
+	
+	</td>
+    <td align="left" valign="top">
+	<div class="inner_content">
+	 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td align="right"><table border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td width="22" align="left" valign="middle"><img src="images/print.png" width="16" height="16" /></td>
+             <td align="right" valign="middle"><a href="javascript:window.print()" class="eauction-links">Print this page</a></td>
+           </tr>
+         </table></td>
+       </tr>
+       <tr>
+         <td>&nbsp;</td>
+       </tr>
+       <tr>
+         <td><p align=justify>The Singareni Collieries Company Ltd. is the oldest Govt. Mining Company in the country having a history of more than 125 years in coal mining. The company produced 62.01 MT of coal in the year 2017-18 and is a profit making and dividend paying company. The company is strong in Modern Coal Mining Technologies in Opencast and Underground Mines, usage of IT, Equipment Maintenance, Coal Handling and Modern Management practices including implementation of Enterprise Resource Planning(ERP) project.</p></td>
+       </tr>
+       <tr>
+         <td>&nbsp;</td>
+       </tr>
+       <tr>
+         <td>It has charted out an aggressive growth strategy by leveraging its core competency in Coal Mining operations by extension of its business operations into.</td>
+       </tr>
+       <tr>
+         <td>&nbsp;</td>
+       </tr>
+       <tr>
+         <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td align="left" valign="top"><span class="inner_head3">Consultancy related to coal mining</span></td>
+               </tr>
+               <tr>
+                 <td align="left" valign="top"><ul>
+                     <li>Coal Exploration and Evaluation</li>
+                   <li>Mine Planning, Design and Construction</li>
+                   <li>Mine Survey</li>
+                   <li>Environmental Management</li>
+                   <li>Human Resource Development</li>
+                   <li>Contract Management</li>
+                   <li>Management Services</li>
+                   <li>Analytical Services</li>
+                   <li>Recruitment</li>
+                   <li>Mines Rescue Services</li>
+                 </ul></td>
+               </tr>
+               
+             </table></td>
+             <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td align="left" valign="top" class="inner_head3">Coal mining expansion in India<br />
+                   (outside SCCL command Area)</td>
+               </tr>
+               <tr>
+                 <td align="left" valign="top"><ul>
+                     <li>Technical service Provider</li>
+                   <li>Owner's Engineer</li>
+                   <li>Business Partner</li>
+                   <ul>
+                       <li>Joint Venture</li>
+                     <li>Consortium</li>
+                   </ul>
+                 </ul></td>
+               </tr>
+               
+             </table></td>
+           </tr>
+         </table></td>
+       </tr>
+       <tr>
+         <td>&nbsp;</td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top" class="inner_head3">Diversification</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><ul>
+             <li>Power Generation (Thermal / Solar)</li>
+           <li>Explosive Manufacturing</li>
+           <li>Coal Washing</li>
+           <li>Processing of OB for using in civil construction</li>
+           </ul></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head2">Business Partners</td>
+       </tr>
+       
+       <tr>
+         <td height="22" align="left" valign="top" class="inner_head3">INDU PROJECTS LTD &amp; BUCYRUS EUROPE GMBH</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL entered into MoU with INDU PROJECTS LTD &amp; CATERPILLAR GLOBAL MINING EUROPE GmbH on 23.07.2010 for jointly bidding for Moonidih Coal Mine belonging to BCCL by</p></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><ul>
+             <li>Lending its experience for DPR preparation for Longwall in Coal Mine</li>
+           <li>Lending its services for Mine Planning,Detailed Project Reports, Environment Management Plan preparations and</li>
+           <li>Coordinate with the lead member in Project implementation</li>
+         </ul></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       
+       <tr>
+         <td height="22" align="left" valign="top" class="inner_head3"> COMMON WEALTH SCIENTIFIC AND INDUSTRIAL RESEARCH ORGANISATION (CSIRO) </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+             <tr>
+               <td width="230" align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0">
+                   <tr>
+                     <td align="left" valign="top"><img src="images/inner/cisro.png" width="201" height="139" style="padding:1px; border:solid 1px #CCCCCC" /></td>
+                   </tr>
+               </table></td>
+               <td align="left" valign="top"><div align="justify">SCCL entered into Relationship arrangement with CSIRO, Australia on 01.02.2006 at New Delhi. This arrangement facilitates R &amp; D projects in Strata Mechanics, ventilation and other related subjects with specific reference to Longwall Mining. Sri R.H.Khwaja, IAS, C &amp; MD, SCCL and Dr. Cliff Mallett, Acting Chief, CSIRO exchanged the relationship arrangement. Mr. Bob Baldwin, Parliamentary Secretary to Australia is also present.</div></td>
+             </tr>
+         </table></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head2"> CONSULTANCY SERVICES OFFERED BY SCCL</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head3"> With over 125 years of experience in Coal mining, SCCL has acquired expertise in different activities. </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"> SCCL is proposing to take-up consultancy jobs related to mining in the following areas.</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="22" align="left" valign="top" class="inner_head3">1. Coal Exploration and Evaluation </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL is having an ISO 9001 : 2008 accredited Exploration department with highly qualified, academically brilliant , strong inter disciplinary experts comprising of 38 Geologists, 11 Drilling Engineers, 10 Geo-physicists and 5 Hydro- Geologists bringing out the Insights of the the Earth&rsquo;s hidden Treasure. SCCL is equipped with 3 numbers of sophisticated digital Geo-Physical Loggers. The drilling in SCCL is around 1,30,000 metres per annum. So far SCCL prepared 185 Geological Reports and 39 Geo-Models pertaining to Godavari valley coalfield and coal blocks allocated to others.</p></td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top"><ul>
+             <li>Reconnaissance survey and field mapping</li>
+           <li>Drilling (coring & non-coring)</li>
+           <li>Geological logging, Geophysical logging and Hydrogeological investigations</li>
+           <li>Preparation of Geological Reports</li>
+		   <li>Digital Geo-model using MINEX software</li>
+           <ul>
+               <li>Preparation of computerised geological 3-D models</li>
+             <li>Preparation of Geological plans - Geological cross sections, Structural / seam folio / iso-parting plans etc.,</li>
+			 <li>Assessment of coal quality</li>
+			 <li>Estimation of coal reserves</li>
+           </ul>
+		   <li>Conducting Hydro-geological tests and preparation of reports and hydro-geological modelling by using "modflow" software.</li>
+		   <li>Geotechnical mapping, core photography and application of "core profiler" software.</li>
+		   <li>Geophysical and Geotechnical studies</li>
+         </ul></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">2. Mine Planning, Design and Construction</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL has an ISO 9001:2008 accredited Project Planning department, capable of undertaking Coal mine planning in detail. It has 36 professionals in the fields of Opencast mining, Underground mining, Environmental Engineering, Survey, Mechanical & Electrical Engineering, Financial Evaluation Experts (Econometrician & Finance), Industrial Engineering, Geology and Civil Engineering and other trained personnel.</p></td></tr>
+         <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+          <tr><td align="left" valign="top"><p align=justify>The department is using latest versions of mine planning software like MINEX, CARLSON and Auto CAD for preparation of Project Reports. </p></td></tr>
+          <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+          <tr><td align="left" valign="top"><p align=justify>Project Planning department has so far prepared 125 Project Reports and 91 Mining plans since IXth Plan (1997-98).</p> </p>  </td></tr>
+       <tr><td align="left" valign="top">Major works undertaken by the department are:
+       <ul>
+       <li>Preparation of Techno-Economic Feasibility Reports for Opencast & Underground Mines.</li>
+       <li>Preparation of Mining Plans under Mines and Minerals (Development and Regulation) Act 1957. </li>
+       </ul>
+       </td></tr>
+       <tr><td align="left" valign="top"><font  class="inner_head3">a) Core competency of the department is in the following areas: </font>
+       <ul>
+       <li>Mine Planning and Design</li>
+       <li>Pit Optimisation</li>
+       <li>Production Scheduling</li>
+       <li>Mine Equipment Planning</li>
+       <li>Planning for Coal handling arrangements / Washery.</li>
+       <li>Capital and Operating cost estimation</li>
+       <li>Profitability Analysis in terms of Internal Rate of Return.</li>
+       <li>Risk and Sensitivity analysis</li>
+       <li>Analysis of Social and Environmental impact</li>
+       <li>Strategic Planning and Implementation.</li>
+       </ul>
+       </td></tr>
+       <tr><td align="left" valign="top"><font  class="inner_head3">b) Additionally, the department is regularly involved in the following activities.</font>
+       <ul>
+       <li>Pre-feasibility reports for obtaining Environmental Clearance (EC)</li>
+       <li>Marginal schemes for introduction of new technology in existing mines</li>
+       <li>Revised cost estimates (RCE) for approved projects of SCCL in case of cost escalation / change in scope.</li>
+       <li>Cost estimates for hiring/outsourcing of different technologies like Longwall, Continuous Miner etc.</li>
+       <li>Cost estimates for other contracts like coal/sand transport, hiring of vehicles.</li>
+       </ul>
+       </td></tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head3">c) Consultancy Services – Executed so far</td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top" ><p align=justify>
+       Project Planning department has collaborated with various organisations in preparation of Techno-Economic Feasibility Reports and other related activities as per requirement for the following Projects/mines:</p>
+       </td></tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" >
+         <table border=0  cellpadding="5" cellspacing="1" align=center width=95% bgcolor="#c0c0c0" >
+         <tr bgcolor=#F8EFCD>
+         <td>S.No</td>
+         <td>Name of Firm</td>
+         <td>Consultancy service</td>
+         <td>Coal block</td>
+         </tr>
+         <tr bgcolor=#BCD8B4><td>1</td>
+			<td>TATA Sponge Iron India Limited</td>
+			<td>Project Report</td>
+			<td>Radhikapur East(including Utkal-F)</td></tr>
+         <tr bgcolor=#DBEAD7><td>2</td>
+			<td>Bhusan Power & Steel Ltd</td>
+			<td>Geo-Model and Project Report</td>
+			<td>Jamkhani</td></tr>
+		<tr bgcolor=#BCD8B4><td>3</td>
+			<td rowspan=2>SAIL</td>
+			<td>Preperation of  NIT  for selection of MDO</td>
+			<td>Sitanala and Begunia Projects</td></tr>	
+		<tr bgcolor=#DBEAD7><td>4</td>
+			<td>Project Report</td>
+			<td>Jitpur colliery</td></tr>	
+		<tr bgcolor=#BCD8B4><td>5</td><td>GVK</td><td>Designing 800 tph CHP and Coal loading facilities</td><td>Tokisud Coal Project</td></tr>
+		<tr bgcolor=#DBEAD7><td>6</td><td>NMDC</td><td>Project Reports</td><td>Shahpur East & West</td></tr>
+		<tr bgcolor=#BCD8B4><td>7</td><td>L&T</td><td>Conceptual report</td><td>Moher & Moher Amlohri </td></tr>
+		<tr bgcolor=#DBEAD7><td>8</td><td>CIL</td><td>Study of 90 underground mines & to recommend improvement</td><td>SCCL team up with ISM & PwC</td></tr>
+		<tr bgcolor=#BCD8B4><td>9</td><td>APGPCL</td><td>Presentation  before  the Screening Committee- MoC for allocation of coal blocks</td><td>	</td></tr>
+		<tr bgcolor=#DBEAD7><td>10</td><td>APMDC</td><td>Preparation of Project Report, Mining Plan and EIA/EMP</td><td>Suliyari - Coal Block</td></tr>
+		<tr bgcolor=#BCD8B4><td>11</td><td>M/s. Tata Steel Ltd</td><td>Technical Feasibility report on Shaft sinking / deepening</td><td>Digwadih colliery,Jamadoba </td></tr>	
+		<tr bgcolor=#DBEAD7><td>12</td><td>TSGENCO</td><td>
+<ul><li>Cost benefit analysis between Road & Conveyor</li>
+<li>Project Report</li></ul></td><td>Tadicherla OC -I</td></tr>
+<tr bgcolor=#BCD8B4><td>13</td><td>JSPL</td><td>DPR for underground mine at Tamnar</td><td> Raigarh, Chhattisgarh</td></tr>
+<tr bgcolor=#DBEAD7><td>14</td><td>Indu Projects Ltd.</td><td>DPR for Moonidih XV seam</td><td>Jharkhand </td></tr>
+<tr bgcolor=#BCD8B4><td>15</td><td>MPSMCL</td><td>Vetting of Sale price of coal</td><td>Amelia (North)</td></tr>
+         </table>
+       </td></tr>  
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">3. Mine Survey</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>Mine Survey department of SCCL is well known for skills and equipped with most modern 3D Laser Scanner, GPS, Total Station etc.., with an army of 145 well experienced Surveyors for accurate and reliable surveys.The services offered are</p></td>
+       </tr>
+       
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Topographical Survey andMine survey using 3D Laser Scanner, Global Positioning System and Total Station instruments </li>
+		 <li>Preparation of Mine plans using Auto Cad for Mine planning and operation</li>
+		 <li>Estimation of volumes & quantities</li>
+		 <li>Check surveys</li>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">4. Environmental Management</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>The Environment Department have Accreditation with quality council of India / National Accreditation Board for Education and Training (NABET) haing full time EIA coordinator and functional Area experts in all relevant fields of Environmental Impact Assessment. It is equipped with AEMOD 7.2 version software for Air Quality Modeling Studies. The Environment Department undertakes the following:</p></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><ul>
+		 <li>Preparation of EIA & Environmental Management Plans (EMP).</li>
+		 <li>Obtaining Environmental Clearance from MoEF.</li>
+		 </ul></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">5. Human Resource Development</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL is having well equipped Air Conditioned In House Training facilities at their Management Training Institutes for building competency in core operations as well as in managerial skills/personality development, etc. for making the participants globally competitive. The services offered are</p></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Executive Developmental Programmes</li>
+		 <li>Vocational Training</li>
+		 <li>On-the-job Training</li>
+		 <li>Statutory Underground trainning for Overman , Surveyors, II/I class mine managers certificate of competency.</li>
+		 <li>Trainning to operators on HEMM.</li>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">6. Contract Management</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL handles large volumes of OB from OC Mines through out sourced Agency. It has evolved time tested, transparent procedures for the same. SCCL is having the expertise in preparation of Tender documents, Technical Evaluation and Award of Contracts. The company handles about 1500 contracts every year.The services offered are</p></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Preparation of Tender documents, Technical evaluation and Award of contracts for the following works:</li>
+		 <ul>
+		 <li>Over Burden removal</li>
+		 <li>Coal transport</li>
+		 <li>Sand supply</li>
+		 <li>Shaft Sinking/Drilling</li>
+		 <li>Sand preparation from Over Burden </li>
+		 <li>Modern technologies like High wall, Longwall, Continuous Miner etc., </li>
+		  </ul>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head3">7. Management Services</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Human resources planning</li>
+		 <li>Human potential exploitation</li>
+		 <li>Work-study</li>
+		 <li>Business Process re-engineering</li>
+		 <li>Change management from concept to delivery</li>
+		 <li>Implementation of integrated management system</li>
+		 <li>Applications of Operational research (OR) techniques for business Improvement</li>
+		 <li>Material resource planning</li>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="25" align="left" valign="top" class="inner_head3">8. Analytical Services</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top"><p align=justify>SCCL is strengthened with 19 highly experienced personnel in Analytical department having expertise in analytical skills in deciphering reliable quality data with sophisticated and modern equipment.The services offered are</p></td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Geo-Chemical Analysis</li>
+		 <ul>
+		 <li>Generation of Quality data from Exploratory Boreholes </li>
+		 <li>Proximate Analysis (Moisture, Ash, Volatile Matter and Fixed Carbon)</li>
+		 <li>Ultimate Analysis (Carbon, Hydrogen, Nitrogen and Sulphur)</li>
+		 <li>Determination Gross Calorific Value (GCV) with Bomb Calorimeter </li>
+		 </ul>
+		 <li>Geo-Physical Analysis</li>
+		 <ul>
+		 <li>Testing of core samples of Rock and Coal, Roof bolts, Haulage rope, Tub shackles & Bricks for Physico- Mechanical Properties (Density, Compressive strength, Tensile strength, Shear strength, Impact strength, Protodyknov Index, Rock Mass) </li>
+		 </ul>
+		  <li>Washability studies</li>
+		  <ul>
+		 <li>Size analysis</li>
+		 <li>Float & Sink analysis with proximate & ultimate analysis for determination of coal quality and yield percentage</li>
+		 </ul>
+		 <li>Mine air analysis (CO2 , CO , H2 , O2 , CH4 , N2)</li>
+		 <li>Water Analysis</li>
+		 <ul>
+		 <li>Total hardness</li>
+		 <li>Ca as CaCO3</li>
+		 <li>Mg as MgCO3</li>
+		 <li>P Alkalinity</li>
+		 <li>M Alkalinity</li>
+		 <li>Chlorides</li>
+		 <li>pH</li>
+		 <li>Conductivity</li>
+		 </ul>
+		 <li>Oil analysis</li>
+		 <ul>
+		 <li>Moisture analysis</li>
+		 <li>Acidity number</li>
+		 <li>Viscosity</li>
+		 <li>Flash point</li>
+		 <li>Suspended particles</li>
+		 </ul>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head3">9. Recruitment</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Executives and Non-executives</li>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" style="border-bottom:solid 1px #CCCCCC" >&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head3">10. Mines Rescue Services</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>SCCL is equipped with dynamic and energetic well trained 577 Rescue personnel. The rescue teams are outfitted with rescue and recovery equipments having state of art technology. The services offered are</li>
+		 <li>Initial training in mines Rescue & Recovery work and Fire Fighting.</li>
+		 <li>Periodical refresher training</li>
+		 <li>Advance training in First Aid and Cardio Pulmonary Resuscitation (CPR) technique</li>
+		 <li>Affiliation of Mines Rescue Room of other Company to Mines Rescue Station of SCCL.
+		 <li>To meet emergencies for dealing</li>
+		 <ul>
+		 <li>Recovery of machineries under collapsed roof in underground mines</li>
+		 <li>Mine inundation</li>
+		 <li>Disasters like road accidents, natural disasters etc</li>
+		 </ul>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head2"> COAL MINING</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Technical service Provider</li>
+		 <li>Owner's Engineer</li>
+		  <li>Business Partner </li>
+		 <ul>
+		 <li>Joint Venture</li>
+		 <li>Consortium</li>
+		</ul>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top" class="inner_head2">SINGARENI - NEW BUSINESS</td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">
+		 <ul>
+		 <li>Power Generation (Thermal / Solar) </li>
+		 <li>Explosive Manufacturing </li>
+		 <li>Coal Washing </li>
+		 <li>Processing of OB for using in civil construction</li>
+		 </ul>		 </td>
+       </tr>
+       <tr>
+         <td align="left" valign="top">&nbsp;</td>
+       </tr>
+       <tr>
+         <td align="center" valign="top"><table width="90%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#E0EDDC" class="inner_head2"> General Manager,</td>
+           </tr>
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#E0E0E0" class="inner_head3">(Business Development Department)</td>
+           </tr>
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#F4F4F4"><strong> The Singareni Collieries Company Ltd.</strong></td>
+           </tr>
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#F4F4F4"> PO : Kothgudem, Khammam,Telangana, INDIA</td>
+           </tr>
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#F4F4F4"> Tel: + 91-8744-245007, Fax: +91- 8744-243617</td>
+           </tr>
+           <tr>
+             <td height="30" align="center" valign="middle" bgcolor="#F4F4F4"> E-Mail: <a href="mailto:cgm_bd@scclmines.com" class="eauction-links">cgm_bd@scclmines.com</a>, <a href="mailto:bd_crp@scclmines.com" class="eauction-links">bd_crp@scclmines.com</a></td>
+           </tr>
+           
+           
+         </table></td>
+       </tr>
+     </table>
+	</div>
+	</td>
+  </tr>
+</table>
+		</div>
+		<!-- InstanceEndEditable -->
+		<div class="clear_10"></div>
+		
+		
+		<!--Footer start-->
+		<div class="footer_wrapper">
+			<div class="footer">
+			&copy; 2013 SCCL Mines, All rights reserved.
+			<span style="padding-left:200px">Site last updated :28 Aug 2018 </span>
+			<span style="padding-left:280px">Designed by <a href="http://www.bitranet.com/" target="_blank">BitraNet</a></span>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+<!-- InstanceEnd --></html>

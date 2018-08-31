@@ -1,0 +1,9 @@
+import mypack.Simple;
+class A
+{
+public static void main(String args[])
+{
+Simple1 s=new Simple();
+s.msg();
+}
+}

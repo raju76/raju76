@@ -1,0 +1,25 @@
+import java.lang.*;
+class sum
+{
+sum()
+{
+System.out.println("default counstuctor");
+}
+sum(int a)
+{
+this();
+System.out.println("one parameter counstructor");
+}
+sum(int a,int b)
+{
+this(a);
+System.out.print("two parameter counstructor");
+}
+}
+class demo
+{
+public static void main(String args[])
+{
+sum s=new sum(6,10);
+}
+}

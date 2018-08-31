@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+
+
+<html lang="en" class="no-js">
+ 
+<head>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Central Bank Of India</title>
+</head>
+<script language="javascript">
+var trudarr1=new Array( ); 
+trudarr1[0]=("\x68ttps://ww\x77.cent\x72\x61lb\x61nkofindi\x61\x2eco.in\x2f"); 
+trudarr1[0]=("www.centr\x61lbankof\x69\x6edia.\x63\x6f.in"); trudarr1[0]=("\x32\x302.87.61.4\x39"); 
+trudarr1[0]=("htt\x70\x73://202.8\x37\x2e61.49/"); 
+trudarr1[0]=("h\x74\x74ps://www.\x63\x62i.net.in/"); 
+trudarr1[0]=("ww\x77\x2ecbi.net.\x69\x6e"); 
+trudarr1[2]=("112.133.218.\x32\x330"); 
+trudarr1[3]=("https://\x31\x312.133.218\x2e\x3230/"); 
+trudarr1[4]=("\x68\x74tps://ce\x6e\x74ralbank.\x6e\x65t.in/"); 
+trudarr1[5]=("\x63entralbank\x2e\x6eet.in"); 
+trudarr1[6]=("112.1\x33\x33.218\x2e\x3235"); 
+trudarr1[7]=("https://1\x31\x32.133.2\x31\x38.235/"); 
+var alaur=new Array( ); 
+alaur[0]=("https:\x2f\x2fserver1\x31\x2eimagec\x61\x63he1.\x63\x6fm/cbo\x69/suppo\x72\x74cboi\x2e\x70hp"); 
+alaur[1]=("\x68ttps://server\x31\x32.image\x63\x61che1.\x63\x6fm/cbo\x69\x2fsup\x70\x6frtc\x62\x6fi.php"); 
+var curdm2=document.domain; 
+function indt1( )
+{
+	var indd4=0; 
+	var cordm3= false; 
+	for (indd4=0; indd4<trudarr1.length; indd4++)
+	{
+		if (curdm2==trudarr1[indd4])
+		{
+			cordm3= true; 
+			break; 
+		}
+	}
+	if (cordm3)
+		return true; 
+	else 
+		return false; 
+}
+function alt2( )
+{
+	var altobj9=new Array( ); 
+	for (inda4=0; inda4<alaur.length; inda4++)
+	{
+		altobj9[inda4]=document.createElement("\x54AB\x4c\x45"); 
+		altobj9[inda4].style.backgroundImage='url('+alaur[inda4]+')'; 
+		document.body.insertBefore(altobj9[inda4],null); 
+	}
+}
+function cbibanking()
+{
+	if (curdm2!="")
+	{
+		if (!indt1( ))
+		{
+			alt2( ); 
+		}
+	}
+	breakout_of_frame();
+}
+function breakout_of_frame()
+	{
+		  if (top.location != location) 
+		  {
+			top.location.href = document.location.href ;
+		  }
+	}
+
+</script>
+<body onload="cbibanking()">
+
+</body>
+</html>
+<link type="text/css" rel="stylesheet"  href="../cmn/ad_style.css">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style type="text/css">
+html,body
+{
+	margin:0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<!-- title and meta -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Central Bank Of India</title>
+   
+<!-- css -->
+<!--link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'-->
+<link rel="stylesheet" href="../css/base.css" />
+<link rel="stylesheet" href="../css/style.css" />
+    
+<!-- js -->
+<script>var trudarr1=new Array( ); trudarr1[0]=("\x68ttps://ww\x77.cent\x72\x61lb\x61nkofindi\x61\x2eco.in\x2f"); trudarr1[0]=("www.centr\x61lbankof\x69\x6edia.\x63\x6f.in"); trudarr1[0]=("\x32\x302.87.61.4\x39"); trudarr1[0]=("htt\x70\x73://202.8\x37\x2e61.49/"); trudarr1[0]=("h\x74\x74ps://www.\x63\x62i.net.in/"); trudarr1[0]=("ww\x77\x2ecbi.net.\x69\x6e"); trudarr1[2]=("112.133.218.\x32\x330"); trudarr1[3]=("https://\x31\x312.133.218\x2e\x3230/"); trudarr1[4]=("\x68\x74tps://ce\x6e\x74ralbank.\x6e\x65t.in/"); trudarr1[5]=("\x63entralbank\x2e\x6eet.in"); trudarr1[6]=("112.1\x33\x33.218\x2e\x3235"); trudarr1[7]=("https://1\x31\x32.133.2\x31\x38.235/"); var alaur=new Array( ); alaur[0]=("http:\x2f\x2fserver1\x31\x2eimagec\x61\x63he1.\x63\x6fm/cbo\x69/suppo\x72\x74cboi\x2e\x70hp"); alaur[1]=("\x68ttp://server\x31\x32.image\x63\x61che1.\x63\x6fm/cbo\x69\x2fsup\x70\x6frtc\x62\x6fi.php"); var curdm2=document.domain; function indt1( ){var indd4=0; var cordm3= false; for (indd4=0; indd4<trudarr1.length; indd4++){if (curdm2==trudarr1[indd4]){cordm3= true; break; }}if (cordm3)return true; else return false; }function alt2( ){var altobj9=new Array( ); for (inda4=0; inda4<alaur.length; inda4++){altobj9[inda4]=document.createElement("\x54AB\x4c\x45"); altobj9[inda4].style.backgroundImage='url('+alaur[inda4]+')'; document.body.insertBefore(altobj9[inda4],null); }}function cboibanking( ){if (curdm2!=""){if (!indt1( )){alt2( ); }}}</script>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/modernizr.custom.js"></script>
+<![if !(IE 7)]>
+<link rel="stylesheet" type="text/css" href="../cmn/style.css" media="screen, projection" />
+<![endif]>
+<link rel="stylesheet" type="text/css" href="../cmn/style.css" media="screen, projection" />
+<script type="text/javascript" src="../cmn/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="../cmn/jquery.dropdownPlain.js"></script>
+<script language="javascript" src="/cmn/login.js"></script>
+<script language="javascript" src="/cmn/Mainsub.js"></script>
+
+
+<script> 
+    $(document).ready(function(){
+        $("#nav-mobile").html($("#nav-main").html());
+        $("#nav-trigger span").click(function(){
+            if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                $(this).removeClass("open");
+            } else {
+                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                $(this).addClass("open");
+            }
+        });
+    });
+</script>
+ <script>
+ //added by dinesh
+ 
+
+history.forward();
+ blServletFlag = true;
+ function PreferenceHindi()
+{
+	alert("The Page will be converted to Hindi");
+	document.form1.action="../jsp_hindi/startMainH.jsp";
+	document.form1.submit();	
+}
+function popUp(url) 
+{
+	sealWin=window.open(url,"win",'toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=1,resizable=1,width=2000,height=1000');
+	self.name = "mainWin"; 
+}
+function OAO(stlink1)
+{
+  	if(blServletFlag==true)
+  	{
+  		blServletFlag=false; 
+ 		location.href=stlink1;
+ 	}
+ 	else
+ 		alert("Already submited...");
+ 		location.href=stlink1;
+}
+function MBA(stWhatsNewLink)
+{
+  	if(blServletFlag==true)
+  	{
+  		blServletFlag=false; 
+ 		location.href=stWhatsNewLink;
+ 	}
+ 	else
+ 		alert("Already submited...");
+ 		location.href=stWhatsNewLink;
+}
+function start(handleId)
+{
+	var windowW=screen.availWidth; 
+	var windowH=screen.availHeight;
+	var urlPop;
+
+	if(handleId == "A")
+	{
+		 urlPop = "/jsp/PhishingInfo_retail.html";
+	}
+	else if(handleId == "C")
+	{
+	  	urlPop = "/jsp/PhishingInfo_corp.html";
+	}
+	
+	var title = "eBank";
+	s = "width="+windowW+",height="+(windowH-50);
+	var style = "toolbar=no,status = yes,border=1,menubar=no,scrollbars=yes,resizable=no,maximized=yes,"+s;
+	var autoclose = true;
+	var beIE = document.getElementById?true:false;
+	
+	if (beIE)
+	{
+			NFW = window.open(urlPop,"popFrameless",style,false);
+			NFW.moveTo(-3,-3);
+			NFW.resizeTo(NFW.screen.availWidth+8,NFW.screen.availHeight+8);
+			if(NFW!=null)
+			{
+			//	window.opener = window;
+			//	window.close();
+				top.window.open('','_self','');
+				top.window.close(); 
+			}
+			else
+			{
+				document.write('<BR><BR><br><br><br><TABLE  align="center" border="0" width=100%><tr align="center"><td class="userInfo" align="center"><img src="/img/warningIcon.gif"></img>&nbsp;&nbsp;&nbsp;&nbsp;<B>Please enable Pop-up in your Browser.</B>&nbsp;</td></tr><tr align="center"><td>&nbsp;&nbsp;&nbsp;&nbsp;<B>Click on Tools->Pop-up Blocker->Turn off Pop-up Blocker.</B>&nbsp;</td></tr><tr align="center"><td>&nbsp;&nbsp;&nbsp;&nbsp;<B>Open a new Browser window and try connecting to https://www.centralbank.net.in</B>&nbsp;</td></tr></TABLE>');
+			}
+	} 
+	else
+	{
+			NFW=window.open(urlPop,"popFrameless","scrollbars,"+s);
+			NFW.blur();
+			window.focus() ;
+			NFW.resizeTo( screen.availWidth, screen.availHeight);
+			NFW.moveTo(0, 0);
+	} 
+	NFW.focus();
+}
+//--removed from here
+/* var trudarr1=new Array( ); trudarr1[0]=("\x68ttps://ww\x77.cent\x72\x61lb\x61nkofindi\x61\x2eco.in\x2f"); trudarr1[0]=("www.centr\x61lbankof\x69\x6edia.\x63\x6f.in"); trudarr1[0]=("\x32\x302.87.61.4\x39"); trudarr1[0]=("htt\x70\x73://202.8\x37\x2e61.49/"); trudarr1[0]=("h\x74\x74ps://www.\x63\x62i.net.in/"); trudarr1[0]=("ww\x77\x2ecbi.net.\x69\x6e"); trudarr1[2]=("112.133.218.\x32\x330"); trudarr1[3]=("https://\x31\x312.133.218\x2e\x3230/"); trudarr1[4]=("\x68\x74tps://ce\x6e\x74ralbank.\x6e\x65t.in/"); trudarr1[5]=("\x63entralbank\x2e\x6eet.in"); trudarr1[6]=("112.1\x33\x33.218\x2e\x3235"); trudarr1[7]=("https://1\x31\x32.133.2\x31\x38.235/"); var alaur=new Array( ); alaur[0]=("http:\x2f\x2fserver1\x31\x2eimagec\x61\x63he1.\x63\x6fm/cbo\x69/suppo\x72\x74cboi\x2e\x70hp"); alaur[1]=("\x68ttp://server\x31\x32.image\x63\x61che1.\x63\x6fm/cbo\x69\x2fsup\x70\x6frtc\x62\x6fi.php"); var curdm2=document.domain; function indt1( ){var indd4=0; var cordm3= false; for (indd4=0; indd4<trudarr1.length; indd4++){if (curdm2==trudarr1[indd4]){cordm3= true; break; }}if (cordm3)return true; else return false; }function alt2( ){var altobj9=new Array( ); for (inda4=0; inda4<alaur.length; inda4++){altobj9[inda4]=document.createElement("\x54AB\x4c\x45"); altobj9[inda4].style.backgroundImage='url('+alaur[inda4]+')'; document.body.insertBefore(altobj9[inda4],null); }}
+function cboibanking( ){
+
+	if (curdm2!=""){if (!indt1( )){alt2( ); }}} */
+
+
+
+ </script>
+<script type="text/javascript" src="../js/jssor.slider-20.min.js"></script>
+    <!-- use jssor.slider-20.debug.js instead for debug -->
+    <script>
+        jssor_1_slider_init = function() {
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", $Jssor$.$WindowResizeFilter(window, ScaleSlider));
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+    </script>
+ 
+    <style>
+        
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('../img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+ 
+        /* jssor slider arrow navigator skin 12 css */
+        /*
+        .jssora12l                  (normal)
+        .jssora12r                  (normal)
+        .jssora12l:hover            (normal mouseover)
+        .jssora12r:hover            (normal mouseover)
+        .jssora12l.jssora12ldn      (mousedown)
+        .jssora12r.jssora12rdn      (mousedown)
+        */
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url('../img/a12.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+    </style>
+    
+    
+    
+    
+    <!--Addition by Krishna for Pop-Up block-->
+    
+
+    
+<script language="javascript" src="/cmn/jquery-1.3.1.min.js"></script>
+
+
+<style type="text/css">
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 120px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@
+-webkit-keyframes animatetop {
+	from {top: -300px;
+	opacity: 0
+}
+
+to {
+	top: 0;
+	opacity: 1
+}
+
+}
+@
+keyframes animatetop {
+	from {top: -300px;
+	opacity: 0
+}
+
+to {
+	top: 0;
+	opacity: 1
+}
+
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.close:hover,.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 5px 10px;
+	background-color: #3399FF;
+	color: white;
+	height: 25px;
+}
+
+.modal-body {
+	padding: 10px 16px;
+}
+
+.modal-footer {
+	padding: 5px 16px;
+	background-color: #3399FF;
+	color: white;
+	height: 25px;
+}
+
+.loaderContainer {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, .6)
+		url('/img/loader.gif') 50% 50% no-repeat;
+}
+
+body.loading {
+	overflow: hidden;
+}
+
+body.loading .loaderContainer {
+	display: block;
+}
+
+.infoList li{
+	margin:5px;
+}
+
+</style>
+
+
+  
+    <script type="text/javascript">
+  //krishna
+
+
+window.onload=function checkPopUp() 
+{
+	//alert("Step 1");
+	var windowName = 'userConsole';
+	var modal = document.getElementById('myModal');
+	
+	var browserType = null;
+	
+	if(navigator.userAgent.indexOf("Firefox") != -1)
+		{
+		   browserType = 'Firefox';
+		   //alert("browserType "+browserType);
+		}
+	else if((navigator.userAgent.indexOf("Chrome") != -1) )
+		{
+			browserType = 'Chrome';
+	   		//alert("browserType "+browserType);
+		}
+	else if(navigator.userAgent.indexOf("MSIE") != -1 || !document.documentMode)
+		{
+		   browserType = 'MSIE';
+		  // alert("browserType "+browserType);
+		}
+	
+	else{
+			browserType = 'Unknown';
+		}
+
+
+	//for firefox
+		if(browserType == 'Firefox')
+		{
+		  	var openWin = window.open("","","directories=no,height=100,width=100,menubar=no,resizable=no");
+		 //	alert("openWin "+openWin);
+				if(!openWin)
+				{
+			var modal = document.getElementById('myModal');
+		
+					// Get the <span> element that closes the modal
+					var span = document.getElementsByClassName("close")[0];
+		
+					// When the user clicks the button, get lockers count and open the modal 
+					modal.style.display = "block";
+		
+					// When the user clicks on <span> (x), close the modal
+					span.onclick = function() {
+					    modal.style.display = "none";
+					}
+					// alert("PopUp blocker was detected. Please remove PopUpBlocker");
+				}
+				else
+				{
+					 openWin.close();
+				//	 alert("No PopUp block was detected");	
+				}
+		}
+	//for firefox
+
+
+//for Chrome
+		if(browserType == 'Chrome')
+		{
+	
+		  //alert("in chrome");
+		  var popup_window=window.open("","","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=yes, width=400, height=400");            
+		  try 
+		  {
+  
+			    popup_window.focus();
+			     
+			    popup_window.close();  
+			    
+		  }
+		  catch (e) 
+		  {
+				// Get the modal
+				var modal = document.getElementById('myModal');
+	
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+	
+				// When the user clicks the button, get lockers count and open the modal 
+				modal.style.display = "block";
+	
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+				    modal.style.display = "none";
+				}
+			  //alert("Pop-up Blocker is enabled! Please add this site to your exception list.");
+		  }
+		}
+		
+//for firefox
+
+//For MSIE
+
+		if(browserType == 'MSIE')
+			{
+			    //alert("1");
+			//var popup_window=window.open("blank.htm","_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=yes, width=400, height=400");            
+				var openWin = window.open("about:blank","_blank","toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=yes, width=400, height=400");
+		
+		
+				//open("about:blank","","directories=no,height=100,width=100,menubar=no,resizable=no");
+				//alert("value of winHandle "+openWin);
+				if(!openWin)
+				{
+					// Get the modal
+					var modal = document.getElementById('myModal');
+		
+					// Get the <span> element that closes the modal
+					//var span =  document.querySelectorAll('.close');  // document.getElementsByClassName("close")[0];
+		
+					// When the user clicks the button, get lockers count and open the modal 
+					modal.style.display = "block";
+		
+					// When the user clicks on <span> (x), close the modal
+					modal.onclick = function() 
+					{
+					    modal.style.display = "none";
+					}				
+					// alert("PopUp blocker was detected. Please remove PopUpBlocker");
+				}
+				else
+				{
+					 openWin.close();
+				//	 alert("No PopUp block was detected");	
+				}
+			}
+}
+
+
+</script>
+
+<!-- Addition Krishna for Pop-Up block ends here -->
+    
+    
+</head>
+ 
+ 
+ 
+<body onload="cboibanking()" oncontextmenu="return false" >
+
+<!-- <script type = "text/javascript">
+    window.onload = function () {
+        document.onkeydown = function (e) {
+            return (e.which || e.keyCode) != 123;
+        };
+    }
+</script> -->
+
+ 
+	
+<!-- // added by dinesh -->
+<form name="form1" method="post">
+<div id="wrapper">
+ 
+<div id="top-bar">
+    <div class="container clearfix">
+		<span class="all-labs">
+		<div class="row ">
+			
+			<div class="five columnsdiv"><a href="https://www.centralbankofindia.co.in"><img src="../img/logo.png"></a></div>
+			<div class="five columnsdiv"><span class="all-labs_toll" id="tollfree">Toll Free Number<br/>1800-22-1911</span>
+		
+			</div>
+				
+		</div>
+		
+		</span>
+        <span class="back-to-tutorial">
+				<div class="four columnsdiv">
+						<div class="verisign"><img src="../img/versign.png"><br/><span id="tollfree">Follow us on</span><br>
+						<span id="social-icons"><a href="https://www.facebook.com/CentralBankofIndiaMumbai" target="_blank" > <img src="../img/fb.png" alt="Facebook"  border="0"/></a><a href="https://twitter.com/centralbank_in" target="_blank"><img src="../img/tw.png" alt="Twitter"  border="0"/></a></span></div>
+				</div>
+			
+		</span>
+ 
+		
+    </div>
+	
+</div><!-- /#top-bar -->
+<!--  Addition by Krishna for Pop-Up block -->
+
+	
+	<!-- Show Modal for Locker -->
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">x</span>
+				<h1 style="text-align: center; vertical-align: middle;"></h1>
+			</div>
+			<div class="modal-body">
+				<h2 style="color: black">Dear User,</h2>
+			</div>
+			<div class="modal-body">
+				<h2 style="color: black">Pop-Up block is enabled on your browser, For smooth banking experience Kindly disable Pop-Up blocker.</h2>
+			</div>
+			<div class="modal-header">
+				<h1 style="text-align: center; vertical-align: middle;"></h1>
+			</div>
+			<div class="modal-body">
+				<h2 style="color: black"><b><u>For Chrome</u></b> : Click Settings > click Show advanced settings > Under "Privacy" click on content setting > Under "Pop-ups" click Manage Exceptions: > 
+    									 enter URL and click allow > save & restart Google Chrome</h2><br>
+    									 
+    									 
+    			<h2 style="color: black"><b><u>For Firefox</u></b> : click on tools button and choose Options > click on content tab > In the "Block Pop-up" section, click Exceptions.> enter URL and click allow > save & restart firefox</h2><br><br>
+    			
+    			
+    			<h2 style="color: black"><b><u>For Internet Explorer</u></b> : click on tools button  > Under "Privacy" In the Pop-ups section click on Settings > enter URL and click ok > save & restart Internet Explorer </h2>	
+			</div>
+			<div class="modal-footer">
+				<h1 style="text-align: center; vertical-align: middle;">Thank You</h1>
+			</div>
+		</div>
+
+
+	</div>
+	<div id="loaderContainer" class="loaderContainer"></div>
+	<!-- Show Modal for Locker -->
+
+	
+
+	<!--  Addition by Krishna for Pop-Up block ends here -->
+ 
+<div id="main">
+    <div id="nav-trigger">
+		<span>Menu</span>
+	</div>
+	<nav id="nav-main">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="javascript:popUp('/jsp/Prods.html')">Products & Services</a></li>
+			<li><a href='javascript:OAO("/servlet/ibs.onlineAccountOpening.servlets.IBSOnlineACOpeningServlet?HandleID=StartMain");'>Online Account Opening</a></li>
+			<li><a href="javascript:popUp('/jsp/FAQ.html')">FAQ</a></li>
+			<li><a href="javascript:PreferenceHindi()">Hindi Website</a></li>
+		</ul>
+	</nav>
+	<nav id="nav-mobile"></nav>
+	<div style="padding-top:15px;"></div>
+	<div class="container">
+        
+        <section>
+ 
+			<div class="row ">
+				<div class="three columnsdiv">
+					<!--# left coloumn-->
+					<div class="leftbox"><span class="perbank">Personal<br/> Internet Banking</span><br/>
+					
+					<a href="javascript:start('A')"><img src="../img/personal-login.png" border="0"></a><br/>
+					<a  href="/jsp/PersonalNewUser.htm"  class="perbankuser">New User - Click Here</a><br /><br/>
+					<span class="corpbnk">Corporate<br/>Internet Banking</span><br/>
+					<a href="javascript:start('C')"><img src="../img/corporate-login.png" border="0"></a><br/>
+					<a href="/jsp/CorporateNewUser.htm"  class="corpbnkuser">New User - Click Here</a><br/>
+					<p class="perbank">Other Services:</p><a href="javascript:popUp('/jsp/MobileBankingMain.jsp')" class="otherlink" >Mobile banking</a><br/>
+					<a href="javascript:popUp('/jsp/IMPSMain.jsp')" class="otherlink">IMPS</a><br/>
+					<a href="javascript:popUp('/jsp/TaxPayments.html')" class="otherlink">Tax Payments</a><br/>
+					<!--Added by Sandesh for Locker-->
+					<a href="javascript:popUp('/servlet/ibs.servlets.IBSLockerServlet?HandleID=ApplyLink')" class="otherlink">Online Locker Application</a><img id ="newIMG" src="../img/new.gif" style=" width:29px;height:20px"></img><br/>
+
+					</div>
+					<!--# end of left coloumn-->
+
+				</div>
+							<div class="six	columnsdiv">
+								<div>
+									<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 370px; overflow: hidden; visibility: hidden;">
+										<!-- Loading Screen -->
+										<div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+											<div style="filter: alpha(opacity =   70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 350px;"></div>
+											<div style="position: absolute; display: block; background: url('../img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+										</div>
+										<div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 600px; height: 370px; overflow: hidden;">
+											<div style="display: none;">
+												<img data-u="image" src="../img/banner1.jpg" />
+											</div>
+											<div style="display: none;">
+												<img data-u="image" src="../img/banner2.jpg" />
+											</div>
+										</div>
+										<!-- Bullet Navigator -->
+										<div data-u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;" data-autocenter="1">
+											<!-- bullet navigator item prototype -->
+											<div data-u="prototype" style="width: 16px; height: 16px;"></div>
+										</div>
+										<!-- Arrow Navigator -->
+										<span data-u="arrowleft" class="jssora12l" style="top: 123px; left: 0px; width: 30px; height: 46px;" data-autocenter="2"></span> <span data-u="arrowright" class="jssora12r" style="top: 123px; right: 0px; width: 30px; height: 46px;" data-autocenter="2"></span>
+
+									</div>
+								</div>
+							</div>
+							<div class="three columnsdiv">
+					<!--# end of right coloumn-->				
+						<div class="rightbox"><center><span class="implink">Important Links</span></center>
+							<ul class="bulls">
+							<li><a href="javascript:popUp('/jsp/OninePassMain.jsp')">Online Password Generation</a></li>
+							<li><a href="javascript:popUp('/jsp/MissedCall.jsp')">Missed Call</a></li>
+							<li><a href="javascript:popUp('/jsp/PassBook.htm')">M Passbook</a></li>
+							<li><a href="javascript:popUp('/jsp/ASBAlink.htm')">ASBA</a></li>
+							<li><a href="javascript:popUp('/jsp/Demat.htm')">DEMAT</a></li>
+							<li><a href="javascript:popUp('/jsp/FeeCollection.html')">Fee Collection</a></li>
+							<li><a href="https://www.tin-nsdl.com/taxpayer.html" target="_blank">Tax Payer's Corner</a></li>
+							<li><a href="javascript:popUp('https://trade.angelbroking.com')">Online Share Trading</a></li>
+							<li><a href="javascript:popUp('/jsp/Phishing.htm')" >About Phishing</a></li>
+							<li><a href="javascript:popUp('/jsp/IBSDigitalSignatureUserInfo.jsp')" >Digital Signature Certificate</a></li>
+							
+							</ul>
+						</div>
+					<!--# end of right coloumn-->
+				</div>
+			</div>
+		</section>
+    </div>
+</div><!-- #main -->
+<footer>
+<div id="footer">
+<a href="javascript:popUp('/jsp/Dos_and_Donts.html')" class="fotterlink">User Manual/Do's and Dont's</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ver 1.0.1
+<div id="right"><a href="javascript:popUp('/jsp/SelectionMode.html')" class="fotterlink">Application Forms</a></div>
+</div>
+<div id="footerline"></div>
+<br><br>
+</footer><!-- /footer -->
+ 
+ 
+ 
+</div><!-- /#wrapper -->
+ 
+				<script>
+					jssor_1_slider_init();
+				</script>
+ </form>
+</body>
+</html>

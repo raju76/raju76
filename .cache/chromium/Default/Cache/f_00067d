@@ -1,0 +1,3799 @@
+var errImg = '<img src="/india/images/error-msg-arrow.png" class="msgArrow">'; 
+var errImgRight = '<img src="/india/images/error-msg-arrow-right.png" class="loginErrorMsgArrow">';
+var corrImg = '<img src="/india/images/correct-field-arrow.png" class="msgArrow">';
+
+var _errName = false, _errEmail = false, _errMobile = false;
+var _loginUser = false, _loginPass = false;
+var _chngPass = false, _chngConfPass = false, _errFrgtEmail = false;
+function emailCheck(e) {
+    var t = true;
+    var n = 0;
+    var r = /^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum)$/;
+    var i = /^(.+)@(.+)$/;
+    var s = '\\(\\)><@,;\\\\\\"\\.\\[\\]';
+    var o = "[^\\s" + s + "]";
+    var u = '("[^"]*")';
+    var a = /^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+    var f = o + "+";
+    var l = "(" + f + "|" + u + ")";
+    var c = new RegExp("^" + l + "(\\." + l + ")*$");
+    var h = new RegExp("^" + f + "(\\." + f + ")*$");
+    var p = e.match(i);
+    if (p == null) {
+        t = false;
+        return t
+    }
+    var d = p[1];
+    var v = p[2];
+    for (g = 0; g < d.length; g++) {
+        if (d.charCodeAt(g) > 127)
+            t = false
+    }
+    for (g = 0; g < v.length; g++) {
+        if (v.charCodeAt(g) > 127)
+            t = false
+    }
+    if (d.match(c) == null)
+        t = false;
+    var m = v.match(a);
+    if (m != null) {
+        for (var g = 1; g <= 4; g++) {
+            if (m[g] > 255)
+                t = false
+        }
+        return true
+    }
+    var y = new RegExp("^" + f + "$");
+    var b = v.split(".");
+    var w = b.length;
+    for (g = 0; g < w; g++) {
+        if (b[g].search(y) == -1)
+            t = false
+    }
+    if (n && b[b.length - 1].length != 2 && b[b.length - 1].search(r) == -1)
+        t = false;
+    if (w < 2)
+        t = false;
+    return t
+}
+function fieldValidate(txtMsgId, fieldType, placeHolderTxt) {
+    var fieldFormat = '';
+    var fieldVal = $('#' + txtMsgId).val();
+
+    if (fieldType == 'name') {
+        fieldFormat = /^\s*[a-zA-Z,\s]+\s*$/;
+    } else if (fieldType == 'email') {
+        fieldFormat = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    } else if (fieldType == 'phone') {
+        fieldFormat = /^([0-9]{10,15})$/;
+    }
+
+    if (!(fieldFormat.test(fieldVal)) || fieldVal == placeHolderTxt) {
+        return false;
+    }
+    return true;
+}
+
+var frstnmErr = 0;
+var emailErr = 0;
+var mblnoErr = 0;
+var catErr = 0;
+var usernmErr = 0;
+var userPassErr = 0;
+var email_confrm = 0;
+var mbl_conf = 0;
+var frgt_mbl_Err = 0;
+var frgt_email_Err = 0;
+var nameFrmt =  /^[a-zA-Z ]{3,30}$/;
+function registerOnblur(txtMsgId) {
+    //var fieldstatus=fieldValidate(txtMsgId,fieldType,placeHolderTxt);    
+    var firstName = $('#first_name');
+    var email = $('#email_addr');
+    var phnmber = $('#phnmber');
+    var mobileFormat = /^([0-9]{10,15})$/;
+    var cateOptions = $(".categoryCheckBoxNew:checked");
+    var id = $('#' + txtMsgId).val();
+    if (txtMsgId == 'first_name')
+    {
+        if (firstName.val() == '' || firstName.val() == 'Name' || !nameFrmt.test(firstName.val()) || firstName.val().length < 3) {
+            $('.namePosition').addClass('borderRedClr');
+            if (firstName.val() != '')
+                $('#nameMsg').hide().html(errImg + 'Please enter your valid name');
+            else
+                $('#nameMsg').hide().html(errImg + 'Please enter your name');
+            $('#nameSpan').addClass('rightSideErrorIcon');
+            frstnmErr = 1;
+        } else {
+            $('.namePosition').removeClass('borderRedClr');
+            //$('#nameMsg').addClass('correctMsg').show().html(corrImg+'Name is okay');
+            $('#nameSpan').removeClass('rightSideErrorIcon').addClass('rightSideCorrectIcon');
+            $('#nameMsg').hide();
+            frstnmErr = 0;
+        }
+
+    }
+    if (txtMsgId == 'email_addr')
+    {
+        email_confrm = 0;
+        var email_ad = $('#' + txtMsgId).val();
+        if (!emailCheck(email.val())) {
+            $('.emailIconPosition').addClass('borderRedClr');
+            if (email.val() != "")
+                $('#emailMsg').hide().html(errImg + 'Please enter a valid email id');
+            else
+                $('#emailMsg').hide().html(errImg + 'Please enter your email id');
+            //$('#emailSpan').removeClass('rightSideLoginIcon_new');
+            $('#emailSpan').addClass('rightSideErrorIcon');
+            emailErr = 1;
+        } else {
+            $('#emailSpan').addClass('rightSideLoginIcon_new');
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                url: '/india/ajax/registerSteps.php?email=' + email_ad + '&action=chkEmail',
+                // dataType: 'html',
+                success: function(data) {
+                    if (data == 'true')
+                    {
+                        $('.emailIconPosition').addClass('borderRedClr');
+                        $('#emailMsg').hide().html(errImg + 'This email id is already registered with us');
+                        $('#emailSpan').removeClass('rightSideLoginIcon_new');
+                        $('#emailSpan').addClass('rightSideErrorIcon');
+                        emailErr = 1;
+                    }
+                    else if (data == 'false_incorrect')
+                    {
+                        $('.emailIconPosition').addClass('borderRedClr');
+                        if (email.val() == '')
+                            $('#emailMsg').hide().html(errImg + 'Please enter your email id');
+                        else
+                            $('#emailMsg').hide().html(errImg + 'Please enter a valid email id');
+                        $('#emailSpan').removeClass('rightSideLoginIcon_new');
+                        $('#emailSpan').addClass('rightSideErrorIcon');
+                        emailErr = 1;
+                    }
+                    else {
+                        $('.emailIconPosition').removeClass('borderRedClr');
+                        //$('#emailMsg').addClass('correctMsg').show().html(corrImg+'Email is okay');
+                        $('#emailSpan').removeClass('rightSideLoginIcon_new');
+                        $('#emailSpan').removeClass('rightSideErrorIcon').addClass('rightSideCorrectIcon');
+                        $('#emailMsg').hide();
+                        emailErr = 0;
+                        email_confrm = 1;
+                    }
+                }
+            });
+        }
+    }
+    if (txtMsgId == 'phnmber')
+    {
+        mbl_conf = 0;
+        var mbl = $('#' + txtMsgId).val();
+        if (!mobileFormat.test(mbl)) {
+            $('.mobileIconPosition').addClass('borderRedClr');
+            if (mbl != '')
+                $('#mobileMsg').hide().html(errImg + 'Please enter a valid mobile number');
+            else
+                $('#mobileMsg').hide().html(errImg + 'Please enter your mobile number');
+            $('#phSpan').removeClass('rightSideLoginIcon');
+            $('#phSpan').addClass('rightSideErrorIcon');
+            mblnoErr = 1;
+        }
+
+        else
+        {
+
+            if (mbl.length > 10 || mbl.length < 10)
+            {
+                $('.mobileIconPosition').addClass('borderRedClr');
+                $('#mobileMsg').hide().html(errImg + 'Please enter a valid mobile number');
+                $('#phSpan').removeClass('rightSideLoginIcon');
+                $('#phSpan').addClass('rightSideErrorIcon');
+                mblnoErr = 1;
+            }
+            else
+            {
+
+                $('#phSpan').addClass('rightSideLoginIcon_new');
+
+                $.ajax({
+                    type: 'GET',
+                    cache: false,
+                    url: '/india/ajax/registerSteps.php?mbl=' + mbl + '&action=chkMobile',
+                    // dataType: 'html',
+                    success: function(data) {
+                        if (data == 'true')
+                        {
+                            $('.mobileIconPosition').addClass('borderRedClr');
+                            $('#mobileMsg').hide().html(errImg + 'Mobile No. already exists..');
+                            $('#phSpan').removeClass('rightSideLoginIcon_new');
+                            $('#phSpan').addClass('rightSideErrorIcon');
+                            //$('#phSpan').css({'background':'red url("/india/images/loadingsmall.gif") 5px 3px no-repeat;'});
+                            mblnoErr = 1;
+                        }
+                        else
+                        {
+                            $('.mobileIconPosition').removeClass('borderRedClr');
+                            // $('#mobileMsg').addClass('correctMsg').show().html(corrImg+'Mobile is okay');
+                            $('#phSpan').removeClass('rightSideLoginIcon_new');
+                            $('#phSpan').removeClass('rightSideErrorIcon').addClass('rightSideCorrectIcon');
+                            $('#mobileMsg').hide();
+                            mblnoErr = 0;
+                            mbl_conf = 1;
+                        }
+                    }});
+            }
+        }
+    }
+    if (txtMsgId == 'register_searchCatTxt')
+    {
+        if (cateOptions == 'null' || cateOptions.length < 1) {
+            $('.categoryIconPosition').addClass('borderRedClr');
+            $('#cateMsg').hide().html(errImg + 'Please select atleast 1 category');
+            catErr = 1;
+
+        } else {
+            // $('#categoryIconPosition').addClass('correctMsg').show().html(corrImg+'category is done');
+            // $('#cateMsg').addClass('correctMsg').show().html(corrImg+'Category is okay');
+            $('#cateMsg').hide();
+            catErr = 0;
+        }
+    }
+    if (txtMsgId == 'txtUsername')
+    {
+        if ($('#' + txtMsgId).val() == '' || $('#' + txtMsgId).val() == 'Email / Username')
+        {
+            $('.userNm').addClass('borderRedClr');
+            $('#UserErr').hide().html(errImgRight + 'Please enter correct email id/ username');
+            $('#userSpan').addClass('rightSideErrorIcon');
+            usernmErr = 1;
+        }
+        else
+        {
+            $('.userNm').removeClass('borderRedClr');
+            $('#UserErr').hide();
+            //$('#userSpan').removeClass('rightSideErrorIcon').addClass('rightSideIcons rightSideCorrectIcon');
+            usernmErr = 0;
+        }
+    }
+
+    if (txtMsgId == 'txtPassword')
+    {
+        if ($('#' + txtMsgId).val() == '' || $('#' + txtMsgId).val() == 'password')
+        {
+            $('.userPass').addClass('borderRedClr');
+            $('#PwdErr').hide().html(errImgRight + 'Please enter correct password.');
+            $('#userSpanpass').addClass('rightSideErrorIcon');
+            userPassErr = 1;
+        }
+        else
+        {
+            $('.userPass').removeClass('borderRedClr');
+            $('#PwdErr').hide();
+            $('#userSpanpass').removeClass('rightSideErrorIcon');
+            //.addClass('rightSideIcons rightSideCorrectIcon');
+            userPassErr = 0;
+        }
+    }
+    if (txtMsgId == 'phone_password')
+    {
+        if ($('#' + txtMsgId).val() == '' || $('#' + txtMsgId).val() == 'Mobile')
+        {
+            $('#mbl_forget').addClass('borderRedClr');
+            //$('#PwdErr').hide().html(errImgRight+'Please enter correct Password.');
+            $('#mbl_nameSpan').addClass('rightSideErrorIcon');
+            frgt_mbl_Err = 1;
+        }
+        else
+        {
+            $('#mbl_forget').removeClass('borderRedClr');
+            //$('#PwdErr').hide();
+            $('#mbl_nameSpan').removeClass('rightSideErrorIcon').addClass('rightSideIcons rightSideCorrectIcon');
+            frgt_mbl_Err = 0;
+        }
+    }
+    if (txtMsgId == 'email')
+    {
+        if ($('#' + txtMsgId).val() == '' || $('#' + txtMsgId).val() == 'Via Email')
+        {
+            $('#email_forget').addClass('borderRedClr');
+            //$('#PwdErr').hide().html(errImgRight+'Please enter correct Password.');
+            $('#email_nameSpan').addClass('rightSideErrorIcon');
+            frgt_email_Err = 1;
+        }
+        else
+        {
+            $('#email_forget').removeClass('borderRedClr');
+            //$('#PwdErr').hide();
+            $('#email_nameSpan').removeClass('rightSideErrorIcon').addClass('rightSideIcons rightSideCorrectIcon');
+            frgt_email_Err = 0;
+        }
+    }
+    return false;
+}
+function chkField(txtMsgId)
+{
+    if (txtMsgId == 'first_name' && frstnmErr == 1)
+    {
+        $('#nameMsg').show();
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#UserErr').hide();
+        $('#PwdErr').hide();
+    }
+    else if (txtMsgId == 'email_addr' && emailErr == 1)
+    {
+        $('#nameMsg').hide();
+        $('#emailMsg').show();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#UserErr').hide();
+        $('#PwdErr').hide();
+    }
+    else if (txtMsgId == 'phnmber' && mblnoErr == 1)
+    {
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#mobileMsg').show();
+        $('#cateMsg').hide();
+        $('#UserErr').hide();
+        $('#PwdErr').hide();
+    }
+    else if (txtMsgId == 'register_searchCatTxt' && catErr == 1)
+    {
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').show();
+        $('#UserErr').hide();
+        $('#PwdErr').hide();
+    }
+    else if (txtMsgId == 'txtUsername' && usernmErr == 1)
+    {
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#UserErr').show();
+        $('#PwdErr').hide();
+    }
+    else if (txtMsgId == 'txtPassword' && userPassErr == 1)
+    {
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#UserErr').hide();
+        $('#PwdErr').show();
+    }
+    else if (txtMsgId == 'email' && _errFrgtEmail == 1)
+    {
+        $('#recoverPass_msg').show();
+    }
+    /*else if(txtMsgId == 'email' && frgt_email_Err==1)
+     {
+     $('#nameMsg').hide();
+     $('#emailMsg').hide();
+     $('#mobileMsg').hide();
+     $('#cateMsg').hide();
+     $('#UserErr').hide();
+     $('#PwdErr').hide();
+     //$('#phone_password').hide();
+     //$('#email').show();
+     }*/
+    /*	else if(txtMsgId == '' && )
+     {
+     $('#PwdErr').show();
+     
+     }
+     else if()
+     {
+     
+     }*/
+}
+function fieldfoucs_span_click(id)
+{
+    $('#' + id).focus();
+}
+function chkPlaceholder_focus(txtMsgId, val)
+{
+    if (document.createElement("input").placeholder == undefined) {
+        if (txtMsgId == 'txtUsername')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Email / Username');
+            }
+            else if ($('#' + txtMsgId).val() == 'Email / Username')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'txtPassword')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('password');
+            }
+            else if ($('#' + txtMsgId).val() == 'password')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'first_name')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Name');
+            }
+            else if ($('#' + txtMsgId).val() == 'Name')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'email_addr')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Email');
+            }
+            else if ($('#' + txtMsgId).val() == 'Email')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'phnmber')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Mobile');
+            }
+            else if ($('#' + txtMsgId).val() == 'Mobile')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'register_searchCatTxt')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Select Your Exam Category (max 2)');
+            }
+            else if ($('#' + txtMsgId).val() == 'Select Your Exam Category (max 2)')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'phone_password')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Mobile');
+            }
+            else if ($('#' + txtMsgId).val() == 'Mobile')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+        else if (txtMsgId == 'email')
+        {
+            if ($('#' + txtMsgId).val() == '')
+            {
+                $('#' + txtMsgId).val('Via Email');
+            }
+            else if ($('#' + txtMsgId).val() == 'Via Email')
+            {
+                $('#' + txtMsgId).val('');
+            }
+        }
+
+    }
+}
+function show_Shadow(txtMsgId)
+{
+    var id = '#' + txtMsgId;
+    //$(id).parent('div').css('box-shadow','0 0 4px #999999');
+    //$(id).parent('div').addClass('fullBorderLogin');
+    if (txtMsgId == 'first_name' && frstnmErr == 1)
+    {
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    }
+    else if (txtMsgId == 'email_addr' && emailErr == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'phnmber' && mblnoErr == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'register_searchCatTxt' && catErr == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'txtUsername' && usernmErr == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'txtPassword' && userPassErr == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'phone_password' && frgt_mbl_Err == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+    else if (txtMsgId == 'email' && frgt_email_Err == 1)
+        $(id).parent('div').children('div').removeClass('rightSideErrorIcon').removeClass('rightSideCorrectIcon');
+
+}
+function hide_Shadow(txtMsgId)
+{
+    var id = '#' + txtMsgId;
+    //$(id).parent('div').css({'box-shadow':'none','position':'relative'});
+
+    //$(id).parent('div').removeClass('fullBorderLogin');
+    if (txtMsgId == 'first_name' && frstnmErr == 1)
+    {
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    }
+    else if (txtMsgId == 'email_addr' && emailErr == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'phnmber' && mblnoErr == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'register_searchCatTxt' && catErr == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'txtUsername' && usernmErr == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'txtPassword' && userPassErr == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'phone_password' && frgt_mbl_Err == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+    else if (txtMsgId == 'email' && frgt_email_Err == 1)
+        $(id).parent('div').children('div').addClass('rightSideErrorIcon');
+
+
+}
+
+
+
+
+
+var mobileFormat = /^([0-9]{10,15})$/;
+
+function submit_frm_register1() {
+    var confrmErr = 0;
+    var fn = 0, em = 0, ph = 0, cat = 0;
+    var firstName = $('#first_name');
+    var email = $('#email_addr');
+    var phnmber = $('#phnmber');
+
+    var cateOptions = $(".categoryCheckBoxNew:checked");
+
+    if (cateOptions == 'null' || cateOptions.length < 1) {
+        $('.categoryIconPosition').addClass('borderRedClr');
+        $('#cateMsg').show().html(errImg + 'Please select atleast 1 category');
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        hide_Shadow('register_searchCatTxt');
+        cat = 1;
+        catErr = 1;
+    }
+    else {
+        cat = 0;
+        catErr = 0
+    }
+    if (!mobileFormat.test((phnmber.val()))) {
+        $('.mobileIconPosition').addClass('borderRedClr');
+        if (phnmber.val() != '')
+            $('#mobileMsg').show().html(errImg + 'Please enter a valid mobile number');
+        else
+            $('#mobileMsg').show().html(errImg + 'Please enter your mobile number');
+        $('#nameMsg').hide();
+        $('#emailMsg').hide();
+        $('#cateMsg').hide();
+        $('#phSpan').addClass('rightSideErrorIcon');
+        hide_Shadow('phnmber');
+        ph = 1;
+        mblnoErr = 1;
+    }
+    else {
+        ph = 0;
+        mblnoErr = 0
+    }
+    if (!emailCheck(email.val())) {
+        $('.emailIconPosition').addClass('borderRedClr');
+        if (email.val() != "")
+            $('#emailMsg').show().html(errImg + 'Please enter a valid email id');
+        else
+            $('#emailMsg').show().html(errImg + 'Please enter your email id');
+        $('#nameMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#emailSpan').addClass('rightSideErrorIcon');
+        hide_Shadow('email_addr');
+        em = 1;
+        emailErr = 1;
+    }
+    else {
+        em = 0;
+        emailErr = 0;
+    }
+    if (email_confrm == 0)
+    {
+        $('.emailIconPosition').addClass('borderRedClr');
+        if (email.val() != "")
+            $('#emailMsg').show().html(errImg + 'This email id is already registered with us');
+        else
+            $('#emailMsg').show().html(errImg + 'Please enter your email id');
+        $('#nameMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#emailSpan').addClass('rightSideErrorIcon');
+        hide_Shadow('email_addr');
+        em = 1;
+        emailErr = 1;
+    }
+    if (firstName.val() == '' || firstName.val() == 'Name' || firstName.val().length < 3) {
+        $('.namePosition').addClass('borderRedClr');
+        if (firstName.val() != '')
+            $('#nameMsg').show().html(errImg + 'Please enter your valid name');
+        else
+            $('#nameMsg').show().html(errImg + 'Please enter your name');
+        $('#emailMsg').hide();
+        $('#mobileMsg').hide();
+        $('#cateMsg').hide();
+        $('#nameSpan').addClass('rightSideErrorIcon');
+        hide_Shadow('first_name');
+        fn = 1;
+        frstnmErr = 1;
+    }
+    else {
+        fn = 0;
+        frstnmErr = 0;
+    }
+    /*else{    
+     confrmErr='';
+     // $('#categoryIconPosition').addClass('correctMsg').show().html(corrImg+'category is done');
+     // $('#cateMsg').addClass('correctMsg').show().html(corrImg+'Category is okay');
+     }*/
+
+    if (fn == 1 || em == 1 || ph == 1 || cat == 1 || email_confrm == 0 || mbl_conf == 0)
+        return false;
+    showWhitediv();
+    $.ajax({
+        type: "POST",
+        url: "/signup",
+        data: "todo=register&" + $('#RegisterFrm').serialize(),
+        success: function(e) {
+            //$("#processImg").hide();
+            if (e == "Registered") {
+                $("#registerError1").fadeOut("fast", function() {
+                    $("#registerError1").html("Registered successfully.");
+                    $("#registerError1").fadeIn("fast")
+                    register_slide(2);
+                });
+                //window.location.href = "/india/Register/step/2"
+            } else if (e != "") {
+                $("#registerError1").fadeOut("fast", function() {
+                    $("#registerError1").html(e);
+                    $("#registerError1").fadeIn("slow")
+                })
+            }
+            hideWhitediv();
+        }
+    })
+    //return false;
+}
+
+$(document).ready(function() {
+    $('#showPass').click(function() {
+        var pass = $('#password').val();
+        
+        if (this.checked)
+        {
+            $('#passDiv').html('<input type="text" value="' + pass + '" name="password" id="password" onblur="regChkError(this.id,\'\');passEmptyChk(this.id);highlightBorder(this.id,\'blur\');showErrDiv(this.id);" onfocus="regChkError(this.id,\'\');showErrDiv(this.id);highlightBorder(this.id,\'focus\');"  >');
+
+        }
+        else
+        {
+            $('#passDiv').html('<input type="password" value="' + pass + '" name="password" id="password" onblur="regChkError(this.id,\'\');passEmptyChk(this.id);highlightBorder(this.id,\'blur\');showErrDiv(this.id);" onfocus="regChkError(this.id,\'\');showErrDiv(this.id);highlightBorder(this.id,\'focus\');" placeholder="Password">');
+        }
+    });
+});
+function chkFrmFields(e) {
+    var t = true;
+    var n = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var r = /^\s*[a-zA-Z,\s]+\s*$/;
+    var i = /^\s*[a-zA-Z0-9#-,./: ; = &()\s] + \s * $ /;
+    var s = /^([0-9]{10,15})$/;
+    var o = e.acceptChk;
+    var u = trim(e.first_name.value);
+    var a = trim(e.email_addr.value);
+    var f = trim(e.phnmber.value);
+    var l = trim(e.captcha.value);
+    var c = trim(e.country.value);
+    var h = $(".categoryCheckBoxNew:checked");
+    if ($.trim(u) == "") {
+        showHideErrorMsg("#informationmsg2", "Please enter your name", 1);
+        t = false
+    } else if (!r.test(u)) {
+        showHideErrorMsg("#informationmsg2", "Please enter a valid name", 1);
+        t = false
+    } else
+        showHideErrorMsg("#informationmsg2", "", 0);
+    if ($.trim(a) == "") {
+        showHideErrorMsg("#informationmsg3", "Please enter your email", 1);
+        t = false
+    } else if (!n.test(a)) {
+        showHideErrorMsg("#informationmsg3", "Please enter valid email", 1);
+        t = false
+    } else
+        showHideErrorMsg("#informationmsg3", "", 0);
+    if ($.trim(f) == "") {
+        showHideErrorMsg("#informationmsg4", "Please enter your mobile no", 1);
+        t = false
+    } else if (!s.test(f)) {
+        showHideErrorMsg("#informationmsg4", "Please enter valid Mobile No", 1);
+        t = false
+    } else
+        showHideErrorMsg("#informationmsg4", "", 0);
+    if (h == "null" || h.length < 1) {
+        showHideErrorMsg("#informationmsg8", "Please select atleast 1 category", 1);
+        t = false
+    } else
+        showHideErrorMsg("#informationmsg8", "", 0);
+    if ($.trim(l) == "") {
+        showHideErrorMsg("#ErrCaptcha", "Please enter security code", 1);
+        t = false
+    } else
+        showHideErrorMsg("#ErrCaptcha", "", 0);
+    if (t == false)
+        return false;
+    else
+        return true
+}
+
+function showHideErrorMsg(e, t, n) {
+    jQuery(document).ready(function() {
+        if (n == 1) {
+            $(e).text(t);
+            $(e).show()
+        } else {
+            $(e).text(t);
+            $(e).hide()
+        }
+    })
+}
+
+function validate(e) {
+    var t = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if (t.test(e) == false)
+        return false;
+    else
+        return true
+}
+
+function findfor(e, t) {
+    var n = e.value != "" ? e.value.toLowerCase() : "";
+    if (lastStr === n)
+        return;
+    lastStr = n;
+    currMuseOver = "";
+    var r = document.getElementById(t);
+    showOf = [];
+    if (n == "") {
+        if (document.getElementById("citySuggest"))
+            document.body.removeChild(document.getElementById("citySuggest"));
+        return
+    }
+    for (var i = 0; i < cities.length; i++) {
+        var s = cities[i].name;
+        if (s.toLowerCase().indexOf(n) == 0 && s.toLowerCase() != n) {
+            showOf.push({
+                id: cities[i].id,
+                name: cities[i].name
+            })
+        }
+    }
+    var o = "";
+    if (showOf.length) {
+        for (var i = 0; i < showOf.length; i++) {
+            if (i <= 5) {
+                o += "<div onclick=\"document.getElementById('" + e.id + "').value=this.innerHTML;document.body.removeChild(document.getElementById('citySuggest'));\" id=\"" + showOf[i].id + '" class="Step3_cityDiv">' + showOf[i].name + "</div>"
+            }
+        }
+    } else {
+        if (document.getElementById("citySuggest"))
+            document.body.removeChild(document.getElementById("citySuggest"));
+        return
+    }
+    if (!document.getElementById("citySuggest")) {
+        var u = document.createElement("div");
+        u.id = "citySuggest";
+        u.style.position = "absolute";
+        u.style.border = "1px solid #999";
+        u.style.padding = "10px";
+        u.style.top = parseInt(r.offsetTop) + parseInt(r.offsetHeight) + "px";
+        u.style.left = r.offsetLeft - 1 + "px";
+        u.style.background = "#fff";
+        u.style.width = e.offsetWidth - 21 + "px";
+        u.style.overflow = "auto";
+        document.body.appendChild(u)
+    } else
+        u = document.getElementById("citySuggest");
+    u.innerHTML = "";
+    u.innerHTML = o
+}
+
+function Steps3Validate() {
+    var e = document.updateProfileFrm.password;
+    var t = document.updateProfileFrm.confpassword;
+    var n = document.updateProfileFrm.student;
+    var r = document.updateProfileFrm.teacher;
+    var i = document.updateProfileFrm.gender;
+    var s = document.updateProfileFrm.day;
+    var o = document.updateProfileFrm.month;
+    var u = document.updateProfileFrm.year;
+    var a = document.updateProfileFrm.city;
+    var f = document.updateProfileFrm.qual;
+    var l = "\\';/{}\":";
+    var c = document.updateProfileFrm.password.value;
+    for (var h = 0; h < c.length; h++) {
+        if (l.indexOf(c.charAt(h)) != -1) {
+            alert("Special characters in password are not allowed.");
+            document.updateProfileFrm.password.value = "";
+            return false
+        }
+    }
+    if (n.checked == false && r.checked == false) {
+        alert("Please enter your role profile.");
+        return false
+    }
+    if (trim(e.value) != trim(t.value)) {
+        alert("Password and Confirm password must be same.");
+        return false
+    }
+    if (trim(a.value) == "") {
+        alert("Please select your city.");
+        return false
+    }
+    if (trim(f.value) == "") {
+        alert("Please select your qualification.");
+        return false
+    }
+    document.updateProfileFrm.submit()
+}
+
+function ChangeMobile() {
+    var e = $("#mobileNo").val();
+    $("#EditMobileProcess").show();
+    var t = "ChangeMobNo=true&mobile=" + e;
+    $("#mobileMsg").hide();
+    if (e != "") {
+        $.ajax({
+            type: "POST",
+            url: "/india/Register_new/step2Ajax.php",
+            data: t,
+            success: function(t) {
+                $("#EditMobileProcess").hide();
+                $("#mobileMsg").show();
+                if (t == "") {
+                    $("#EditMobileProcess").html('<div class="successMsg">Updating the information, please wait.</div>');
+                    $("#mobileSpan").html(e);
+                    $("#popUpEditMobile").delay(3500).hide("fast", function() {
+                        $("#HP_dullDiv").css("display", "none");
+                        $("#imgZipDial").attr("src", "/india/images/loader.gif");
+                        $(".redZipImg").remove();
+                        changeZipDial(e)
+                    })
+                } else {
+                    $("#mobileMsg").html('<div class="errorMsg">' + t + "</div>")
+                }
+            }
+        })
+    }
+}
+
+function changeZipDial(e) {
+    var t = "RegenrateImg=true&mobile=" + e;
+    $.ajax({
+        type: "POST",
+        url: "/india/Register_new/step2Ajax.php",
+        data: t,
+        success: function(t) {
+            if (trim(t) == "") {
+                $("#imgZipDial").attr("src", "");
+                $(".RD_DialNumber").append("<div class='redZipImg'>Some error occured, please try again.</div>");
+                clearInterval(verifyInterval);
+                verifyInterval = ""
+            } else {
+                contNo = e;
+                sendVerificationCode()
+            }
+        }
+    });
+}
+
+function ChangeEmail() {
+    $("#EditEmailProcess").show();
+    $("#emailMsg").hide();
+    var e = $("#emailId").val();
+    var t = "ResendMail=true&mailId=" + e;
+    if (e != "") {
+        $.ajax({
+            type: "POST",
+            url: "/india/Register_new/step2Ajax.php",
+            data: t,
+            success: function(t) {
+                $("#EditEmailProcess").hide();
+                $("#emailMsg").show();
+                if (t != "") {
+                    $("#emailMsg").html('<div class="errorMsg">' + t + "</div>")
+                } else {
+                    $("#emailMsg").html('<div class="successMsg">An activation email has been sent at ' + e + "</div>");
+                    $("#popUpEditEmail").delay(2500).hide("fast", function() {
+                        $("#HP_dullDiv").css("display", "none");
+                        $("#emailSpan").html(e)
+                    })
+                }
+            }
+        })
+    }
+}
+
+function vedrifyMoBileNo() {
+    var e = "user_id=" + userId + "&contact_no=" + contNo + "&transaction_token=" + tranToken + "&sid=" + Math.random();
+    $.ajax({
+        type: "POST",
+        url: "/verifymobile2.php",
+        data: e,
+        success: function(e) {
+            if (e == "phone verified") {
+                clearInterval(verifyInterval);
+                InstantMsg('<div class="successMsg">Mobile verified successfully. Please wait while we redirect you to next page.</div>', "450");
+                window.location.href = "/signup/details"
+            }
+        }
+    })
+}
+
+function sendVerificationCode(e) {
+    var t = "contact_no=" + contNo + "&verificationCode=true";
+    $.ajax({
+        type: "POST",
+        url: "/india/Register_new/step2Ajax.php",
+        data: t,
+        success: function() {
+            if (typeof e == "undefined")
+                InstantMsg('<div class="successMsg">An activation code has been sent at ' + contNo + "</div>")
+        }
+    })
+}
+function verifyTheCode() {
+    var e = trim($("#verifyCodeIs").val());
+    if (e != "" && !isNaN(e)) {
+        var t = "verifyCode=" + e + "&contact_no=" + contNo;
+        $("#verifyCodeIs").addClass("waiter");
+        $.ajax({
+            type: "POST",
+            url: "/india/Register_new/step2Ajax.php",
+            data: t,
+            success: function(e) {
+                /* $("#verifyCodeIs").removeClass("waiter");
+                 var t = e == "" ? '<div class="successMsg">Mobile verified successfully. Please wait while we redirect you to next page.</div>' : '<div class="errorMsg">' + e + "</div>";
+                 InstantMsg(t, "450");*/
+                if (e == "")
+                    register_slide(3);
+
+            }
+        })
+    } else
+        InstantMsg('<div class="errorMsg">Invalid conformation code.</div>')
+}
+
+function InstantMsg(e, t) {
+    $("<div/>", {
+        "class": "popup_model",
+        id: "ForPopUpMsgs"
+    }).appendTo("body");
+    if (typeof t != "undefined") {
+        $("#ForPopUpMsgs").width(t)
+    }
+    $("#ForPopUpMsgs").html(e);
+    $("#HP_dullDiv").css("display", "block");
+    $("#ForPopUpMsgs").show();
+    middleDiv("ForPopUpMsgs");
+    setTimeout("$('#HP_dullDiv').css('display', 'none');$('#ForPopUpMsgs').remove();", 3500)
+}
+
+function sendEmailVerifyMail(e, t) {
+    e.innerHTML = "Please wait...";
+    var n = "uId=" + t;
+    $.ajax({
+        type: "POST",
+        url: "/india/Register_new/send_verification.php",
+        data: n,
+        success: function(t) {
+            e.innerHTML = t;
+            e.onclick = function() {
+            }
+        }
+    })
+}
+
+function sendForgotPassMail(e, t) {
+    e = $("#registerError1");
+    e.html("Please wait...");
+    var n = "uId=" + t + "&forgotpass=true";
+    $.ajax({
+        type: "POST",
+        url: "/india/Register_new/send_verification.php",
+        data: n,
+        success: function(t) {
+            if (t == 1) {
+                e.html("Email has been sent")
+            } else {
+                e.html(t)
+            }
+        }
+    })
+}
+function showCat_img()
+{
+    var n = $(".categoryCheckBoxNew:checked").length;
+    if ($('#catImg').attr('src') == '/india/images/downCategoriesIcon.png')
+    {
+        register_showCats();
+        if (n == 1)
+            if($('#register_searchCatTxt').val() == '')
+            $('#register_searchCatTxt').attr('placeholder', 'Select Your Exam Category (max 2)');
+        else
+            $('#register_searchCatTxt').attr('placeholder', 'Select Maximum 2 Categories');
+    }
+    else
+    {
+       // $(".dropDownCategory").hide();
+        $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+        if (document.createElement("input").placeholder != undefined) {
+            $("#form_cats").removeClass('rightSideErrorIcon').removeClass('form_inner').addClass('form_inner_up');
+            $('#register_searchCatTxt').attr('placeholder', '');
+        }
+    }
+}
+function chkChkbox_new(e, t)
+{
+    $('#register_searchCatTxt').parent('div').removeClass("errorBorder");
+    $('.ticArow').hide();
+    $('#ticDd').hide();
+    $('#selectdcats').hide();
+    $('#category_error').hide();
+    //$('#dropDownfields i').show();
+    $('.examCategory').children('i').show();
+    $(".dropDownCategory").show();
+    var e = e.split("-");
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    var r = t.slice(0, 10);
+    var catid = ( parseInt(e[1]) && parseInt(e[1]) > 0 ) ? parseInt(parseInt(e[1])) : 0;
+    if (n <= 2) {
+        if ($("#cat-" + e[1]).is(":checked")) {
+            var html = $('#selectdcats .showCtgry_'+e[1]).html(); 
+            if( typeof html!='undefined' && html!='' && html != null){ 
+                
+            }else if( typeof appendCat!='undefined' && appendCat==false ){
+                appendCat = true;
+            }else{
+               $("#selectdcats").append('<div class="showCtgry showCtgry_'+e[1]+'" id="cross_' + e[1] + '">' + r + '<i onclick="closeUncheckCat_new(\'' + e[1] + '\');"></i></div>');
+            }
+            $("#dropDownOutter").show();
+
+
+        } else {
+            $("#cross_" + e[1]).remove();
+           
+        }
+    }
+
+    if (n <= 2 && n > 0) {
+        $('.ticArow').show();
+        if($("#register_searchCatTxt").val() == '')
+        $('#register_searchCatTxt').val('Select Your Exam Category (max 2)');
+        $('#selectdcats').show();
+        // $('#cateMsg').hide();
+        $("#form_cats").show();
+
+    } else if (n == 0) {
+        $('#register_searchCatTxt').parent('div').addClass("errorBorder");
+
+        $("#form_cats").hide()
+    }
+
+    if (n > 2) {
+        $('#register_searchCatTxt').val('Select Maximum 2 Categories').css('color', '#ff7e7e');
+        setTimeout("categoryMsg()", 2e5);
+        $('.ticArow').show();
+        $('#selectdcats').show();
+        return false
+    }
+    if ($("#catDiv" + e[1]).hasClass("categoryNameBoxSelected")) {
+        $("#catDiv" + e[1]).removeClass("categoryNameBoxSelected")
+    } else {
+        $("#catDiv" + e[1]).addClass("categoryNameBoxSelected")
+    }
+    if (n == 2)
+    {
+        //$(".dropDownCategory").hide();
+        $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+        if (document.createElement("input").placeholder != undefined) {
+            $("#form_cats").removeClass('rightSideErrorIcon').addClass('form_inner_up').removeClass('form_inner');
+        }
+        $('#register_searchCatTxt').attr('placeholder', '');
+    }
+}
+function chkChkbox_new_profile(e, t)
+{
+    $('#register_searchCatTxt').parent('div').removeClass("errorBorder");
+    $('.ticArow').hide();
+    $('#ticDd').hide();
+    $('#selectdcats').hide();
+    $('.dropDownCategory').css('display','none');
+    $('.examCategory').children('i').show();
+    $(".dropDownCategory").show();
+    var e = e.split("-");
+    var x =  $(".register_cate_check:checked");
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    var r = t.slice(0, 10);
+    for(i=0 ; i< x.length ; i++){
+        if ($("#cat-" + x[i].value).is(":checked")) {
+            catName = document.getElementById("lcat-"+x[i].value).innerHTML;
+            $("#selectdcats").append('<div class="showCtgry" id="cross_' + x[i].value + '">' + catName + '<i onclick="closeUncheckCat_new(\'' + x[i].value + '\');"></i></div>');
+            $("#dropDownOutter").show();
+        } else {
+            $("#cross_" + x[i]).remove();           
+        }
+    }
+    
+
+    if (n <= 2 && n > 0) {
+        $('.ticArow').show();
+        if($("#register_searchCatTxt").val() == '')
+        $('#register_searchCatTxt').val('Select Your Exam Category (max 2)');
+        $('#selectdcats').show();
+        // $('#cateMsg').hide();
+        $("#form_cats").show();
+
+    } else if (n == 0) {
+        $('#register_searchCatTxt').parent('div').addClass("errorBorder");
+
+        $("#form_cats").hide()
+    }
+
+    if (n > 2) {
+        $('#register_searchCatTxt').val('Select Maximum 2 Categories').css('color', '#ff7e7e');
+        setTimeout("categoryMsg()", 2e5);
+        $('.ticArow').show();
+        $('#selectdcats').show();
+        return false
+    }
+    if ($("#catDiv" + e[1]).hasClass("categoryNameBoxSelected")) {
+        $("#catDiv" + e[1]).removeClass("categoryNameBoxSelected")
+    } else {
+        $("#catDiv" + e[1]).addClass("categoryNameBoxSelected")
+    }
+    if (n == 2)
+    {
+        //$(".dropDownCategory").hide();
+        $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+        if (document.createElement("input").placeholder != undefined) {
+            $("#form_cats").removeClass('rightSideErrorIcon').addClass('form_inner_up').removeClass('form_inner');
+        }
+        $('#register_searchCatTxt').attr('placeholder', '');
+    }
+}
+
+function chkChkbox_new_cat(e, t)
+{
+    $('#register_searchCatTxt').parent('div').removeClass("errorBorder");
+    $('.ticArow').hide();
+    $('#ticDd').hide();
+    $('#selectdcats').hide();
+    //$('#dropDownfields i').show();
+    $('.examCategory').children('i').show();
+    $(".dropDownCategory").show();
+    var cat = e;
+    var e = e.split("-");
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    var r = t.slice(0, 10);
+   
+    if (n <= 2) {
+        
+        if ($("#cat-" + e[1]).is(":checked")) {
+            $("#selectdcats").append('<div class="showCtgry" id="cross_' + e[1] + '">' + r + '<i onclick="closeUncheckCat_new(\'' + e[1] + '\');showClasses(\''+ cat +'\' , \'' + t + '\' , \'0\') ; "></i></div>');
+            $("#dropDownOutter").show();
+        } else {
+            $("#cross_" + e[1]).remove();
+           
+        }
+    }
+
+    if (n <= 2 && n > 0) {
+        $('.ticArow').show();
+        if($("#register_searchCatTxt").val() == '')
+        $('#register_searchCatTxt').val('Select Your Exam Category (max 2)');
+        $('#selectdcats').show();
+        // $('#cateMsg').hide();
+        $("#form_cats").show();
+
+    } else if (n == 0) {
+        $('#register_searchCatTxt').parent('div').addClass("errorBorder");
+        $('#selectdcats').html('');//cool
+        $("#form_cats").hide()
+    }
+
+    if (n > 2) {
+        $('#register_searchCatTxt').val('Select Maximum 2 Categories').css('color', 'red');
+        setTimeout("categoryMsg()", 2e3);
+        $('.ticArow').show();
+        $('#selectdcats').show();
+        return false
+    }
+    
+    
+            $('.register_cate_check').each(function(e){
+                var gg = $(this).attr('id').split('-');
+                if($(this).is(":checked")){
+                    
+                    if ($("#catDiv" + gg[1]).hasClass("categoryNameBoxSelected")) {
+                        $("#catDiv" + gg[1]).removeClass("categoryNameBoxSelected")
+                    } else {
+                        $("#catDiv" + gg[1]).addClass("categoryNameBoxSelected");
+                    }
+                }else{
+                    $("#catDiv" + gg[1]).removeClass("categoryNameBoxSelected")
+                }
+            });
+            
+        
+    
+    if (n == 2)
+    {
+        $(".dropDownCategory").hide();
+        $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+        if (document.createElement("input").placeholder != undefined) {
+            $("#form_cats").removeClass('rightSideErrorIcon').addClass('form_inner_up').removeClass('form_inner');
+        }
+        $('#register_searchCatTxt').attr('placeholder', '');
+    }
+}
+function chkChkTick()
+{
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    if (n > 0)
+    {
+        $('.ticArow').hide();
+        //$('#dropDownfields i').hide();
+        $('.examCategory').children('i').hide();
+        $('#ticDd').show();
+
+    }
+
+}
+function removeDivCat(e) {
+    $("#cross_" + e).remove()
+}
+
+function closeUncheckCat_new(e) {
+    $("#catDiv" + e).removeClass("categoryNameBoxSelected");
+    $("#cat-" + e).attr("checked", false);
+    setTimeout("removeDivCat('" + e + "')", 100);
+    if ($(".dropDownCategory").css("display") == "block") {
+        $("#catImg").html('<img src="/india/images/register-page-up-icon.png">')
+    } else {
+        $("#catImg").html('<img src="/india/images/register-page-down-icon.png">')
+    }
+    categoryMsg();
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    if (n == 0)
+    {
+        $('#dropDownOutter').hide();
+        $('#dropDownOutter').removeClass('dropDownAddClass');
+        $('.ticArow,#ticDd').hide();
+        //$('#dropDownfields i').hide();
+        //$('#ticDd').hide();
+        $('#selectdcats').hide();
+        $('.examCategory').children('i').show();
+    }
+
+}
+
+function register_showCats() {
+    var n = $(".register_cate_check:checked").length;
+   // alert(n);
+    $('#dropDownOutter').show();
+    $('#dropDownOutter').removeClass('dropDownAddClass');
+    if (n > 0)
+        catErr = 0;
+    if (n != 2) {
+         if($("#register_searchCatTxt").val() == '' )
+            $('#register_searchCatTxt').attr('placeholder', 'Select Your Exam Category (max 2)');
+    } else  {
+        $('#register_searchCatTxt').attr('placeholder', 'Select Maximum 2 Categories');
+    }    
+    $(".dropDownCategory").show();
+    $("#catImg").attr('src', '/india/images/register-page-up-icon.png');
+    if (document.createElement("input").placeholder != undefined) {
+        $("#form_cats").removeClass('rightSideErrorIcon').removeClass('form_inner_up').addClass('form_inner');
+    }
+}
+
+function categoryMsg() {
+    var e = $(".register_cate_check:checked").length;
+    if (e != 0) {
+    } else {
+        $("#form_cats").hide()
+    }
+    $(".dropDownfields").css("border", "");
+    $("#register_searchCatTxt").css("color", "#666666")
+}
+
+function showCategories() {
+   // $(".dropDownCategory").toggle();
+    if ($(".dropDownCategory").css("display") == "block") {
+        $("#catImg").attr('src', '/india/images/register-page-up-icon.png');
+    } else {
+        $("#catImg").attr('src', '/india/images/register-page-up-icon.png');
+    }
+}
+
+function loginSms_User(e) {
+    var t = "/india/sendpassword.php?action=sms&username=" + e;
+    commmonFun(t, "loginError", "", "", 2);
+}
+
+function searchCat_new(e) {
+    var t = "";
+    //alert('a');
+    if ($("#cat-100552_1").is(":checked") && $("#cat-100552_2").is(":checked")) {
+        t = "&bba=yes&bca=yes"
+    } else if ($("#cat-100552_1").is(":checked")) {
+        t = "&bba=yes"
+    } else if ($("#cat-100552_2").is(":checked")) {
+        t = "&bca=yes"
+    }
+    var n = $(".register_cate_check:checked");
+    var r = "";
+    //alert(n.length);
+    if (n && n.length > 0) {
+        for (var i = 0; i < n.length; i++) {
+            r += "&courses[]=" + n[i].value
+        }
+    }
+    //alert(r);
+    $.ajax({
+        type: "POST",
+        url: "/india/ajax/registerSteps.php",
+        data: "action=searchCat&search=" + e + r + t,
+        success: function(e) {
+            $("#allCategories").html(e)
+        }
+    })
+}
+
+var loadingimg = '<div style="text-align:center"><img style="margin: auto;" src="/india/images/loading.gif" alt="loading" title="Loading"></div>';
+var ieB = document.all ? 1 : 0;
+var IE = document.all ? true : false;
+var iserror = 0;
+var steps3Val = 0;
+var sbtlogs = 0;
+var digits = "0123456789";
+var phoneNumberDelimiters = "()- ";
+var validWorldPhoneChars = phoneNumberDelimiters + "+";
+var minDigitsInIPhoneNumber = 10;
+var showOf = [];
+var lastStr = "";
+var HP_ieB = document.all ? 1 : 0
+var contNo = '';
+var step2_emailid = 0;
+var step2_mbl = 0;
+function change_contact(type) {
+   
+    var e = processImg = dataUrl = this_format = errMsg = hideDivid = showDivid = datatxt = '';
+    $('#emailId').removeClass('errorBorder');
+    $('#mobileNo').removeClass('errorBorder');
+    $('#wrngMbl').hide();
+    $('#wrngEmail').hide();
+    $('#verifyCodeIs').css('border-color', '#e4e4e4');
+
+    // $('#wrngVerMbl').hide();
+    if (type == 'phone') {
+         $("#vrybtn").val("Please Wait...").attr("disabled","disabled");
+        e = $("#mobileNo").val();
+        processImg = $('#m_edit_pro');
+        dataUrl = "ChangeMobNo=true&mobile=" + e;
+        this_format = mobileFormat;
+        errMsg = 'Please enter a valid mobile number';
+        hideDivid = $('#resendMobile');
+        showDivid = $('#verification_mobile');
+        datatxt = $('#mobileNumtxt');
+
+        if (!this_format.test(e)) {
+            $('#mobileNo').addClass('errorBorder');
+            $('#wrngMbl').show().html(errMsg + '<span class="errorArrow"></span>');
+            step2_mbl = 1;
+            $("#vrybtn").val("Resend").removeAttr("disabled");
+            return false;
+           
+        }
+    } else if (type == 'email') {
+         $("#vryebtn").val("Please Wait...").attr("disabled","disabled");
+        e = $("#emailId").val();
+        dataUrl = "ResendMail=true&mailId=" + e;
+        this_format = emailCheck;
+        hideDivid = $('#resendEmail');
+        showDivid = $('#verification_email');
+        processImg = $('#e_edit_pro');
+        datatxt = $('#emailNumtxt');
+        if (!this_format(e)) {
+            $('#emailId').addClass('errorBorder');
+            $('#wrngEmail').show().html('Please enter a valid E-Mail Id <span class="errorArrow"></span>');
+            step2_emailid = 1;
+            $("#vryebtn").val("Resend").removeAttr("disabled");
+            return false;
+        }
+    }
+    processImg.show();
+    // processImg.parent('div').children('div .rightSideIcons').html('<img alt="Please wait" title="Please wait"  src="/india/images/loadingsmall.gif" border="0" />').removeClass('rightSideErrorIcon').show();
+    $.ajax({
+        type: "POST",
+        url: "/india/ajax/registerSteps.php",
+        data: dataUrl,
+        success: function(t) {
+            processImg.hide();
+            var explodedval = t.split('|||');
+            if (t == "" || explodedval[0] == 1) {
+                hideDivid.hide();
+                showDivid.show();
+                datatxt.html(e);
+                if (type == 'phone') {
+                    $("#my_mob").val(e);
+                    change_phone_close();
+                    
+                }
+                if (type == 'email') {
+                    $("#ch_email").val(e);
+                    change_email_close();
+                }
+            } else {
+                if (type == 'email') {
+                    $("#vryebtn").val("Resend").removeAttr("disabled");
+                    $('#emailId').addClass('errorBorder');
+                    $('#wrngEmail').show().html(t + '<span class="errorArrow"></span>');
+                    step2_emailid = 1;
+                } else {
+                    $("#vrybtn").val("Resend").removeAttr("disabled");
+                    $('#mobileNo').addClass('errorBorder');
+                    $('#wrngMbl').show().html(t + '<span class="errorArrow"></span>');
+                    step2_mbl = 1;
+                }
+            }
+        }
+    })
+}
+
+function onfocus_common(type) {
+    if (type == 'mobile' && step2_mbl == 1) {
+        $('#wrngMbl').show();
+    } else if (type == 'email' && step2_emailid == 1) {
+        $('#wrngEmail').show();
+    } else if (type == 'verify' && verify_code == 1) {
+        $('#wrngVerMbl').show();
+    }
+}
+
+var verify_code = 0;
+function verifyCode() {
+    $('#wrngVerMbl').hide();
+    var e = trim($("#verifyCodeIs").val());
+    $("#vrybtn").val('Please Wait...').attr("disabled","disabled");
+    if (e != "" && !isNaN(e)) {
+        var t = "verifyCode=" + e + "&contact_no=" + contNo;
+        $("#verifyCodeIs").addClass("waiter");
+        $.ajax({
+            type: "POST",
+            url: "/india/ajax/registerSteps.php",
+            data: t,
+            success: function(e) {
+                if (e == "") {
+                  if( typeof REGISTER_SKIP_VARFY !='undefined' && REGISTER_SKIP_VARFY==true ){
+                     if( typeof comeFrom !='undefined' && comeFrom!='' ){
+                        window.location = comeFrom;
+                     }else {
+                        window.location = '/profile/'+profilename+'/'+chatUserid;
+                     }
+                     return false;  
+                  }else if( typeof s!=='undefined' && s == "tcy-opte-register" ) {
+                       window.location = '/signup/details/tcy-opte-register';
+                  }else{
+                     window.location = '/signup/details';
+                  }
+                    return false;
+                }
+                else
+                {
+                    $("#vrybtn").val('Submit').removeAttr("disabled");
+                    $('#wrngVerMbl').show().html(e+' <span class="errorArrow"></span>');
+                }
+            }
+        });
+    } else {
+        $("#vrybtn").val('Submit').removeAttr("disabled");
+        $('#verifyCodeIs').addClass('errorBorder');
+        $('#wrngVerMbl').show().html('Please enter vaild verification code <span class="errorArrow"></span>');
+        verify_code = 1;
+    }
+
+}
+function change_email_login(){
+    $('#loginError').html('');
+    $(".socialMediaBox").show();
+    $("#head_part").html('Login/Sign Up');
+    $(".rightLoginPart").removeClass('rightForm');
+    var email = $("#txtUsername").val();
+    if(typeof email == 'undefined') 
+        email = '';
+    var htm = '<div class="loginField loginEmailIcon"><input tabindex="1" type="text" name="txtUsername" id="txtUsername" value="'+email+'" onblur="regChkError(this.id,\'Email / Username\');loginEmptyChk(this.id);highlightBorder(this.id,\'blur\');" onfocus="regChkError(this.id,\'Email / Username\');showErrDiv(this.id);highlightBorder(this.id,\'focus\');" /></div><div id="txtUsername_error" class="errorInputMsg">Please enter Email / Username<span class="errorArrow"></span></div><div class="nextBtnLogin"><a href="javascript:void(0)"><input type="button" tabindex="2" onclick="return chk_email_addr()" id="lg_check" class="loginBtn" value="Next"/></a></div><input type="hidden" id="txtPassword" name="txtPassword"/>   <input type="hidden" id="destroy_session" name="destroy_session">';
+   // $('#sh_pwd').hide('slide', {direction: 'left'}, 500);
+    //setTimeout(function(){
+      //  $("#sh_pwd").show();
+        $("#sh_pwd").html(htm);
+    //}, 510);
+                   
+    
+}
+function password_recovery() {
+    var email = $('#email').val();
+    var msgDiv = $('#recoverPass_msg').removeClass('success-msg');
+    msgDiv.hide();
+    var progress = $('#forgot_pass');
+    $("#ret_pass").val("Please Wait...").attr("disabled","disabled");
+    if (validateEmail(email) == true) {
+        progress.show();
+        $.ajax({
+            type: "POST",
+            url: "/india/sendpassword.php?email=" + email,
+            success: function(e) {
+                progress.hide();
+                
+                 $("#ret_pass").val("Retrieve").removeAttr("disabled");
+                if (e == 1) {
+                    //$("#txtUsername").val(email);
+                    $("#recoverPass_msg").html('Your Password is sent to you at '+email).addClass('success-msg').show();
+                    $('#email_forget').removeClass("errorBorder");
+                    //setTimeout('$("#showforgot1").slideUp(500)',2000);                       
+                } else {
+                    $('#email_forget').addClass("errorBorder");
+                    $("#forgot_passworderror").html('Please enter a valid email<span class="errorArrow"></span>').show();
+                   
+                }
+            }
+        })
+    } else {
+         $("#ret_pass").val("Retrieve").removeAttr("disabled");
+        $('#email').parent('div').addClass("errorBorder");
+       $("#forgot_passworderror").val('Please enter a valid email<span class="errorArrow"></span>').show();
+        _errFrgtEmail = true;
+    }
+}
+//step3
+var step3_conf_pass = 0;
+var step3_pass = 0;
+var step3_city = 0;
+var step3_qual = 0;
+var step3_day = 0;
+var step3_month = 0;
+var step3_year = 0;
+var step3_role = 0;
+function validation(inputid, val, typ)
+{
+    var id = "#" + inputid;
+    if (typ == 'focus')
+    {
+        if (inputid != 'student' && inputid != 'teacher')
+            $(id).parent('div').css('box-shadow', '0 0 4px #999999');
+        if (document.createElement("input").placeholder == undefined) {
+            if ($(id).val() == 'Password' || $(id).val() == 'Confirm Password' || $(id).val() == '')
+            {
+
+                //$(id).prop('type','password');
+                $(id).removeClass('passBg');
+                $(id).removeClass('confPassBg');
+            }
+        }
+        if (inputid == 'password')
+        {
+            if (step3_pass == 1)
+            {
+
+                $(id).parent('div').children('div .rightSideIcons').hide();
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $(id).parent('div').children('div .errorLoginMsg').show();
+                $('#step3dob').hide();
+                //step3_pass = 0;
+            }
+        }
+        if (inputid == 'confpassword')
+        {
+            if (step3_conf_pass == 1)
+            {
+                //step3_pass = 0;
+                $(id).parent('div').children('div .rightSideIcons').hide();
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $(id).parent('div').children('div .errorLoginMsg').show();
+                $('#step3dob').hide();
+            }
+
+        }
+        if (inputid == 'city')
+        {
+            if (step3_city == 1)
+            {
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $(id).parent('div').children('div .errorLoginMsg').show();
+                $('#step3dob').hide();
+            }
+        }
+        if (inputid == 'qual')
+        {
+            if (step3_qual == 1)
+            {
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $(id).parent('div').children('div .errorLoginMsg').show();
+                $('#step3dob').hide();
+            }
+        }
+        if (inputid == 'day')
+        {
+
+            if (step3_day == 1)
+            {
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $('#step3dob').show();
+            }
+        }
+        if (inputid == 'month')
+        {
+
+            if (step3_month == 1)
+            {
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $('#step3dob').show();
+            }
+        }
+        if (inputid == 'year')
+        {
+
+            if (step3_year == 1)
+            {
+                $(id).parent('div').css('border-color', '#6DAC48');
+                $('#updateProfileFrm div .errorLoginMsg').hide();
+                $('#step3dob').show();
+            }
+        }
+        if (inputid == 'student' || inputid == 'teacher')
+        {
+            $(id).parent('div').children('div .rightSideIcons').hide();
+            $('#step3role').hide();
+        }
+    }
+    else if (typ == 'blur')
+    {
+        $('#step3dob').hide();
+        $('#updateProfileFrm div .errorLoginMsg').hide();
+        if (inputid != 'student' && inputid != 'teacher')
+            $(id).parent('div').css('box-shadow', 'none');
+        if (document.createElement("input").placeholder == undefined) {
+            if ($(id).val() == '' && inputid == 'password')
+            {
+                $(id).addClass('passBg');
+            }
+            if ($(id).val() == '' && inputid == 'confpassword')
+            {
+
+                $(id).addClass('confPassBg');
+            }
+        }
+        if (inputid == 'password')
+        {
+
+            if ($(id).val() == '' || $(id).val() == 'Password')
+            {
+                step3_pass = 1;
+                //$(id).parent('div').children('div .rightSideIcons').show();
+                $(id).parent('div').children('div .rightSideIcons').removeClass('rightSideCorrectIcon').addClass('rightSideErrorIcon').show();
+                $(id).parent('div').css('border-color', '#C12727');
+            }
+            else
+            {
+                $(id).parent('div').children('div .rightSideIcons').removeClass('rightSideErrorIcon').addClass('rightSideCorrectIcon').show();
+
+                step3_pass = 0;
+            }
+        }
+        if (inputid == 'confpassword')
+        {
+            if ($(id).val() == '' || $(id).val() == 'Confirm Password' || $(id).val() != $('#password').val())
+            {
+                step3_conf_pass = 1;
+                //$(id).parent('div').children('div .rightSideIcons').show();
+                $(id).parent('div').css('border-color', '#C12727');
+                $(id).parent('div').children('div .rightSideIcons').removeClass('rightSideCorrectIcon').addClass('rightSideErrorIcon').show();
+            }
+            else
+            {
+                step3_conf_pass = 0;
+                $(id).parent('div').children('div .rightSideIcons').removeClass('rightSideErrorIcon').addClass('rightSideCorrectIcon').show();
+            }
+        }
+        if (inputid == 'city')
+        {
+            if ($(id).val() == '')
+            {
+                $(id).parent('div').css('border-color', '#C12727');
+                step3_city = 1;
+            }
+            else
+                step3_city = 0;
+        }
+        if (inputid == 'qual')
+        {
+            if ($(id).val() == '')
+            {
+                $(id).parent('div').css('border-color', '#C12727');
+                step3_qual = 1;
+            }
+            else
+                step3_qual = 0;
+        }
+        if (inputid == 'phnmber')
+        {
+            
+        }
+        if (inputid == 'day')
+        {
+            if ($(id).val() == '')
+            {
+                $(id).parent('div').css('border-color', '#C12727');
+                step3_day = 1;
+            }
+            else
+                step3_day = 0;
+        }
+        if (inputid == 'month')
+        {
+            if ($(id).val() == '')
+            {
+                $(id).parent('div').css('border-color', '#C12727');
+                step3_month = 1;
+            }
+            else
+                step3_month = 0;
+        }
+        if (inputid == 'year')
+        {
+            if ($(id).val() == '')
+            {
+                $(id).parent('div').css('border-color', '#C12727');
+                step3_year = 1;
+            }
+            else
+                step3_year = 0;
+        }
+        if (inputid == 'student')
+        {
+            if (!($('#student').attr('checked')) && !($('#teacher').attr('checked')))
+            {
+                $(id).parent('div').children('div .rightSideIcons').show();
+                $('#step3role').show();
+                step3_role = 1;
+            }
+            else
+            {
+                step3_role = 0;
+
+            }
+
+        }
+        if (inputid == 'teacher')
+        {
+            if (!($('#student').attr('checked')) && !($('#teacher').attr('checked')))
+            {
+                $(id).parent('div').children('div .rightSideIcons').show();
+                $('#step3role').show();
+                step3_role = 1;
+            }
+            else
+            {
+                step3_role = 0;
+
+            }
+        }
+    }
+
+}
+function chk_dob(type)
+{
+    var day = $('#day').val();
+    var month = $('#month').val();
+    var yr_val;
+    if (month == 2)
+    {
+        $('#day option[value=30]').attr('disabled', 'true');
+        $('#day option[value=31]').attr('disabled', 'true');
+    }
+    $("#year option").show();
+    if (day == 29 && month == 2)
+    {
+        $("#year option").each(function()
+        {
+            yr_val = $(this).val();
+            if (yr_val % 4 != 0)
+            {
+
+                $('#year option[value="' + $(this).val() + '"]').hide();
+            }
+
+        });
+    }
+    if (type == 'day')
+    {
+
+        if (day == 31)
+        {
+            $('#month option[value=02]').attr('disabled', 'true');
+            $('#month option[value=04]').attr('disabled', 'true');
+            $('#month option[value=06]').attr('disabled', 'true');
+            $('#month option[value=09]').attr('disabled', 'true');
+            $('#month option[value=11]').attr('disabled', 'true');
+        }
+        else if (day == 30)
+        {
+            $('#month option[value=04]').removeAttr('disabled');
+            $('#month option[value=06]').removeAttr('disabled');
+            $('#month option[value=09]').removeAttr('disabled');
+            $('#month option[value=11]').removeAttr('disabled');
+            $('#month option[value=02]').attr('disabled', 'true');
+        }
+        else
+        {
+            $('#month option[value=02]').removeAttr('disabled');
+            $('#month option[value=04]').removeAttr('disabled');
+            $('#month option[value=06]').removeAttr('disabled');
+            $('#month option[value=09]').removeAttr('disabled');
+            $('#month option[value=11]').removeAttr('disabled');
+        }
+
+
+    }
+    else if (type = 'month')
+    {
+
+        if (month == 2)
+        {
+            $('#day option[value=30]').attr('disabled', 'true');
+            $('#day option[value=31]').attr('disabled', 'true');
+        }
+        else if (month == 4 || month == 6 || month == 9 || month == 11)
+        {
+            $('#day option[value=30]').removeAttr('disabled');
+            $('#day option[value=31]').attr('disabled', 'true');
+        }
+        else
+        {
+            $('#day option[value=30]').removeAttr('disabled');
+            $('#day option[value=31]').removeAttr('disabled');
+        }
+
+    }
+
+
+}
+
+function submit_step3()
+{
+    if ($('#confpassword').val() == '' || $('#confpassword').val() == 'Confirm Password')
+    {
+        $("#confpassword").parent('div').children('div .rightSideIcons').removeClass('rightSideCorrectIcon').addClass('rightSideErrorIcon').show();
+        $("#confpassword").parent('div').css('border-color', '#C12727');
+        step3_conf_pass = 1;
+
+    }
+    else
+        step3_conf_pass = 0;
+    if ($('#city').val() == '')
+    {
+        $("#city").parent('div').css('border-color', '#C12727');
+        step3_city = 1;
+
+    }
+    else
+        step3_city = 0;
+    if ($('#qual').val() == '')
+    {
+        $('#qual').parent('div').css('border-color', '#C12727');
+        step3_qual = 1;
+    }
+    else
+        step3_qual = 0;
+    if ($('#day').val() == '')
+    {
+        $('#day').parent('div').css('border-color', '#C12727');
+        step3_day = 1;
+
+    }
+    else
+        step3_day = 0;
+    if ($('#month').val() == '')
+    {
+        $('#month').parent('div').css('border-color', '#C12727');
+        step3_month = 1;
+
+    }
+    else
+        step3_month = 0;
+    if ($('#year').val() == '')
+    {
+        step3_year = 1;
+        $('#year').parent('div').css('border-color', '#C12727');
+
+    }
+    else
+        step3_year = 0;
+    if ($('#password').val() != $('#confpassword').val())
+    {
+        step3_conf_pass = 1;
+        //$(id).parent('div').children('div .rightSideIcons').show();
+        $("#confpassword").parent('div').children('div .rightSideIcons').removeClass('rightSideCorrectIcon').addClass('rightSideErrorIcon').show();
+        $("#confpassword").parent('div').css('border-color', '#C12727');
+    }
+    else
+        step3_conf_pass = 0;
+
+
+    if ($('#password').val() == '' || $('#password').val() == 'Password')
+    {
+        step3_pass = 1;
+        $("#password").parent('div').children('div .rightSideIcons').removeClass('rightSideCorrectIcon').addClass('rightSideErrorIcon').show();
+        $("#password").parent('div').css('border-color', '#C12727');
+    }
+    else
+        step3_pass = 0;
+
+    if (!($('#student').attr('checked')) && !($('#teacher').attr('checked')))
+    {
+        $(id).parent('div').children('div .rightSideIcons').show();
+
+        step3_role = 1;
+    }
+    else
+    {
+
+        step3_role = 0;
+    }
+
+    if (step3_pass == 1 || step3_conf_pass == 1 || step3_city == 1 || step3_qual == 1 || step3_role == 1 || step3_day == 1 || step3_month == 1 || step3_year == 1)
+    {
+        return false
+    }
+    else
+    {
+        $('#updateProfileFrm').submit();
+
+    }
+}
+function conf_password(inputid)
+{
+    var id = "#" + inputid;
+    var l = "\\';/{}\":";
+    for (var h = 0; h < $(id).val().length; h++) {
+        if (l.indexOf($(id).val().charAt(h)) != -1) {
+            $(id).parent('div').children('img').attr('src', '/india/images/error-msg-img.png').show();
+            $(id).parent('div').css('border-color', '#C12727');
+        }
+        else
+        {
+            $(id).parent('div').css('border-color', '#6DAC48');
+            $(id).parent('div').children('img').hide();
+        }
+    }
+}
+$(document).click(function(e) {
+    if ($('.dropDownCategory').css("display") == 'block') {
+        //var n = $(".categoryCheckBoxNew:checked").length; 
+        var n = $(".categoryNameBox .floatLeft:checked").length;
+        
+        if (e.target.id != 'dropDownfields' && !$('#dropDownfields').find(e.target).length && e.target.id != 'formExamCat' && !$('#formExamCat').find(e.target).length && e.target.id != 'catImg' && !$('#catImg').find(e.target).length) {
+            if (document.createElement("input").placeholder == undefined) {
+                 if($("#register_searchCatTxt").val() == '' )
+                    $('#register_searchCatTxt').val('Select Your Exam Category (max 2)');
+            }
+            else {
+                 if($("#register_searchCatTxt").val() == '' )
+                   $('#register_searchCatTxt').attr('placeholder', 'Select Your Exam Category (max 2)');
+            }
+            if( n > 2) {
+                $(".dropDownCategory").hide();
+            }
+            // alert(n);
+            if (n == 0)
+            {
+                $('#dropDownOutter').hide();
+                $('#dropDownOutter').removeClass('dropDownAddClass');
+            }
+            else
+            {
+                $('#dropDownOutter').addClass('dropDownAddClass');
+                
+            }
+            chkChkTick();
+            if (document.createElement("input").placeholder != undefined) {
+                $("#form_cats").removeClass('rightSideErrorIcon').removeClass('form_inner').addClass('form_inner_up');
+                if (n == 0)
+                     if($("#register_searchCatTxt").val() == '' )
+                    $('#register_searchCatTxt').attr('placeholder', 'Select Your Exam Category (max 2)');
+                else
+                    $('#register_searchCatTxt').attr('placeholder', '');
+            }
+            //searchCat_new('');
+            if ($(".dropDownCategory").css("display") == "block") {
+
+                $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+            } else {
+                $("#catImg").attr('src', '/india/images/downCategoriesIcon.png');
+            }
+
+        }
+    }
+    if ($('#dropDownOutter').css('display') == 'block')
+    {
+
+    }
+
+});
+function loginFB() {
+    
+    FB.getLoginStatus(function(e) {
+        
+        if (e.status === "connected") {
+            login()
+        } else if (e.status === "not_authorized") {
+            login()
+        } else {
+            login()
+        }
+    })
+}
+function loginTW(){
+    window.location.href='/india/tw_login/process.php';
+}
+window.fbAsyncInit = function() {
+    //appId: "606737929341540",
+    FB.init({
+        appId: "140723036038106",
+        channelUrl: "",
+        status: true,
+        cookie: true,
+        xfbml: true,
+        version : 'v2.10'
+    })
+};
+
+
+function login() {
+    FB.login(function(e) {
+        if (e.authResponse) {
+            window.location.href = "/india/LoginNow/fb-connect"
+        } else {
+        }
+    }, {
+        scope: "email,user_birthday,user_hometown,user_location"
+    })
+}
+function show_popups() {
+     window.open("https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.tcyonline.com%2FCreaTest%2Fgoogle-login-api%2Findex.php&client_id=1090083381316-ip94otqp46vee8j6nel3qfss1003gm7r.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&approval_prompt=force","samewindow","toolbar=no, scrollbars=no, resizable=no, top=200, left=500, width=470, height=450");
+}
+
+function show_popup() {
+    googleOpener.popup(450, 500)
+}
+var upgradeToken = function() {
+};
+var extensions = {
+    "openid.ns.ext1": "http://openid.net/srv/ax/1.0",
+    "openid.ext1.mode": "fetch_request",
+    "openid.ext1.type.email": "http://axschema.org/contact/email",
+    "openid.ext1.type.first": "http://axschema.org/namePerson/first",
+    "openid.ext1.type.last": "http://axschema.org/namePerson/last",
+    "openid.ext1.type.country": "http://axschema.org/contact/country/home",
+    "openid.ext1.type.lang": "http://axschema.org/pref/language",
+    "openid.ext1.type.city": "http://axschema.org/contact/city/home",
+    "openid.ext1.required": "email,first,last,country,lang,city",
+    "openid.ns.oauth": "http://specs.openid.net/extensions/oauth/1.0",
+    "openid.oauth.consumer": "googlecodesamples.com",
+    "openid.ui.icon": "true"
+};
+try{
+var googleOpener = popupManager.createPopupOpener({
+    realm: "http://www.tcyonline.com",
+    opEndpoint: "https://www.google.com/accounts/o8/ud",
+    returnToUrl: "http://www.tcyonline.com/CreaTest/google/index.php?popup=true",
+    onCloseHandler: upgradeToken,
+    shouldEncodeUrls: true,
+    extensions: extensions
+})
+}catch (exception) {
+    
+}
+function submitpwdrecovery(e) {
+    var t = "";
+    var n;
+    if (e == 1) {
+        t = "&type=loginForgot";
+        var r = document.getElementById("txtUsername").value;
+        n = "loginError"
+    } else {
+        var r = document.getElementById("email").value;
+        n = "mymsgdiv"
+    }
+    document.getElementById(n).innerHTML = "Please wait...";
+    document.getElementById(n).style.display = "block";
+    var i = "/india/sendpassword.php?email=" + r + t;
+    $.ajax({
+        url: i,
+        type: "GET",
+        cache: false,
+        global: false,
+        success: function(t) {
+            if (t == 1) {
+                if (e != 1) {
+                    $("#passHtmlDiv").remove()
+                }
+                $("#" + n).html('<div class="success-msg">Email with your login details sent on your email id.</div>');
+            } else {
+                $("#" + n).html(t)
+            }
+        }
+    })
+}
+
+//function login_advanced(tmp_username, tmp_pwd, tmp_rem) {
+//    document.getElementById("txtUsername").value = tmp_username;
+//    document.getElementById("txtPassword").value = tmp_pwd;
+//    if (tmp_rem > 0) {
+//        document.getElementById("remember").checked = 'true';
+//    }
+//    document.getElementById("destroy_session").value = '1';
+//    document.getElementById("contentHolder").innerHTML = 'Please wait...';
+//    middleDiv("multiple_login_loader");
+//    document.forms["LoginFrm"].submit();
+//}
+
+/* daman */
+
+function str_trim(str){
+   return str.replace(/^\s+|\s+$/g, '');
+}
+
+function regChkError(e, t, t2) {
+    
+    var id = "#" + e;
+    var val = str_trim($(id).val());
+    $(id).val(val);
+    if ($(id).val() == t || $(id).val() == t2) {
+        $(id).val("");
+        $(id).parent('div').removeClass("errorBorder");
+    }
+    else if ($(id).val() == "")
+    {
+        $(id).val(t);
+        $(id).parent('div').addClass("errorBorder");
+
+    }
+
+}
+function regChkUser(e)
+{
+    var id = $('#' + e);
+    var val = $(id).val();
+    var name = $(id).attr('name');
+    $(id).parent('div').children("dd").hide();
+    //$('.errorInputMsg').hide();
+    if (id.val() != '' && id.val() != 'Name' && id.val() != 'name')
+    {
+        if (!nameFrmt.test(id.val()) || id.val().length < 3)
+        {
+            $(id).parent('div').addClass("errorBorder");
+            $('#' + e + '_error').html('Please enter a valid name<span class="errorArrow"></span>');
+            $('#' + e + '_error').show();
+            _errName = true;
+        }
+        else
+        {
+            $(id).parent('div').removeClass("errorBorder");
+            $(id).parent('div').children("dd").show();
+            $('#' + e + '_error').hide();
+            _errName = false;
+            /*sign track recd*/
+            $.ajax({
+                type: "POST",
+                url: '/india/ajax/registerSteps.php?action=regsignuptrackdb',
+                data: {val:val,name:name},
+                success: function(e) {
+                    //$("#processImg").hide();
+//                    if (e == "Registered") {
+//                        $("#registerError1").fadeOut("fast", function() {
+//                            $("#registerError1").html("Registered successfully.");
+//                            $("#registerError1").fadeIn("fast")
+//                            register_slide(2);
+//                        });
+//                        //window.location.href = "/india/Register/step/2"
+//                    } else if (e != "") {
+//                        $("#registerError1").fadeOut("fast", function() {
+//                            $("#registerError1").html(e);
+//                            $("#registerError1").fadeIn("slow")
+//                        })
+//                    }
+//                    hideWhitediv();
+                }
+            })
+            /*sign track recd*/
+        }
+    }
+    else
+    {
+        _errName = true;
+    }
+
+}
+function sendVerificationCode_new()
+{
+    var n = $('#verifynumberid').val();
+    if (TCYtrim(n) == "")
+        return false;
+    var r = /^[0-9]{10}$/;
+    if (r.test(n) == false) {
+        alert("Please enter a valid 10 digit mobile no..");
+        return false
+    } else {
+        //document.getElementById("msgVerify").innerHTML = "Please wait...";
+        ajaxCode2_new("/challenge-zone/includes/reportabuse.php?verifyMobNo=" + n, "alertmsg")
+    }
+
+}
+function verifymobilecode(){
+    var codeval = $("input[name='verificationcodetxt[]']").map(function(){return $(this).val();}).get();
+    var num = 0;
+    var phnm = '';
+    for(var i=0;i<codeval.length;i++)
+    {
+        if(codeval[i] != '')
+        {
+            num++;
+            phnm +=codeval[i];
+        }
+    }
+    if(num == 6 && phnm!='')
+    {
+        console.log(phnm);
+        ajaxCode2_new("/challenge-zone/includes/reportabuse.php?verifyCode=" + phnm, "alertmsg")
+        //console.log('submit');
+    }
+    //console.log(codeval);
+    
+}
+function ajaxCode2_new(e, t) {
+    var n;
+    if (window.XMLHttpRequest)
+        n = new XMLHttpRequest;
+    else
+        n = new ActiveXObject("Microsoft.XMLHTTP");
+    n.onreadystatechange = function () {
+        //console.log('---');
+        //console.log(n.readyState);
+        
+        if (n.readyState == 4) {
+            //console.log(n.responseText);
+            output = n.responseText;
+            if (output != "" && document.getElementById(t)) {
+                if (output.indexOf("sent") != -1) {
+                    document.getElementById(t).innerHTML = "You will shortly receive verification code"
+                } else if (output.indexOf("error") != -1) {
+                    document.getElementById(t).innerHTML = "Sending failed, try again." + output.substr(parseInt(output.indexOf("error")) + 5)
+                } else if (output.indexOf("queued") != -1) {
+                    document.getElementById(t).innerHTML = "Process queued. You will shortly receive verification code."
+                } else {
+                    if(output == "<span style='color:red;'>Verification Failed.</span>")
+                    {
+                        document.getElementById(t).innerHTML = "<span style='color:red;'>Otp does not match, please try again.</span>";
+                    }
+                    else
+                    {
+                        document.getElementById(t).innerHTML = output
+                        setTimeout(function(){
+                            location.reload();
+                        },1000);
+                        
+                    }
+                    
+                    //location.reload();
+                }
+            }
+            
+        } else {
+            document.getElementById(t).innerHTML = "";
+        }
+        
+    };
+    n.open("GET", e, true);
+    n.send(null)
+}
+
+function regChkMobile(e)
+{
+    var mobileFormat = /^([0-9]{3,16})$/;
+    mbl_conf = 0;
+    var mbl = $('#' + e).val();
+    var process = $('#process2');
+    $('#' + e).parent('div').children("dd").hide();
+    // $('.errorInputMsg').hide();
+    if(typeof forgien === 'undefined')
+    {
+        forgien = false;
+    }
+    if (mbl != '' && mbl != 'Mobile')
+    {
+        var mobilenumbermaxlength = 10;
+        var mobilenumberminlength = 10;
+        
+        if(forgien == 'true')
+        {
+            mobilenumbermaxlength = 17;
+            mobilenumberminlength = 3;
+        }
+        if (!mobileFormat.test(mbl) || (mbl.length > mobilenumbermaxlength || mbl.length < mobilenumberminlength)) {
+            $('#' + e).parent('div').addClass("errorBorder");
+            _errMobile = true;
+            //mblnoErr = 1;
+            $('#' + e + '_error').css('background','#ff5454');
+            $('#' + e + '_error .errorArrow').css("background", "url('/india/images/errorMsgArrow.jpg') no-repeat");
+                        
+            $('#' + e + '_error').html("Please enter valid mobile number<span class=\"errorArrow\"></span>");
+             $('#' + e + '_error').show();
+        } else {
+            process.show();
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                url: '/india/ajax/registerSteps.php?mbl=' + mbl + '&action=chkMobile&chkVerify=true&typecheck=1',
+                // dataType: 'html',
+                success: function(data) {
+                    process.hide();
+                    if(data == 'notverify'){
+                        $('#' + e).parent('div').removeClass("errorBorder");
+                        
+                        //$('#' + e).parent('div').addClass("errorBorder");
+                        if(forgien == 'true')
+                        {
+                            //showVerify = '<a style="color:#fff" href="javascript:void(0);" onClick="showforgien();" class="verifyAcc">Click here to verify your account</a>';
+                        }
+                        else
+                        {
+                            showVerify = '<a style="color:#fff" href="javascript:void(0);" onClick="openverificationPopUp();" class="verifyAcc">Click here to verify your account</a>';
+                            $('#' + e + '_error').html("<!--Mobile number already exists--><span class=\"errorArrow\"></span>"+showVerify);
+                            $('#' + e + '_error').css('background','#5fbf8a');
+                            $('#' + e + '_error .errorArrow').css("background", "url('/india/images/errorMsgArrow_green.jpg') no-repeat");
+
+                            $('#' + e + '_error').show();
+                        }
+                        //showVerify = '<a style="color:#fff" href="javascript:void(0);" onClick="postVerifyUser(this,2);" class="verifyAcc">Click here to verify your account</a>';
+                        
+                        
+                        _errMobile = false;
+                    }else if(data == 'true') {
+                       
+                        $('#' + e).parent('div').addClass("errorBorder");
+                        $('#' + e + '_error').html("Mobile number already exists<span class=\"errorArrow\"></span>");
+                        
+                        $('#' + e + '_error').css('background','#ff5454');
+                        $('#' + e + '_error .errorArrow').css("background", "url('/india/images/errorMsgArrow.jpg') no-repeat");
+                        
+                        $('#' + e + '_error').show();
+                        _errMobile = true;
+                    } else {
+                        _errMobile = false;
+                        $('#' + e).parent('div').removeClass("errorBorder");
+                        $('#' + e).parent('div').children("dd").show();
+                        
+                        $('#' + e + '_error').hide();
+                        
+                    }
+                }
+            });
+        }
+    }
+    else
+    {
+        $('#' + e).parent('div').addClass("errorBorder");
+        $('#' + e + '_error').html("Please enter your mobile number<span class=\"errorArrow\"></span>");
+        _errMobile = true;
+    }
+}
+function regChkMobile_otp(e)
+{
+    var mobileFormat = /^([0-9]{10,15})$/;
+    mbl_conf = 0;
+    var mbl = $('#' + e).val();
+    //var process = $('#process2');
+    $('#' + e).parent('div').children("dd").hide();
+    // $('.errorInputMsg').hide();
+    $('#alertmsg').html("");
+
+    if (mbl != '' && mbl != 'Mobile')
+    {
+        if (!mobileFormat.test(mbl) || (mbl.length > 10 || mbl.length < 10)) {
+            $('#' + e).parent('div').addClass("errorBorder");
+            _errMobile = true;
+            //mblnoErr = 1;
+                        
+            $('#alertmsg').html("<span style='color:red;'>Please enter valid mobile number.</span>");
+             
+        } else {
+           // process.show();
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                url: '/india/ajax/registerSteps.php?mbl=' + mbl + '&action=chkMobile&chkVerify=true&typecheck=1',
+                // dataType: 'html',
+                success: function(data) {
+                   // process.hide();
+                    if(data == 'notverify'){
+                       $('#phnmber').val(mbl);
+                       $("#verifynumberid").prop("disabled",true);
+                        _errMobile = false;
+                    }else if(data == 'true') {
+                       
+                        $('#alertmsg').html("<span style='color:red;'>Mobile number already exists.</span>");
+                        _errMobile = true;
+                    } else {
+                        $("#verifynumberid").prop("disabled",true);
+                        $('#phnmber').val(mbl);
+                        _errMobile = false;
+                       
+                        
+                    }
+                }
+            });
+        }
+    }
+    else
+    {
+         $('#alertmsg').html("<span style='color:red;'>Please enter your mobile number.</span>");
+        _errMobile = true;
+    }
+}
+
+function retrive_new_pass(email_div_id,error_div_id){
+    
+    var email = $('#'+email_div_id).val();
+    var msgDiv = $('#'+error_div_id).removeClass('success-msg');
+    //msgDiv.hide();
+    
+    if (validateEmail(email) == true) {   
+        $.ajax({
+            type: "POST",
+            url: "/india/sendpassword.php?email=" + email,
+            success: function(e) {
+                if (e == 1) {
+                    msgDiv.html('Email has been sent').show();
+                    //$('#email').val('Via Email');
+                    //setTimeout('$("#showforgot1").slideUp(500)',2000);                       
+                } else {
+                    //$('#email_forget').addClass("errorBorder");
+                    msgDiv.html('Please enter a valid email<span class="errorArrow"></span>');
+                }
+            }
+        })
+    } else {
+       // $('#'+email_div_id).parent('div').addClass("errorBorder");
+        msgDiv.html('Please enter a valid email<span class="errorArrow"></span>').show();
+    }
+    
+}
+function regChkEmail(e)
+{
+    var forgot_msg='';
+    if(typeof showforgot_div!=='undefined'){
+        var email_field_id =$('#'+e) .attr('id');
+        var error_field_id =$('#'+e+ '_error') .attr('id');
+        forgot_msg='. <a href="javascript:;" style="color:#fff;font-weight:bold;text-decoration:underline;" onclick="retrive_new_pass(\'email_addr\',\'email_addr_error\')">click here to get your password.</a> ';
+    }
+    var email = $('#' + e);
+    var process = $('#process1');
+    $('#' + e).parent('div').children("dd").hide();
+    //$('.errorInputMsg').hide();
+    if (email.val() != '' && email.val() != 'E-Mail')
+    {
+        if (!emailCheck(email.val()))
+        {
+            $('#' + e + '_error').show();
+            $('#' + e).parent('div').addClass("errorBorder");
+            $('#' + e + '_error').html("Please enter valid email address<span class=\"errorArrow\"></span>");
+            
+            _errEmail = true;
+        }
+        else
+        {
+            process.show();
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                url: '/india/ajax/registerSteps.php?email=' + email.val() + '&action=chkEmail&chkVerify=true',
+                // dataType: 'html',
+                success: function(data)
+                {
+                    process.hide();
+                    if(data == 'notverify'){
+                        $('#' + e).parent('div').addClass("errorBorder");
+                        _errEmail = true;
+                        showVerify = '<a href="javascript:void(0);" onClick="postVerifyUser(this,1);" class="verifyAcc">Click here to verify your account</a>';
+                        $('#' + e + '_error').html("E-Mail already exists<span class=\"errorArrow\"></span>"+showVerify);
+                        $('#' + e + '_error').show();
+                    }else if (data == 'true' || data == 'false_incorrect')
+                    {
+                        $('#' + e).parent('div').addClass("errorBorder");
+                        _errEmail = true;
+                        if(typeof TCYEMAIL_CHECK!=='undefined' && TCYEMAIL_CHECK==true ) {
+                            $('#' + e + '_error').html("Already have TCY account? Login <a href='#' onclick='javascript:$(\"#tabone\").trigger(\"click\");' style=\"color:#fff; font-size: 14px;\"><u>here</u></a><span class=\"errorArrow\"></span>"+forgot_msg);
+                        }else{
+                            $('#' + e + '_error').html("E-Mail already exists<span class=\"errorArrow\"></span>"+forgot_msg);
+                        }
+                        $('#' + e + '_error').show();
+                    }else if(data == '1'){
+                        $('#' + e).parent('div').addClass("errorBorder");
+                        _errEmail = true;
+                        $('#' + e + '_error').html("Please enter a valid email<span class=\"errorArrow\"></span>"+forgot_msg);
+                        $('#' + e + '_error').show();
+                    }
+                    else {
+                        $('#' + e + '_error').hide();
+                        $('#' + e).parent('div').removeClass("errorBorder");
+                        $('#' + e).parent('div').children("dd").show();
+
+                        _errEmail = false;
+                    }
+                }
+            });
+
+        }
+    }
+    else
+    {
+        $('#' + e).parent('div').addClass("errorBorder");
+        $('#' + e + '_error').html("Please enter your email address<span class=\"errorArrow\"></span>");
+        $('#' + e + '_error').show();
+        _errEmail = true;
+    }
+
+}
+function regChkCaptcha(e, valsecure)
+{
+    var captcha = $('#' + e);
+    $('#' + e).parent('div').children("dd").hide();
+    $('.errorInputMsg').hide();
+    if (captcha.val() != '')
+    {
+        if (captcha.val() != valsecure)
+        {
+
+            _errCaptcha = true;
+        }
+        else
+        {
+            $.ajax({
+                type: 'GET',
+                cache: false,
+                url: '/india/ajax/registerSteps.php?captcha=' + captcha.val() + '&action=chkCaptcha',
+                // dataType: 'html',
+                success: function(data)
+                {
+                    if (data == 'true' || data == 'false_incorrect')
+                    {
+                        _errCaptcha = true;
+                    }
+                    else {
+                        _errCaptcha = false;
+                    }
+                }
+            });
+
+        }
+    }
+    else
+    {
+        _errCaptcha = true;
+    }
+
+}
+function regChkCat(e)
+{
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+    if (n == 0)
+    {
+        $('#' + e).parent('div').addClass("errorBorder");
+    }
+    else
+    {
+        $('#' + e).parent('div').removeClass("errorBorder");
+    }
+}
+function submit_frm_new() 
+{
+    var e = document.RegisterFrm;
+    var t = $(".categoryNameBox .floatLeft:checked");
+
+    var r = trim(e.first_name.value);
+    if (e.proper_case) {
+        var i = trim(e.proper_case.value)
+    }
+    else
+        var i = 0;
+     
+     
+    var ss = trim(e.email_addr.value);
+    var o = trim(e.phnmber.value);
+//    var u = trim(e.captcha.value);
+    var u = trim(recapValue);
+    var a = "first_name=" + r + "&proper_case=" + i + "&email_addr=" + ss + "&phnmber=" + o + "&captcha=" + u;
+    
+    if( typeof SKIP_REGISTERATION_STEPS !='undefined' && SKIP_REGISTERATION_STEPS==true ){
+        a += "&password="+ trim(e.password.value);
+    }
+    
+    if (t && t.length > 0) {
+        for (var f = 0; f < t.length; f++) {
+            a += "&courses[]=" + t[f].value
+        }
+    }
+    a += "&todo=register";
+    
+   if( typeof s!=='undefined' && s == "tcy-opte-register" ) {
+      a+="&tcy-opte-register=true";
+   }
+    $("#login_singup").val("Please Wait...").attr("disabled","disabled");
+    
+    $.ajax({
+        type: "POST",
+        url: "/signup",
+        data: a,
+        success: function(e) {
+           
+            if (trim(e) == "Registered") {
+               $("#errormsgDiv").fadeOut("fast", function() {
+                  $("#succmsgDiv").html("Registered successfully.");
+                  $("#succmsgDiv").fadeIn("fast")
+               });
+               
+               if( typeof SKIP_REGISTERATION_STEPS !='undefined' && SKIP_REGISTERATION_STEPS==true ){
+                  window.location.href = "/";
+               }else if( typeof REGISTER_SKIP_VARFY !='undefined' && REGISTER_SKIP_VARFY==true ){
+                //window.location.href = "/india/Register/step/3";
+                window.location.href = "/signup/details";
+               }else if( typeof s!=='undefined' && s == "tcy-opte-register" ) {
+                  window.location.href = "/signup/verify/tcy-opte-register";
+               }else{
+                   window.location.href = " /signup/verify";
+               }
+                
+            } else if (e != "") {
+                $("#login_singup").val("Submit").removeAttr("disabled");
+                /*if( typeof SKIP_REGISTERATION_STEPS !='undefined' && SKIP_REGISTERATION_STEPS==true ){
+                    
+                   $("#errormsgDiv").fadeOut("fast", function() {
+                        $("#succmsgDiv").html("Registered successfully.");
+                        $("#succmsgDiv").fadeIn("fast")
+                    });
+                    
+                    var jsonUseArray = JSON.parse(trim(e));
+                    if(isNaN(parseInt(jsonUseArray.url_pid))) {
+                        var profile_uid = parseInt(jsonUseArray.url_pid);
+                        var profile_name = jsonUseArray.url_pname;
+                        window.location = '/profile/'+profile_name+'/'+profile_uid;
+                    }
+                    else {
+                        $("#login_disable").hide();
+                        $("#registerError1").fadeOut("fast", function() {
+                            $("#registerError1").html(e);
+                            $("#registerError1").fadeIn("slow")
+                        });
+                    }   
+                } else {*/
+                    $("#login_disable").hide();
+                    $("#registerError1").fadeOut("fast", function() {
+                        if(e !=  'Captcha not valid'){
+                        $("#registerError1").html(e);
+                        $("#registerError1").fadeIn("slow");
+                        }
+                        if(e == 'Security Code is not correct.'){
+//                             $('#captcha').addClass("errorBorder");
+                            //$('#cap1').addClass("errorBorder");
+                        }else  if(e ==  'Please enter a valid mobile number.'){
+                            $('#phnmber').parent('div').addClass("errorBorder");
+                            $('#phnmber_error').html(e+"<span class=\"errorArrow\"></span>");
+                        }else  if(e ==  'Captcha not valid'){
+                        }
+                    })
+                //}
+                 grecaptcha.reset();
+            }
+        }
+    });
+    return false;
+
+}
+
+
+
+var mobileFormat = /^([0-9]{10,15})$/;
+var recapValue='';
+function submit_frm_register() {
+    var _errorReg = false;
+    $('#registerError1').hide();
+    ('login_singup');
+//    var iptrk = ip;  
+//    ga('send','event','signuptrack','blur','submit' +iptrk); 
+    var n = $(".categoryNameBox .floatLeft:checked").length;
+
+    if (_errName || ($('#first_name').val() == '' || $('#first_name').val() == 'Name' || $('#first_name').val() == 'name'))
+//	if ( ($('#first_name').val() == '' || $('#first_name').val() == 'Name' || $('#first_name').val() == 'name') )
+    {
+        $('#first_name').parent('div').addClass("errorBorder");
+        $("#first_name_error").show();
+        _errorReg = true;
+        _errName = true;
+    }
+
+    if (_errEmail || $('#email_addr').val() == '' || $('#email_addr').val() == 'E-Mail')
+    {
+
+        $('#email_addr').parent('div').addClass("errorBorder");
+        $("#email_addr_error").show();
+        _errorReg = true;
+        _errEmail = true;
+    }
+  
+    if ( _errMobile || $('#phnmber').val() == '' || $('#phnmber').val() == 'Mobile')
+    { 
+        $('#phnmber').parent('div').addClass("errorBorder");
+        $("#phnmber_error").show();
+        _errorReg = true;
+        //_errMobile = true;
+    }else{
+        $("#phnmber_error").hide();
+       // _errMobile = false;
+    }
+    
+    if( typeof SKIP_REGISTERATION_STEPS !='undefined' && SKIP_REGISTERATION_STEPS==true ){
+        //if (_errPassword || $('#password').val() == '')
+        if ($('#password').val() == '') {
+            $('#password').parent('div').addClass("errorBorder");
+            _errorReg = true;
+        }
+    }
+    
+//    if ($('#captcha').val() == '')
+//    {
+//        $('#captcha').addClass("errorBorder");
+//         
+//        _errorReg = true;
+//        _errCaptcha = true;
+//    }
+
+//    if($('#frmcheckbox').is(':checked')== false  || $('#hid').val()==1){
+//	 $("#frmcheckbox_error").show();
+//	    _errorReg = true;
+//    }else{
+//        $("#frmcheckbox_error").hide();
+//       // _errMobile = false;
+//    }
+
+
+        recapValue = grecaptcha.getResponse();
+        //alert(recapValue);
+	if(recapValue=='')
+	{
+	    $("#captcha_error").show();
+	    _errorReg = true;
+            _errCaptcha = true;
+	}
+	else
+	{
+	    $("#captcha_error").hide();
+            _errCaptcha = false;
+	}
+        //_errorReg = true;
+//alert(_errCaptcha);
+    if (n == 0)
+    {
+
+        $('#dropDownfields').addClass("errorBorder");
+        $("#category_error").show();
+        _errorReg = true;
+    }
+
+    if (_errorReg == true)
+    {
+        return false;
+    }
+    else
+    {
+        submit_frm_new();
+    }
+    return false;
+
+
+}
+function find_category(){
+ 
+            var searchText = $("#register_searchCatTxt").val();
+            var filter = $("#register_searchCatTxt").val(); 
+             $(".categoryNameBox label").each(function(){
+                
+              if ($(this).html().search(new RegExp(filter, "i")) < 0) {
+                    $(this).closest(".categoryNameBox").hide();
+                 } else {
+                    $(this).closest(".categoryNameBox").show();
+                   
+                }
+            });
+       
+}
+function change_phone_number(){
+    var my_mob = $("#my_mob").val();
+    $("#change_head").html('Edit your Mobile No.');
+    var htm = '<div><input onkeypress="$(\'#wrngMbl\').hide(); $(\'#mobileNo\').removeClass(\'errorBorder\')" class="mobileNoVerification" value="'+my_mob+'"  type="text" id="mobileNo"> <div id="wrngMbl" class="errorInputMsg" style="display: none;"></div></div><input  type="submit" onclick="return change_contact(\'phone\');" id="vrybtn"  value="Resend" class="verificationSubmit"><input type="button" value="Back" onclick="return change_phone_close()" class="resendCodeBtn" />';
+    $("#sh_data").html(htm);
+}
+
+function change_email_add(){
+    var my_email = $("#ch_email").val();
+    $("#email_heading").html('Edit your Email ID.');
+    var htm = '<div><input onkeypress="$(\'#wrngEmail\').hide();$(\'#emailId\').removeClass(\'errorBorder\')" class="mobileNoVerification" value="'+my_email+'" name="emailId"  type="text" id="emailId"> <div id="wrngEmail" class="errorInputMsg" style="display: none;"></div></div><input  type="submit" onclick="return change_contact(\'email\');" id="vryebtn"  value="Resend" class="verificationSubmit"><input type="button" value="Back" onclick="return change_email_close()" class="resendCodeBtn" />';
+    $("#em_data").html(htm);
+}
+function change_phone_close(){
+
+    var my_mob = $("#my_mob").val();
+     $("#change_head").html('Verification Code Sent on <strong>'+my_mob+'</strong><img src="/india/images/editIconLogin.png" onclick="return change_phone_number();"  />');
+    var htm = '<div><input onkeypress="$(\'#wrngVerMbl\').hide(); $(\'#verifyCodeIs\').removeClass(\'errorBorder\')" class="mobileNoVerification" type="text" onfocus="placeHolder(this.id,\'Enter verification code\');" onblur="placeHolder(this.id,\'Enter verification code\');" id="verifyCodeIs" value="Enter verification code" name="verifyCodeIs" style="color: rgb(153, 153, 153);"> <div id="wrngVerMbl" class="errorInputMsg" style="display: none;"></div></div><input  type="submit" onclick="verifyCode();" id="vrybtn"  value="Submit" class="verificationSubmit"><input type="button" onclick="return change_phone_number();" value="Resend Code" class="resendCodeBtn" />';
+    $("#sh_data").html(htm);
+}
+function change_email_close(){
+    var my_email = $("#ch_email").val();
+     $("#email_heading").html('Verification Email Sent on<br /><strong>'+my_email+'</strong><img onclick="return change_email_add()" src="/india/images/editIconLogin.png" />');
+    var htm = ' <div class="chkInbox">Please check you inbox</div><input type="button" onclick="return change_email_add()" value="Resend Email" class="resendCodeBtn resendemail" />';
+    $("#em_data").html(htm);
+}
+function fgt_pass(email){
+    $("#head_part").html('Password Recovery');
+    $(".rightLoginPart").addClass('rightForm');
+    
+    var  htm = '<div id="recoverPass_msg" style="display:none"></div><input type="hidden" name="txtUsername" id="txtUsername" value="'+email+'"/><div id="email_forget"  class="loginField loginEmailIcon"> <input class="internal" type="text" name="email" id="email" onclick="$(\'#recoverPass_msg\').hide(); $(\'#forgot_passworderror\').hide();"  onblur="registerOnblur(this.id);hide_Shadow(this.id);chkPlaceholder_focus(this.id);regChkError(this.id,\'Via Email\');frgtEmail(this.id,\'blur\');"  onFocus="chkField(this.id);show_Shadow(this.id);chkPlaceholder_focus(this.id);regChkError(this.id,\'Via Email\');frgtEmail(this.id,\'focus\');" value="'+email+'"  onkeypress=" $(\'#recoverPass_msg\').hide();" /><pp id="forgot_pass"></pp></div><div class="errorInputMsg" id="forgot_passworderror">Please enter valid email<span class="errorArrow"></span></div><div class="forgotPwdSubmit"><input type="submit" onClick="password_recovery();" style="margin-right:10px;" class="loginBtn btncolorOnly floatLeft" value="Retrieve" id="ret_pass" name="sbt"> <input type="button" id="forgot_close_btn" onclick="forgot_close();"  class="loginBtn btncolorOnly" value="Close" name="cancelbtn"></div>';
+    $("#sh_pwd").html(htm);
+}
+function forgot_close(){
+    $("#forgot_close_btn").val('Please Wait...').attr("disabled","disabled");
+    var email = $('#txtUsername').val();
+    $.ajax({
+            type: "POST",
+            url: "/india/login_signup_html.php",
+            data: "email="+email+"",
+            success: function(e) {
+                var arr = e.split("!!!");
+                var  htm = arr[0];
+                if(arr[1] == 'true') {
+                    $(".socialMediaBox").hide();
+                    $("#lg_check").val('Next').removeAttr("disabled","disabled");
+                    var  htm = arr[0];
+                    $( "#sh_pwd" ).html(htm)
+                    $("#head_part").html('Login');
+                    $(".rightLoginPart").addClass('rightForm');  
+                   
+                }else {
+                    if( !isValidEmailAddress( email ) ) { 
+                        $("#forgot_close_btn").val('Next').removeAttr("disabled","disabled");
+                        $('#email_forget').parent('div').addClass("errorBorder");
+                        $('#forgot_passworderror').show().html('Please enter a valid email id<span class="errorArrow"></span>');
+                    }else {
+                        $(".socialMediaBox").hide();
+                        $("#lg_check").val('Next').removeAttr("disabled","disabled");
+                        $("#head_part").html('Sign Up');
+                        $(".rightLoginPart").addClass('rightForm');
+                        document.getElementById('sh_pwd').innerHTML = htm;        
+                    }
+                }
+            }
+        }); 
+}
+function chk_email_addr(){
+    
+    if ($('#txtUsername').val() == '' || $('#txtUsername').val() == 'Email / Username'){
+        $('#txtUsername').parent('div').addClass("errorBorder");
+            _loginUser = true;
+            return false;
+    }
+    var email = $('#txtUsername').val();
+     $("#lg_check").val('Please Wait...').attr("disabled","disabled");
+        $.ajax({
+            type: "POST",
+            url: "/india/login_signup_html.php",
+            data: "email="+email+"",
+            error : function(){
+            $("#lg_check").val('Next').removeAttr("disabled","disabled");
+            },
+            success: function(e) {
+                var arr = e.split("!!!");
+                var  htm = arr[0];
+                if(arr[1] == 'true') {
+                    $(".socialMediaBox").hide();
+                    $("#lg_check").val('Next').removeAttr("disabled","disabled");
+                    var  htm = arr[0];
+                    $( "#sh_pwd" ).html(htm)
+                    $("#head_part").html('Login');
+                    $(".rightLoginPart").addClass('rightForm');  
+                }else {
+                    if( !isValidEmailAddress( email ) || parseInt(htm)===3) { 
+                        $("#lg_check").val('Next').removeAttr("disabled","disabled");
+                        $('#txtUsername').parent('div').addClass("errorBorder");
+                        $('#txtUsername_error').show().html('Please enter a valid email id<span class="errorArrow"></span>');
+                    }else {
+                        $(".socialMediaBox").hide();
+                        $("#lg_check").val('Next').removeAttr("disabled","disabled");
+                        $("#head_part").html('Sign Up');
+                        $(".rightLoginPart").addClass('rightForm');
+                        document.getElementById('sh_pwd').innerHTML = htm;        
+                    }
+                }
+            }
+        });    
+}
+function kee_me(){
+    var chk = $("#check_rem").val();
+    if(chk == 0){
+        $("#check_rem").val(1);
+        $("#remember").attr("checked","checked");
+    }else if(chk == 1){
+        $("#check_rem").val(0);
+        $("#remember").removeAttr("checked");
+    }
+}
+function isValidEmailAddress(emailAddress) {
+    var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+    return pattern.test(emailAddress);
+};
+function showErrDiv(e)
+{
+    $('.errorInputMsg').hide();
+    if (_errName && e == 'first_name')
+    {
+        if ($('#' + e).val() == '' || $('#' + e).val() == 'Name' || $('#' + e).val() == 'Name')
+        {
+            $('#' + e + '_error').html("Please enter your name<span class=\"errorArrow\"></span>");
+            $('#' + e + '_error').show();
+        }
+        else
+        {
+            $('#' + e + '_error').html("");
+            $('#' + e + '_error').hide();
+        }
+        
+    }else if (_errEmail && e == 'email_addr') {
+        $('#' + e + '_error').show();
+    }else if (_errMobile && e == 'phnmber') {
+        $('#' + e + '_error').show();
+    }else if (_loginUser && e == 'txtUsername'){
+        if($.trim($('#txtUsername').val())=='')
+            $('#' + e + '_error').show();
+    }else if (_loginPass && e == 'txtPassword') {
+        if($('#txtPassword').val()=='')
+            $('#' + e + '_error').show();
+    }else if (_chngPass && e == 'password'){
+        if( $('#' + e).val() == '' ) {
+            $('#' + e + '_error').show();
+        }else{
+            $('#' + e + '_error').hide();
+        }
+    }
+
+}
+
+function submit_login() {
+    
+    if ($.trim($('#txtUsername').val()) == '' || $.trim($('#txtUsername').val()) == 'Email / Username' || $.trim($('#txtPassword').val()) == '')
+    {
+        //alert($("#txtUsername").val());
+        if ($.trim($('#txtUsername').val()) == '' || $.trim($('#txtUsername').val()) == 'Email / Username')
+        {
+            $('#txtUsername').parent('div').addClass("errorBorder");
+            $("#txtUsername_error").show();
+            _loginUser = true;
+           
+
+        }
+        if ($.trim($('#txtPassword').val()) == '')
+        {
+            $('#txtPassword').parent('div').addClass("errorBorder");
+            $("#txtPassword_error").show();
+            _loginPass = true;
+            
+        }
+        return false;
+    } else {
+        $("#login_btn").val('Please Wait...').attr("disabled","disabled");
+        $.ajax({
+            type: "POST",
+            url: "/india/ajax/registerSteps.php",
+            data: "action=login&" + $('#LoginFrm').serialize(),
+            error : function(){
+                 $("#login_btn").val('Login').removeAttr("disabled");
+            },
+            success: function(e) {
+                var explodedVal = e.split("|||");
+               
+                if (explodedVal[0] == 0) {
+                    document.getElementById("LoginFrm").submit();
+                    return false;
+                } else {
+                     $("#login_btn").val('Login').removeAttr("disabled");
+                    if (explodedVal[0] == '3') {
+                        $('#txtPassword').parent('div').addClass("errorBorder");
+                        $('#txtUsername').parent('div').addClass("errorBorder");
+                        $('#loginError').show().html(explodedVal[1]);
+                        _loginUser = true;
+                        _loginPass = true;
+                        //$('#txtPassword_error').show().html('Please enter correct password<span class="errorArrow"></span>');
+                        } else if (explodedVal[0] == '2') {
+                            $('#loginError').show().html(explodedVal[1]);
+                    }
+                }
+            }
+        })
+    }
+    return false;
+}
+
+function chk_login(form_id,popup_container) {
+    if ($('#txtUsername').val() == '' || $('#txtUsername').val() == 'Email / Username' || $('#txtPassword').val() == '') {
+        if ($('#txtUsername').val() == '' || $('#txtUsername').val() == 'Email / Username') {
+            $('#txtUsername').parent('div').addClass("errorBorder");
+            _loginUser = true;
+
+        }
+        if ($('#txtPassword').val() == '') {
+            $('#txtPassword').parent('div').addClass("errorBorder");
+            _loginPass = true;
+        }
+        return false;
+    } else {
+        //showWhitediv();
+
+        $('#login_disable').css('display', 'block');
+        $.ajax({
+            type: "POST",
+            url: "/india/ajax/registerSteps.php",
+            data: "action=login&" + $('#'+form_id).serialize(),
+            success: function(e) {
+                var explodedVal = e.split("|||");
+                if (explodedVal[0] == 0) {
+                    $.ajax({
+                        url : $('#'+form_id).attr('action'),
+                        type : 'POST',
+                        data: "action=login&" + $('#'+form_id).serialize()+'&redirect=false',
+                        success : function (response){
+                            if(response=='1') {
+                                $('#'+popup_container).hide();
+                                $('#dullDiv').hide();
+                            }
+                        }
+                    })
+                    return false;
+                } else {
+                    /*$('.userPass').addClass('borderRedClr');
+                     $('#userSpanpass').addClass('rightSideErrorIcon');
+                     if(explodedVal==3){
+                     $('.userNm').addClass('borderRedClr');
+                     }*/
+                    $('#login_disable').css('display', 'none');
+                    //alert(explodedVal[0]);
+                    if (explodedVal[0] == '3') {
+                        //alert('ok');
+                        $('#user_input_outer').addClass('errorBorder');
+                        //$('#txtUsername_error').html('Please enter correct email id/ username<span class="errorArrow"></span>');
+
+                        /* usernmErr = 1;
+                         hide_Shadow('txtUsername');
+                         hide_Shadow('txtPassword');
+                         $('.userPass').addClass('borderRedClr');
+                         $('#PwdErr').hide().html(errImgRight+'Please enter correct Password.');
+                         $('#userSpanpass').addClass('rightSideErrorIcon');
+                         userPassErr = 1;*/
+                    } else if (explodedVal[0] == '2') {
+                        /* hide_Shadow('txtPassword');
+                         $('.userPass').addClass('borderRedClr');
+                         $('#PwdErr').hide().html(errImgRight+'Please enter correct Password.');
+                         $('#userSpanpass').addClass('rightSideErrorIcon');
+                         userPassErr = 1;*/
+                    }
+                    $('#loginError').html(explodedVal[1]);
+                }
+            }
+        })
+    }
+    return false;
+}
+
+function loginEmptyChk(e1) {
+    var e = $('#' + e1);
+    if (($(e).val() == '' || $(e).val() == 'Email / Username') && e1 == 'txtUsername')
+    {
+        _loginUser = true;
+    }else {
+         _loginUser = false;
+    }
+    if (($(e).val() == '' || $(e).val() == 'password') && e1 == 'txtPassword')
+    {
+        _loginPass = true;
+    }else {
+        _loginPass = false;
+    }
+}
+function passEmptyChk(e1) {
+    var e = $('#' + e1);
+     $('#' + e1).parent('div').children("dd").hide();
+    if (e1 == 'password')
+    {
+        if (e.val() == '' || e.val() == 'password')
+        {
+             e.parent('div').addClass('errorBorder');
+            $('#' + e1 + '_error').html('Please enter password<span class="errorArrow"></span>');
+            _chngPass = true;
+        }
+        else if (e.val().length < 6)
+        {
+            e.parent('div').addClass('errorBorder');
+            $('#' + e1 + '_error').html('Password must be atleast 6 characters long <span class="errorArrow"></span>');
+            _chngPass = true;
+        }
+        else
+        {
+            $('#' + e1).parent('div').children("dd").show();
+            e.parent('div').removeClass('errorBorder');
+            _chngPass = false;
+        }
+    }
+ }
+
+function highlightBorder(e, type) {
+    e = '#' + e;
+    if (type == 'focus')
+        $(e).parent('div').addClass('focus');
+    else
+        $(e).parent('div').removeClass('focus');
+}
+/* signup form track*/
+function rgsignuptrck(e) {
+    e = '#' + e;
+    var val = $(e).val();
+    var type = e;
+    var iptrk = ip;
+    if(type == 'register_searchCatTxt'){
+            var p = $(".register_cate_check:checked").length;
+            if(p > 0){
+                    ga('send','event','signuptrack','blur',type+' '+iptrk);
+            }
+    }
+    if(val != ''){
+        ga('send','event','signuptrack','blur',type+' '+iptrk);
+    }
+}
+/*tab track*/
+function tabtrack(e) {
+    e = '#' + e;
+    var type = e;
+    var iptrk = ip;    
+    ga('send','event','signuptrack','blur',type+' '+iptrk);
+}
+
+function regChkSelectError(e, t, t2) {
+    e = "#" + e;
+    if ($(e).val() == t)
+    {
+        $(e).parent('div').addClass("errorBorder");
+    }
+    else
+    {
+        $(e).parent('div').removeClass("errorBorder");
+
+    }
+}
+function step3PassChng() {
+    console.log(_chngPass);
+    if ( $('#password').val() == '' || $('#password').val() == 'Password' )
+    {
+        $('#password').parent('div').addClass("errorBorder");
+        $('#password_error').show();
+        _chngPass = true;
+
+    }else if( $('#password').val().length<6 ){
+        $('#password').parent('div').addClass("errorBorder");
+        $('#password_error').show().html('Password must be atleast 6 characters long <span class="errorArrow"></span>');
+        _chngPass = true;
+    }else if (_chngPass == false){//ashishkapoor15@gmail.com
+        $('#login_disable').css('display', 'block');
+        var ajax_url = '/india/ajax/registerSteps.php?action=chngPass';
+        if( typeof s!=='undefined' && s == "tcy-opte-register" ) {
+           ajax_url = '/india/ajax/registerSteps.php?action=chngPass&s='+s;
+        }
+        $.ajax({
+            url: ajax_url,
+            type: 'POST',
+            data: 'pass=' + $('#password').val(),
+            success: function(resp) {
+                if(resp=='') {
+                    $('#passInfo').slideUp('slow');
+                    $('#personalInfo').slideDown('slow');
+                    $('#login_disable').css('display', 'none');
+                }else if( resp=='1' ) {
+                    $('#password').parent('div').addClass("errorBorder");
+                    $('#password_error').show().html('Password must be atleast 6 characters long <span class="errorArrow"></span>');
+                    $('#login_disable').css('display', 'none');
+                }
+                
+            },
+            error: function() {
+                //alert('error');
+            }
+        });
+
+    }
+
+
+}
+var step3err = 0;
+function submit_info() {
+    $('.errorInputMsg').hide();
+    $('#updateProfileFrm #qual').parent('div').removeClass("errorBorder");
+        step3err = 0;
+        if($('#student').prop("checked") == false && $('#teacher').prop("checked") == false){
+            $('#profile_error').show();
+            step3err += 1;
+        }
+        else if(typeof $('#updateProfileFrm #day').val() !='undefined' && $('#updateProfileFrm #day').val()==''){
+            $('#updateProfileFrm #day').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #dob_error').html('Please select Day of Birth <span class="errorArrow"></span>');
+            $('#updateProfileFrm #dob_error').show();
+            step3err += 1;
+        }else if(typeof $('#updateProfileFrm #month').val() !='undefined' && $('#updateProfileFrm #month').val()==''){
+            $('#updateProfileFrm #month').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #dob_error').html('Please select Month of Birth <span class="errorArrow"></span>');
+            $('#updateProfileFrm #dob_error').show();
+            step3err += 1;
+        }else if(typeof $('#updateProfileFrm #year').val() !='undefined' && $('#updateProfileFrm #year').val()==''){
+            $('#updateProfileFrm #year').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #dob_error').html('Please select year of Birth <span class="errorArrow"></span>');
+            $('#updateProfileFrm #dob_error').show();
+            step3err += 1;
+        }else if(typeof $('#updateProfileFrm #qual').val() !='undefined' && $('#updateProfileFrm #qual').val()==''){
+            $('#updateProfileFrm #qual').parent('div').addClass("errorBorder");
+             $('#updateProfileFrm #qual_error').show();
+            step3err += 1;
+        }
+        else if (typeof $('#updateProfileFrm #city_list').val() !='undefined' && $('#updateProfileFrm #city_list').val()=='') {
+            $('#updateProfileFrm #state').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #state_error_empty').show();
+            step3err += 1;
+        }
+        else if(typeof $('#updateProfileFrm #state').val() !='undefined' && $('#updateProfileFrm #state').val()=='' && forgien =='false'){
+            $('#updateProfileFrm #state').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #state_error').show();
+            step3err += 1;
+        }
+        else if(typeof $('#updateProfileFrm #city').val() !='undefined' && $('#updateProfileFrm #city').val()=='' && forgien =='false'){
+            $('#updateProfileFrm #city').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #city_error').show();
+            step3err += 1;
+        }else if($("#updateProfileFrm #selectClass").length == 1 &&  typeof $('#updateProfileFrm #selectClass').val() !='undefined' && $('#selectClass').val()==''){
+            $('#updateProfileFrm #selectClass').parent('div').addClass("errorBorder");
+            $('#updateProfileFrm #class_error').show();
+            step3err += 1;
+        }
+//        $('select').each(function() {
+//            if (this.id != 'reservationCategory' && this.id != 'suggType' && $(this).val() == '')
+//            {
+//                $(this).parent('div').addClass("errorBorder");
+//                step3err += 1;
+//            }
+//
+//        });
+var n = $(".categoryNameBox input[type='checkbox']:checked").length;
+if (n == 0 && $(".categoryNameBox input[type='checkbox']").length>0)
+    {
+
+        $('#dropDownfields').addClass("errorBorder");
+        $("#category_error").show();
+        _errorReg = true;
+    }
+/*******bof ste3 name *******/
+        if( $('#updateProfileFrm #first_name').length > 0 ) {
+            
+            var error_msg = $("#updateProfileFrm #first_name_error").html();
+            var email_addr =  $("#updateProfileFrm #first_name").val();
+            if( email_addr == '' || email_addr == 'Name' ) {
+                $("#updateProfileFrm #first_name").focus();
+                $("#updateProfileFrm #first_name_error").show();
+                return false;
+            }else if($("#updateProfileFrm #first_name_error").html() == error_msg) {   
+                $("#updateProfileFrm #first_name").focus();
+                if($("#updateProfileFrm #first_name_error").css('display') == 'none') {
+                    //
+                }else {
+                    $("#updateProfileFrm #first_name_error").show();  
+                    return false;
+                }
+                
+            }
+        }
+        /*******bof ste3 name*******/
+/*******bof ste3 email*******/
+        if( $('#updateProfileFrm #email_addr').length > 0 ) {
+            
+            var error_msg = $("#updateProfileFrm #email_addr_error").html();
+            var email_addr =  $("#updateProfileFrm #email_addr").val();
+            if( email_addr == '' || email_addr == 'Email' || !isValidEmailAddress(email_addr) ) {
+                $("#updateProfileFrm #email_addr").focus();
+                $("#updateProfileFrm #email_addr_error").show();
+                return false;
+            }else if($("#updateProfileFrm #email_addr_error").html() == error_msg) {   
+                $("#updateProfileFrm #email_addr").focus();
+                if($("#updateProfileFrm #email_addr_error").css('display') == 'none') {
+                    //
+                }else {
+                    $("#updateProfileFrm #email_addr_error").show();  
+                    return false;
+                }
+                
+            }
+        }
+        /*******bof ste3 email*******/
+        if($('#updateProfileFrm #phnmber').length > 0)
+        {
+            $('.mobileIconPosition').addClass('borderRedClr');
+            var error_msg = $("#updateProfileFrm #phnmber_error").html();            
+            var ph_number =  $("#updateProfileFrm #phnmber").val();
+            if(ph_number == '' || ph_number == 'Mobile' || !mobileFormat.test(ph_number))
+            {
+                $("#updateProfileFrm #phnmber").focus();
+                $("#updateProfileFrm #phnmber_error").show();
+                return false;
+                
+            }else if($("#updateProfileFrm #phnmber_error").html() == error_msg)   
+            {   
+                $("#updateProfileFrm #phnmber").focus();
+                if($("#updateProfileFrm #phnmber_error").css('display') == 'none')
+                {
+                    
+                }else
+                {
+                    $("#updateProfileFrm #phnmber_error").show();  
+                    return false;
+                }
+                
+            }
+        }
+        if (step3err == 0)
+        {
+            $('#updateProfileFrm').submit();
+        }
+
+}
+
+function skipStep3(){
+    $.ajax({
+        url:'/india/ajax/ajax-common.php?action=skipStep3',
+	type:"GET",
+        beforeSend: function () {
+            $('input[id="skipStep3"]').val('Please Wait...');
+            $('input[id="skipStep3"]').attr('disabled','disabled');
+        },success:function(resp) {
+            var jsonResp = JSON.parse(resp);
+            if( typeof jsonResp.success!=='undefined' && jsonResp.success=='1' ) {
+                if( typeof jsonResp.url!=='undefiend' && jsonResp.url!='' ){
+                    window.location.href=jsonResp.url;
+                }else{
+                    window.location.href='/';
+                }
+            }
+        }
+    })
+}
+function frgtEmail(e, type)
+{
+    if (type == 'focus')
+    {
+        if (_errFrgtEmail == true && ($('#' + e).val() == '' || $('#' + e).val() == 'Via Email'))
+        {
+            $('#recoverPass_msg').show();
+            _errFrgtEmail = true;
+        }
+    }
+    else if (type == 'blur')
+    {
+        // $('#recoverPass_msg').hide();
+        if ($('#' + e).val() == '' || $('#' + e).val() == 'Via Email')
+        {
+
+            _errFrgtEmail = true;
+        }
+    }
+}
+
+function remeber_check() {
+    if ($('#remember').attr('checked') == 'checked')
+        $('#remember').removeAttr('checked');
+    else
+        $('#remember').attr('checked', 'checked');
+}
+function showClasses(catId, catName,status){   
+    $("#loadClasses").empty();
+    var catId = catId.split("-");
+    // FOR CBSE Categories
+    var p = $(".register_cate_check:checked").length;
+        if (p <= 2){
+            var n  = $(".register_cate_check:checked");
+            var r = "";
+    //alert(n.length);
+            if (n && n.length > 0) {
+                counter=0;
+                x = 0;
+                for (var i = 0; i < n.length; i++) {
+                    if(n[i].value == '100282' || n[i].value == '100574'){
+                        counter++;                        
+                    }
+                    if(n[i].value == '100282'){
+                        x = 1;
+                    }
+                    if(n[i].value == '100574'){
+                        x = 2;
+                    }
+                    
+                }
+                if(status == '1'){
+                    if(counter == 2){
+                        $("#loadClasses").empty();
+                        $("#loadClasses").append('<div style="margin-top:33% 3%"><select id="class" onchange="checkClassVal(this.value)" style="width: 82%; margin:11% 3% 11% 39px; height:45px; background:#fff; border: 1px solid rgb(204, 204, 204); padding: 5px;"><option value="">Select Class</option><option value="53">Class XI</option><option value="54">Class XII</option><option value="67">Class X </option><option value="66">Class IX </option><option value="65">Class VIII </option><option value="64">Class VII </option> <option value="63">Class VI </option><option value="95">Class V </option> <option value="82">Class IV </option><option value="83">Class III </option></select>'); 
+                    }else{                        
+                        if(catId[1] == '100282' || x == 1){
+                            $("#loadClasses").empty();
+                            $("#loadClasses").append('<div style="margin-top:33% 3%"><select id="class" onchange="checkClassVal(this.value)" style="width: 82%; margin:11% 3% 11% 39px; height:45px; background:#fff; border: 1px solid rgb(204, 204, 204); padding: 5px;"><option value="">Select Class</option><option value="67">Class X </option><option value="66">Class IX </option><option value="65">Class VIII </option><option value="64">Class VII </option> <option value="63">Class VI </option><option value="95">Class V </option> <option value="82">Class IV </option><option value="83">Class III </option></select>'); 
+                        }
+                        if(catId[1] == '100574' || x == 2){
+                            $("#loadClasses").empty();
+                            $("#loadClasses").append('<div style="margin-top:33% 3%"><select id="class" onchange="checkClassVal(this.value)" style="width: 82%; margin:11% 3% 11% 39px; height:45px; background:#fff; border: 1px solid rgb(204, 204, 204); padding: 5px;"><option value="">Select Class</option><option value="53">Class XI</option><option value="54">Class XII</option></select>'); 
+                        }
+                    }
+                }else if(status == '0'){
+                    if(catId[1] == '100282' || catId[1] == '100574'){                        
+                        $("#loadClasses").empty();
+                    }
+                    for (var i = 0; i <= n.length; i++) {
+                        if(n[i].value == '100282'){
+                            $("#loadClasses").empty();
+                            $("#loadClasses").append('<div style="margin-top:33% 3%"><select id="class" onchange="checkClassVal(this.value)" style="width: 82%; margin:11% 3% 11% 39px; height:45px; background:#fff; border: 1px solid rgb(204, 204, 204); padding: 5px;"><option value="">Select Class</option><option value="67">Class X </option><option value="66">Class IX </option><option value="65">Class VIII </option><option value="64">Class VII </option> <option value="63">Class VI </option><option value="95">Class V </option> <option value="82">Class IV </option><option value="83">Class III </option></select>'); 
+                        }
+                        else if(n[i].value == '100574'){
+                            $("#loadClasses").empty();
+                            $("#loadClasses").append('<div style="margin-top:33% 3%"><select id="class" onchange="checkClassVal(this.value)" style="width: 82%; margin:11% 3% 11% 39px; height:45px; background:#fff; border: 1px solid rgb(204, 204, 204); padding: 5px;"><option value="">Select Class</option><option value="53">Class XI</option><option value="54">Class XII</option></select>'); 
+                        }else{
+                            $("#loadClasses").empty();
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+}
+function checkClassVal(v){
+    if(v == ''){
+        $("#class").css('border', '2px solid red');
+    }else{
+        $("#class").css('border', '1px solid rgb(204, 204, 204)');
+    }
+}
+function updteCatInfo(){    
+    err_status = 0;
+    $(".dropDownCategory").hide();
+    z='';
+    var p = $(".register_cate_check:checked").length;
+    var cbse = 0;
+    if(p == 0){
+        $(".dropDownfields").addClass("errorBorder");
+        err_status++;
+        
+    }
+    if (p <= 2){
+        var n  = $(".register_cate_check:checked");
+        var r = "";
+        var z = "";
+    //alert(n.length);
+        if (n && n.length > 0) {
+            counter=0;
+            for (var i = 0; i < n.length; i++) {
+                r += "&courses[]=" + n[i].value;
+                if(n[i].value == '100282' || n[i].value == '100574'){
+                    cbse = 1;
+                }
+            }
+        }else{
+            $('#register_searchCatTxt').parent('div').addClass("errorBorder");
+        }
+        if(cbse == 1){            
+            if($('#class option:selected').text() == 'Select Class'){
+                $('.class').html("Please Choose a Class");
+                $("#class").css('border', '2px solid red');
+                err_status++;
+            }else{
+                z = '&classes='+$('#class option:selected').val();
+                $('.class').html("");
+                $("#class").css('border', '1px solid rgb(204, 204, 204)');
+            }
+        }
+        if(err_status == 0){
+            $.ajax({
+                    type: 'POST',
+                    url: '/india/ajax/ajax-common.php',
+                    data: 'updateCatInfo=1'+r+z,   
+                    beforeSend: function(){
+                        $("#updateClass").prop( "disabled", true);
+                        $("#updateClass").val("Please Wait...");
+                        
+                    },
+                    success: function (data) {                        
+                        $("#success").show();
+                        $(".loginPage").hide();
+                        setTimeout(function(){
+                            var tt = window.location.href;
+                            var newUrl = tt.replace('show_popup', '');
+                            window.location.href=newUrl;
+                        }, 2000);
+                        $("#updateClass").prop( "disabled", false);
+                        $("#updateClass").val("Submit");
+                        //$(".success_msg").html();
+                        //$(".success_msg").html(data);
+                       // alert(data)
+                    },
+                });
+        }
+    }
+}
+var optErrorMsg='';
+var otp_btnMsg='';
+var otp_btn = otp_verifyerror='';
+$(function (){
+    if( document.getElementById('txtOtpMobile_error') )  {
+        optErrorMsg = $('#txtOtpMobile_error .msg').html();
+    }
+    if( document.getElementById('txtOtpVerify_error') )  {
+        otp_verifyerror = $('#txtOtpVerify_error .msg').html();
+    }
+    if( document.getElementById('txtOtpMobile_error') )  {
+        otp_btn = $('#otp_btn').val();
+    }
+    
+    $('input[type="text"].otpField').each(function(){  
+        $(this).keyup(function(e){
+            if( document.getElementById('txtOtpVerify_error') ) {
+                document.getElementById('txtOtpVerify_error').style.display='none';
+            }
+            if( e.keyCode==8 || e.which ==8) {
+                if( $(this).prev().hasClass('otpField') ) 
+                    $(this).prev().focus();
+            }else {
+                if( $(this).next().hasClass('otpField') && $(this).val()!='' )
+                    $(this).next().focus().val('');
+            }
+        });
+    });
+    
+});
+function getLoginOpt(){
+    if( document.getElementById('otpmobile') ) {
+        var fieldFormat = /^([0-9]{10})$/;
+
+        var fieldVal = document.getElementById('otpmobile').value; 
+//        if ( !(fieldFormat.test(fieldVal)) ) {
+        if ( fieldVal=='' ) {
+            if( document.getElementById('txtOtpMobile_error') )  {
+                $('#txtOtpMobile_error').css({display:'block'});
+                $('#txtOtpMobile_error .msg').html(optErrorMsg);
+            }
+            return false;
+        }else{
+            if( document.getElementById('txtOtpMobile_error') ) 
+                $('#txtOtpMobile_error').css({display:'none'});
+            
+            $('#otp_btn').val('Please wait...').attr('disabled','disabled');
+            $.ajax({
+                type: 'POST',
+                url: '/india/ajax/registerSteps.php?action=getb2copt', 
+                data : { mobile : fieldVal },
+                success : function (resp){
+                    var res = JSON.parse(resp);
+                    if( typeof res.success!=='undefined' && res.success==1 ) {
+                        $('#loginSignup').slideUp('');
+                        $('#loginDivContainer').slideUp('');
+                        $('#optloginFrm').slideDown('');
+                        $('#otp_btn').removeAttr('disabled').val(otp_btn);
+                        $('.otpField').val('');
+                        $('#txtOtpVerify_error').css({display:'none'});
+                    }else{
+                        if( typeof res.message!=='undefined' && res.message!='' ) {
+                            $('#txtOtpMobile_error').css({display:'block'});
+                            $('#txtOtpMobile_error .msg').html(res.message);
+                            $('#otp_btn').val(otp_btn).removeAttr('disabled');
+                        }else{
+                            $('#otp_btn').val(otp_btn).removeAttr('disabled');   
+                        }
+                    }
+                    
+                },error:function(error){
+                    $('#txtOtpMobile_error').css({display:'block'});
+                    $('#txtOtpMobile_error .msg').html(res.message);
+                    $('#otp_btn').val(otp_btn).removeAttr('disabled');
+                }
+            });
+        }
+    }
+    return false;
+}
+function validateOpt(){
+    if( document.getElementById('txtOtpVerify_error') ) {
+        document.getElementById('txtOtpVerify_error').style.display='none';
+        $('#txtOtpVerify_error .msg').html(otp_verifyerror);
+    }
+    var optVAlArr = [];
+    var emptyOptVal=0;
+    $('input[type="text"].otpField').each(function (){
+        var thisval =  $(this).val().trim();
+        if( $(this).val()!='' ) {
+            optVAlArr.push($(this).val());
+        }else{
+            if( document.getElementById('txtOtpVerify_error') ) {
+                document.getElementById('txtOtpVerify_error').style.display='block';
+            }
+            emptyOptVal=1;
+            return false;
+        }
+    })
+    if( document.getElementById('otpmobile') && emptyOptVal==0 ) {
+        var otpVal = optVAlArr.join('');
+        document.getElementById('otpCode').value = otpVal;
+        if( document.getElementById('otpmobile')!=''  && document.getElementById('otpCode').value!='' ) {
+            var mobile = document.getElementById('otpmobile').value;
+            var otpCode = document.getElementById('otpCode').value;
+            $('#otp_sbt_btn').val('Please Wait...').attr('disabled','disabled');
+            $.ajax({
+                type: 'POST',
+                url: '/india/ajax/registerSteps.php?action=validateOtp', 
+                data : { otpcode:btoa(otpCode) },
+                success : function (resp){
+                    var res = JSON.parse(resp);
+                    if( typeof res.success!=='undefined' && res.success==1 ) {
+                        $('#enOtp').val(btoa(otpCode));
+                        document.optloginFrm.submit();
+                    }else{
+                        $('#otp_sbt_btn').val('Login').removeAttr('disabled');
+                        if( document.getElementById('txtOtpVerify_error') ) {
+                            document.getElementById('txtOtpVerify_error').style.display='block';
+                            $('#txtOtpVerify_error .msg').html('OTP not matched');
+                        }
+                    }
+                }
+            });
+        }
+    }
+    return false;
+}
+$(document).click(function(e) {
+    var arr = [ 'categoryDropDownIcon', 'internal','categoryNameBox','floatLeft register_cate_check','undefined'];
+   // alert($(e.target).attr('class'));
+    if ($.inArray( $(e.target).attr('class'), arr )=== -1 ) {
+    $('#dropDownOutter').show();$('.dropDownCategory').hide();
+    }
+});
+$(function(){
+    $('#teacher').change(function(){
+        if($(this).is(':checked')){
+            $('.compEmp').show();
+            $('.reservCat').hide();
+        }else{
+            $('.compEmp').hide();
+            $('.reservCat').show();
+        }
+    });
+}); 
+/**/
+function chkSelectCat(){
+    var cat_val = [];
+    $('input[name="courses[]"]').each(function(){
+        if( $(this).is(':checked') ) {
+            var val = $(this).val();
+            cat_val.push(val);
+        }
+    });
+    if(cat_val.length > 0 && cat_val.length < 3) {
+        var cat_id = cat_val.join();
+    /*sign track recd*/
+        $.ajax({
+            type: "POST",
+            url: '/india/ajax/registerSteps.php?action=regsignuptrackcatgdb',
+            data: {val:cat_id},
+            success: function(e) {
+                //$("#processImg").hide();
+//                    if (e == "Registered") {
+//                        $("#registerError1").fadeOut("fast", function() {
+//                            $("#registerError1").html("Registered successfully.");
+//                            $("#registerError1").fadeIn("fast")
+//                            register_slide(2);
+//                        });
+//                        //window.location.href = "/india/Register/step/2"
+//                    } 
+//                    hideWhitediv();
+            }
+        })
+        /*sign track recd*/
+        
+    }
+}
+function postVerifyUser(ele,type) {
+    $(ele).text('Please Wait...');
+    var form = $('<form></form>');
+
+    form.attr("method", "post");
+    form.attr("action", 'https://www.tcyonline.com/signup/verify');
+
+    //$.each(parameters, function(key, value) {
+    var field = $('<input></input>');
+    
+    field.attr("type", "hidden");
+    if(type==1){
+        var val = $('#email_addr').val();
+        field.attr("name", 'vemail');
+    }else{
+        var val = $('#phnmber').val();
+        field.attr("name", 'vphone');
+    }
+    field.attr("value", val);
+
+    form.append(field);
+    //});
+
+    // The form needs to be a part of the document in
+    // order for us to be able to submit it.
+    $(document.body).append(form);
+    form.submit();
+}
+
+$(function (){
+    
+    $('input[name="courses[]"]').change(function(){
+        chkSelectCat();
+    });
+    
+    
+    
+});
+/**/

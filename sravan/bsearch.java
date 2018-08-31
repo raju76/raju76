@@ -1,0 +1,30 @@
+import java.io.*;
+class binary
+{
+public static void main(String argv[])
+{
+int a[]={10,20,30,40,50,60,70,80};
+int low,high,search k,mid,found;
+found=0;
+low=0;
+high=7;
+search k=50;
+while(low<=high)
+{
+mid=(low+high/2);
+if(a[mid]==search k)
+{
+found=1;
+break;
+}
+if(a[mid]>search k)
+high=m-1;
+else 
+low=mid+1;
+}
+if(found==1)
+System.out.println("search key found");
+else
+System.out.println("search key not found");
+}
+}

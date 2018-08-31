@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/sccl.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Singareni Collieries Company Limited (A Government Company)</title>
+<!-- InstanceEndEditable -->
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+	<div id="main_wrapper">
+		
+		<!--top links start-->
+		<div class="header-top">
+		<!--<div class="counter" valign=middle>
+			VISITORS: <img border="0" src="http://cc.amazingcounters.com/counter.php?i=3158324&c=9475285">
+		</div>-->
+			<div class="top_links">
+			<a href="index.asp">Home</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="rti.asp">RTI Act,2005</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="sitemap.asp">Sitemap</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="https://mail.scclmines.com/owa">Mail</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<a href="contact-us.asp">Contact</a>&nbsp;&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='https://www.facebook.com/SingareniCMD'><img src='images/f7.jpg' width=120 height=20></a></span>
+			<span>|</span>&nbsp;&nbsp;&nbsp;<span><a href='company_Singareni_samacharam.asp'><img src='images/ICON.jpg' width=120 height=20></a></span></div>
+		</div>
+		
+		<!--Header start-->
+		<div id="header_wrapper">
+			<div class="header">
+				<div class="logo"><img src="images/sccl-logo.jpg" alt="sccl logo" /></div>
+				<div class="top_right_img"><img src="images/top-right-img.jpg" alt="sccl" /></div>
+			</div>
+		</div>
+		
+		<!--Navgation start-->
+		<div class="navigation">
+			<div class="nav_panel">
+			<nav id="smoothmenu1" class="ddsmoothmenu">
+				  <ul>
+				  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+<link href="css/modern-ticker.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>  
+<script>  
+document.createElement("nav");
+</script>  
+<![endif]-->
+<script type="text/javascript" src="js/menu_js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/menu_js/jquery.min.js"></script>
+<script type="text/javascript" src="js/loopedslider.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.flow.1.2.js"></script>
+<script type="text/javascript" src="js/jquery2.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#myController").jFlow({
+		slides: "#slides",
+		controller: ".jFlowControl", // must be class, use . sign
+		slideWrapper : "#jFlowSlide", // must be id, use # sign
+		selectedWrapper: "jFlowSelected",  // just pure text, no sign
+		auto: false,		//auto change slide, default true
+		width: "318px",
+		height: "273px",
+		duration: 500,
+		prev: ".jFlowPrev", // must be class, use . sign
+		next: ".jFlowNext" // must be class, use . sign
+	});
+});
+</script>
+
+<script type="text/javascript">
+            
+            $(function () {
+                
+                $(".ticker3").modernTicker({
+                    effect: "type",
+                    typeInterval: 10,
+                    displayTime: 4000,
+                    transitionTime: 300,
+                    autoplay: true
+                });
+                
+            });
+            
+        </script> 
+
+				  <li><a href="#nogo">Company</a>
+				  	<ul>
+					<li><a href="company_about-us.asp">About Us</a>
+						<ul>
+						<li><a href="company_about-us_godavari-valley-map.asp">Godavari Valley Map</a></li>
+						<li><a href="company_about-us_coalreserves.asp">Coal Reserves</a></li>
+						</ul>
+					</li>
+				  	<li><a href="company_board-of-directors.asp">Board</a></li>
+				  	<li><a href="company_history.asp">History</a></li>
+				   	<li><a href="company_cmds.asp">C&amp;MD Desk</a></li>
+					<li><a href="company_mission.asp">Mission </a></li>
+					<li><a href="company_policies.asp">Policies</a></li>
+					<li><a href="company_joint-ventures.asp">Joint Ventures</a></li>
+					<li><a href="company_awards-rewards.asp">Awards &amp; Rewards</a></li>
+<li><a href="company_Singareni_poster.asp">Singareni Poster</a></li>
+<li><a href="company_Singareni_samacharam.asp">Singareni Samacharam</a></li>
+<li><a href="company_related_sites.asp">Quick Links</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Our Business</a>
+				   <ul>
+					<li><a href="#x">Products & Services</a>
+						<ul>
+						<li><a href="our-business_products-and-services_introduction.asp">Introduction</a></li>
+						<li><a href="our-business_products-and-services_definitions.asp">Definitions</a></li>
+						<li><a href="our-business_products-and-services_quality-of-coal.asp">Quality of Coal</a></li>
+						<li><a href="our-business_products-and-services_grade-specification.asp">Grade Specifications</a></li>
+						<li><a href="our-business_products-and-services_coal-grades.asp">Coal Grades - Despatch Points</a></li>
+						<li><a href="our-business_products-and-services_procedure-for-allotment-of-coal.asp">Procedure for Allotment of Coal</a></li>
+						<!--<li><a href="our-business_products-and-services_sector-mode-wise-dispatches.asp">Sector &amp; Mode wise Dispatches</a></li>-->
+						<li><a href="our-business_products-and-services_what-is-fsagreement.asp">What is FS Agreement</a></li>
+						<!--<li><a href="our-business_products-and-services_present-fsagreement.asp">Present FS Agreement</a></li>-->
+						<li><a href="our-business_products-and-services_application-formats.asp">Application Formats</a></li>
+						<li><a href="our-business_products-and-services_marketing-notices.asp">Marketing Notices</a></li>
+
+<li><a href="our-business_products-and-services_inVESTORS.asp" >Investor Opportunities</a></li>
+						</ul>
+					</li>
+				   <li><a href="our-business_coal-prices.asp">Coal Price</a></li>
+				   <li><a href="#x">e-Auction</a>
+				   		<ul>
+						<li><a href="our-business_e-auction_e-auction-current-month.asp">e-Auction Current Month</a></li>
+												<li><a href="our-business_e-auction_e-auction-procedures-formats.asp">e-Auction Procedures &amp; Formats</a></li>
+<li><a href="our-business_auction_linkages.asp">Auction of Linkages</a></li>
+						</ul>
+				   </li>
+				   <li><a href="http://www.scclmines.com/scclerp">Customer Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Tenders</a>
+				  <ul>
+					<li><a href="#x">MATERIAL PROCUREMENT</a>
+						<ul>
+						<!--<li><a href="tenders_material-procurement_current-tenders.asp">CONVENTIONAL TENDERS</a></li>
+						<li><a href="tenders_material-procurement_tenders-cancelled.asp">CANCELLED TENDERS</a></li>
+						<li><a href="tenders_material-procurement_upcoming-tenders.asp" >Upcoming Tenders</a></li>
+						-->
+<li><a href="tenders_material-procurement_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+<li><a href="tenders_material-procurement_upcoming-tenders.asp">UPCOMING TENDERS</a></li>
+<li><a href="tenders_material_procurement_conv_tenders.asp">CONVENTIONAL TENDERS</a></li>
+
+
+						
+						
+						<li><a href="images/pdfs/Vendor-Registration.pdf" target="_blank">VENDOR REGISTRATION FORMAT</a></li>
+						
+						<li><a href="tenders_material-procurement_area-purchase-tenders.asp">AREA TENDERS</a></li>
+						<li><a href="tenders_material-procurement_hyderabad-tenders.asp">HYDERABAD TENDERS </a></li>
+						
+						<li><a href="tenders_material-procurement_identified-eprocurement-items.asp">IDENTIFIED EPROCUREMENT ITEMS </a></li>
+						
+						</ul>
+					</li>
+						<li><a href="tenders_material-procurement_nit.asp">NIT</a></li>
+		  				<li><a href="tenders_material-procurement_eoi.asp">EOI</a></li>
+<li><a href="tenders_material-procurement_stpp.asp">2X600MW STPP Tenders</a>			 		
+<li><a href="#x">CIVIL</a>
+						<ul>
+						<li><a href="tenders_civil_civil-tenders.asp">CONVENTIONAL TENDERS</a></li>
+<li><a href="tenders_CIVIL_e-proc-notice.asp">E-PROCUREMENT TENDERS</a></li>
+						<li><a href="tenders_civil_execution.asp">EXECUTION</a></li>
+						<li><a href="tenders_civil_methods-of-evaluation.asp">METHOD OF EVALUATION</a></li>
+						<li><a href="tenders_civil_registration-of-contractors.asp">REGISTRATION OF CONTRACTORS</a></li>
+						
+						</ul>
+					</li>
+					<li><a href="tenders_forestry.asp">FORESTRY</a></li>
+					<li><a href="#">CONTRACTS</a>
+						<ul>
+						<li><a href="http://scclmines.com/puruploads/obr.xls" target="_blank">OBR</a></li>
+						<li><a href="http://scclmines.com/puruploads/coal.xls" target="_blank">COAL</a></li>
+						<li><a href="http://scclmines.com/puruploads/sand.xls" target="_blank">SAND</a></li>
+						</ul>
+					</li>
+<li><a href="#">DEPARTMENTAL LOGIN</a>
+						<ul>
+						<!--<li><a href="tenders_MaterialTenderLogin.asp" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="http://www.scclmines.com/tendercancel" >CANCEL TENDERS</a></li>-->
+						<li><a href="../filesupload/CorMP/default.aspx" >MATERIAL PROCUREMENT</a></li>
+						<li><a href="../filesupload/areaMP/frmAMPLogin.aspx" >AREA PURCHASE</a></li>
+<li><a href="../filesupload/civil/frmCvllogin.aspx" >CIVIL TENDERS</a></li>
+<li><a href="../filesupload/forest/frmlogin.aspx">FORESTRY TENDERS</a></li>
+
+						</ul>
+					</li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Performance</a>
+				  	<ul>
+					<li><a href="performance_production.asp">Production</a></li>
+					<li><a href="performance_financial.asp">Financial</a></li>
+					<li><a href="flashrep_login.asp">Flash Reports</a></li>
+					</ul>
+				  </li>
+				  <li><a href="business-development.asp">Business Development</a></li>
+				   <li><a href="#x">Environment</a>
+				  	<ul>
+				  <li><a href="http://www.scclmines.com/env">Environment</a></li>
+					<li><a href="stpp_fly_ash.asp">Ash Availability</a></li>
+					<li><a href="bioMedicalDisposal.asp">Bio-Medical Disposal Report</a></li>
+					</ul>
+				  </li>
+				  <li><a href="#x">Careers</a>
+					<ul>
+				  <li><a href="careers.asp">Recruitment</a></li>
+                  <li><a href="careersDep.asp">Deputation</a></li>
+				  </ul></li>
+				  <li><a href="csr.asp">CSR</a></li>
+				  <li style="border:none;"><a href="news-and-events.asp">News & Events</a></li>
+
+				  </ul>
+      </nav>
+	  </div>
+		</div>
+		
+		<div class="clear_10"></div>
+		
+		<!--Mid Content start-->
+		<!-- InstanceBeginEditable name="EditRegion1" -->
+		<div class="inner_mid_content_panel" align="center">
+		<h1>NOTIFICATIONS</h1>
+		</div>
+		<!-- InstanceEndEditable -->
+		
+		<!-- InstanceBeginEditable name="EditRegion2" -->
+		<div class="inner_mid_content_pane2">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    
+          <td width="200" align="left" valign="top" style="border-right:solid 1px #EBEBEB">
+	<div class="inner_head">Careers</div>
+	<div class="inner_head2">Recruitment</div>
+	<ul class="tabs">
+<li><a href="careers_flashRep.asp">News</a></li>
+<li><a href="careers_hallticket.asp">HallTickets Download</a></li>
+<li><a href="careers_PayScales.asp">Pay Scales</a></li>
+          <li><a href="careers_Notification.asp">Notification</a></li>
+          <!--<li><a href="careers_apply.asp">How To Apply</a></li>-->
+          <li><a href="careers_OnlineRegistration.asp">Online Registration</a></li>
+          <!--<li><a href="careers_ApplyStatus.asp">Application Status</a></li>-->
+          <li><a href="careers_ContactUs.asp">Contact Us</a></li>
+          <li><a href="careers_ImpDates.asp">Important Dates</a></li>
+          <li><a href="http://www.scclmines.com/cpp/status.html">Status Of Posts</a></li>
+		  <li><a href="http://www.scclmines.com/cpp/status.html">View Results</a></li>
+		  <li><a href="careers_Archieves.asp">Archives</a></li>
+</ul>
+	
+	</td>
+       
+    <td align="left" valign="top">
+	<div class="inner_content">
+	 
+
+<div align="CENTER" style="margin-top:20px">
+
+NO NEW NOTIFICATIONS
+
+
+
+ <!--
+ 
+ <tr><td align=center><font size=4><b>NOTIFICATION NO. 04/2017 </b></td></tr>
+  <tr height=5><td>&nbsp;</td></tr>
+  <tr><td><font size=3>Walk in interview for Specialist Doctors <a href='images/pdfs/SPLST_DOCTORS_WALKIN.pdf'  class="award-links">Click here for Details </a></td></tr>
+ <tr height=5><td>&nbsp;</td></tr>
+
+<!--
+ <tr><td align=center><font size=4><b>NOTIFICATION NO. 05/2017 </b></td></tr>
+  <tr height=5><td>&nbsp;</td></tr>
+  <tr><td><font size=3>Online applications for Employment Notification no. 05/2017<a href='../olappl0517'  class="award-links">Click here for Details </a></td></tr>
+ <tr height=5><td>&nbsp;</td></tr>
+
+ <tr><td align=center><font size=4><b>NOTIFICATION NO. 03/2017 </b></td></tr>
+  <tr height=5><td>&nbsp;</td></tr>
+  <tr><td><font size=3>Syllabus of Management Trainee (F&A) <a href='careers/docs/SYLLABUS0317.pdf'  class="award-links">Click here for Details </a></td></tr>
+ <tr height=5><td>&nbsp;</td></tr>
+
+ <tr><td align=center><font size=4><b>NOTIFICATION NO. 03/2017 </b></td></tr>
+  <tr height=5><td>&nbsp;</td></tr>
+  <tr><td><font size=3>Online applications for the Post of MANAGEMENT TRAINEE(F&A)<a href='../olappl032017'  class="award-links">Click here for Details </a></td></tr>
+ <tr height=5><td>&nbsp;</td></tr>-->
+</table>
+</div>
+
+
+	</div>
+	
+	</td>
+  </tr>
+</table>
+		</div>
+		<!-- InstanceEndEditable -->
+		<div class="clear_10"></div>
+		
+		
+		<!--Footer start-->
+		<div class="footer_wrapper">
+			<div class="footer">
+			&copy; 2013 SCCL Mines, All rights reserved.
+			<span style="padding-left:200px">Site last updated :28 Aug 2018 </span>
+			<span style="padding-left:280px">Designed by <a href="http://www.bitranet.com/" target="_blank">BitraNet</a></span>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+<!-- InstanceEnd --></html>

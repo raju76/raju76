@@ -1,0 +1,29 @@
+class Student
+{
+int rno;
+String name;
+static String college="vce";
+Student(int r,String n)
+{
+rno=r;
+name=n;
+}
+static void change()
+{
+college="vec";
+}
+void display()
+{
+System.out.println(rno +""+name +""+college);
+}
+public static void main(String args[])
+{
+Student s1=new Student(1,"sangeetha");
+Student s2=new Student(2,"savargnitha");
+s1.display();
+s2.display();
+Student.change();
+s1.display();
+s2.display();
+}
+}

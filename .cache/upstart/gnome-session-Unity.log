@@ -1,0 +1,363 @@
+Error loading .desktop file /usr/share/app-install/desktop/activity-log-manager:gnome-activity-log-manager-panel.desktop: constructor returned NULL
+Error loading .desktop file /usr/share/applications/gnome-deja-dup-panel.desktop: constructor returned NULL
+Error loading .desktop file /usr/share/app-install/desktop/deja-dup:gnome-deja-dup-panel.desktop: constructor returned NULL
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_new_with_path: assertion 'path_is_valid (path)' failed
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_get_value: assertion 'G_IS_SETTINGS (settings)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_type: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_unref: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_new_with_path: assertion 'path_is_valid (path)' failed
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_get_value: assertion 'G_IS_SETTINGS (settings)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_type: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_unref: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_new_with_path: assertion 'path_is_valid (path)' failed
+
+(nm-connection-editor:2728): GLib-GIO-CRITICAL **: g_settings_get_value: assertion 'G_IS_SETTINGS (settings)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_type: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_type_is_subtype_of: assertion 'g_variant_type_check (type)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_get_boolean: assertion 'g_variant_is_of_type (value, G_VARIANT_TYPE_BOOLEAN)' failed
+
+(nm-connection-editor:2728): GLib-CRITICAL **: g_variant_unref: assertion 'value != NULL' failed
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(nm-connection-editor:2728): GLib-GObject-WARNING **: invalid unclassed pointer in cast to 'NMRemoteConnection'
+
+(nm-connection-editor:2728): GLib-GObject-WARNING **: instance with invalid (NULL) class pointer
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_signal_handlers_disconnect_matched: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(nm-connection-editor:2728): GLib-GObject-WARNING **: instance with invalid (NULL) class pointer
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_signal_handlers_disconnect_matched: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+
+(nm-connection-editor:2728): GLib-GObject-CRITICAL **: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+
+(unity-control-center:2717): GLib-CRITICAL **: Source ID 291 was not found when attempting to remove it
+[2792:2792:0831/121103:ERROR:logging.h(808)] Failed to call method: org.freedesktop.DBus.ObjectManager.GetManagedObjects: object_path= /: org.freedesktop.DBus.Error.UnknownMethod: Method "GetManagedObjects" with signature "" on interface "org.freedesktop.DBus.ObjectManager" doesn't exist
+
+[2792:2792:0831/121103:ERROR:logging.h(808)] Failed to call method: org.freedesktop.DBus.ObjectManager.GetManagedObjects: object_path= /: org.freedesktop.DBus.Error.UnknownMethod: Method "GetManagedObjects" with signature "" on interface "org.freedesktop.DBus.ObjectManager" doesn't exist
+
+[2792:2792:0831/121556:ERROR:navigation_entry_screenshot_manager.cc(140)] Invalid entry with unique id: 5
+
+** (zeitgeist-datahub:2597): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/eswecha/Downloads/.org.chromium.Chromium.ksbIJG: Error when getting information for file '/home/eswecha/Downloads/.org.chromium.Chromium.ksbIJG': No such file or directory
+
+** (zeitgeist-datahub:2597): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
+
+** (zeitgeist-datahub:2597): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/eswecha/Downloads/.org.chromium.Chromium.Axaw1b: Error when getting information for file '/home/eswecha/Downloads/.org.chromium.Chromium.Axaw1b': No such file or directory
+
+** (zeitgeist-datahub:2597): WARNING **: downloads-directory-provider.vala:120: Couldn't process /home/eswecha/Downloads/.org.chromium.Chromium.nVJ8na: Error when getting information for file '/home/eswecha/Downloads/.org.chromium.Chromium.nVJ8na': No such file or directory
+
+** (zeitgeist-datahub:2597): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
+
+** (zeitgeist-datahub:2597): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
+
+** (zeitgeist-datahub:2597): WARNING **: zeitgeist-datahub.vala:212: Error during inserting events: GDBus.Error:org.gnome.zeitgeist.EngineError.InvalidArgument: Incomplete event: interpretation, manifestation and actor are required
+wine: created the configuration directory '/home/eswecha/.wine'
+fixme:storage:create_storagefile Storage share mode not implemented.
+err:mscoree:LoadLibraryShim error reading registry key for installroot
+err:mscoree:LoadLibraryShim error reading registry key for installroot
+err:mscoree:LoadLibraryShim error reading registry key for installroot
+err:mscoree:LoadLibraryShim error reading registry key for installroot
+fixme:storage:create_storagefile Storage share mode not implemented.
+[2792:2792:0831/121739:ERROR:CONSOLE(1)] "Failed to set referrer policy: The value 'strict-origin' is not one of 'always', 'default', 'never', 'no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-crossorigin', or 'unsafe-url'. This document's referrer policy has been left unchanged.", source: https://www.google.co.in/_/chrome/newtab?espv=2&ie=UTF-8&client=ubuntu (1)
+fixme:iphlpapi:NotifyAddrChange (Handle 0x10ee890, overlapped 0x10ee89c): stub
+wine: configuration in '/home/eswecha/.wine' has been updated.
+fixme:process:SetProcessDEPPolicy (1): stub
+fixme:process:SetProcessDEPPolicy (1): stub
+fixme:process:SetProcessDEPPolicy (1): stub
+fixme:win:DisableProcessWindowsGhosting : stub
+fixme:process:SetProcessDEPPolicy (1): stub
+fixme:win:DisableProcessWindowsGhosting : stub
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:shell:SHAutoComplete stub
+fixme:shell:SHAutoComplete stub
+fixme:win:WINNLSEnableIME hwnd 0x10136 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10136 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1015a enable 0: stub!
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:msg:ChangeWindowMessageFilter c05a 00000001
+fixme:shell:SHAutoComplete stub
+fixme:win:WINNLSEnableIME hwnd 0x1015a enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10170 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10170 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1015a enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1015a enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10182 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10182 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x30180 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x30180 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10188 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10188 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10190 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10190 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10196 enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x10196 enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable 0: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014c enable -1: stub!
+fixme:win:WINNLSEnableIME hwnd 0x1014a enable 0: stub!
+wine: Call from 0x7b83aace to unimplemented function rstrtmgr.dll.RmShutdown, aborting
+fixme:sfc:SfcIsFileProtected ((nil), L"C:\\Program Files\\Git\\unins000.exe") stub
+fixme:win:WINNLSEnableIME hwnd 0x1014a enable -1: stub!
+fixme:msvcrt:MSVCRT__wsopen_s : pmode 0x01b6 ignored
+fixme:msvcrt:MSVCRT__wsopen_s : pmode 0x01b6 ignored
+fixme:msvcrt:MSVCRT__wsopen_s : pmode 0x01b6 ignored
+fixme:ntdll:NtSetInformationToken unimplemented class 4
+fixme:ntdll:NtQueryInformationProcess (process=0xffffffff) Unimplemented information class: ProcessSessionInformation
+fixme:advapi:LsaOpenPolicy ((null),0x612c6bc0,0x00000001,0x6fc334) stub
+fixme:advapi:LsaClose (0xcafe) stub
+fixme:netapi32:NetUserGetInfo Level 3 is not implemented
+fixme:ntdll:NtQueryVolumeInformationFile 0xc0: volume info not supported
+fixme:ntdll:NtQueryVolumeInformationFile 0xc0: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc4: faking attribute info
+fixme:netapi32:NetLocalGroupGetInfo ((null) L"Administrators" 1 0x6fc478) semi-stub!
+fixme:advapi:LsaOpenPolicy ((null),0x612c6bc0,0x00000800,0x6fc994) stub
+fixme:advapi:LsaClose (0xcafe) stub
+fixme:netapi32:NetLocalGroupGetInfo ((null) L"Users" 1 0x6fc3f8) semi-stub!
+fixme:shell:SHAutoComplete stub
+wine: Unhandled page fault on read access to 0x00000000 at address 0x61195e85 (thread 001d), starting debugger...
+err:dbghelp_msc:pe_load_debug_directory Got a page fault while loading symbols
+err:dbghelp:pe_load_msc_debug_info -Debug info stripped, but no .DBG file in module L"rebase"
+fixme:ntdll:NtSetInformationToken unimplemented class 4
+fixme:ntdll:NtQueryInformationProcess (process=0xffffffff) Unimplemented information class: ProcessSessionInformation
+fixme:advapi:LsaOpenPolicy ((null),0x612c6bc0,0x00000001,0x61c334) stub
+fixme:advapi:LsaClose (0xcafe) stub
+fixme:netapi32:NetUserGetInfo Level 3 is not implemented
+fixme:ntdll:NtQueryVolumeInformationFile 0xc0: volume info not supported
+fixme:ntdll:NtQueryVolumeInformationFile 0xc0: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xc8: faking attribute info
+fixme:thread:NtQueryInformationThread info class 9 not supported yet
+fixme:ntdll:NtQueryVolumeInformationFile 0xd4: volume info not supported
+fixme:ntdll:NtQueryVolumeInformationFile 0xd4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xd4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xd4: faking attribute info
+fixme:ntdll:NtQueryVolumeInformationFile 0xd4: faking attribute info
+fixme:ole:RemUnknown_QueryInterface No interface for iid {00000019-0000-0000-c000-000000000046}
+fixme:file:GetFileInformationByHandleEx 0x68, 0, 0x2d6110, 40
+fixme:ver:GetCurrentPackageId (0x2d4aec (nil)): stub
+fixme:win:LockWindowUpdate (0x2024e), partial stub!
+fixme:imm:ImmReleaseContext (0x102e8, 0xc5eb30): stub
+fixme:win:LockWindowUpdate ((nil)), partial stub!
+fixme:file:GetFileInformationByHandleEx 0xc4, 0, 0x2b2820, 40
+fixme:file:GetFileInformationByHandleEx 0xc4, 0, 0x2b2880, 40
+fixme:file:GetFileInformationByHandleEx 0xc4, 0, 0x2b2834, 40
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch type: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch monitor: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch maximized state: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+WARN  2018-08-31 12:19:29 unity <unknown>:0 Failed to fetch xid: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface 'org.ayatana.bamf.window' on object at path /org/ayatana/bamf/window/111149071
+fixme:file:GetFileInformationByHandleEx 0xcc, 0, 0x2d369c, 40
+fixme:advapi:RegisterTraceGuidsW (0xf26942, (nil), {f7b697a3-4db5-4d3b-be71-c4d284e6592f}, 7, 0x11a5d00, (null), (null), 0x11aba70,): stub
+fixme:process:GetNumaHighestNodeNumber (0x2d5ca8): stub
+fixme:process:GetNumaHighestNodeNumber (0x2d4a98): stub
+wine: Unhandled exception 0x40000015 in thread 31 at address 0x532a7b (thread 0031), starting debugger...
+
+(nautilus:2453): GLib-CRITICAL **: Source ID 278 was not found when attempting to remove it
+
+(nautilus:2453): GLib-CRITICAL **: Source ID 279 was not found when attempting to remove it
+
+(nautilus:2453): GLib-CRITICAL **: Source ID 280 was not found when attempting to remove it
+
+(telepathy-indicator:2576): Gdk-WARNING **: telepathy-indicator: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+
+(update-manager:2673): Gdk-WARNING **: update-manager: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 206 requests (206 known processed) with 1 events remaining.
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0.0"
+      after 83 requests (83 known processed) with 0 events remaining.
+
+(nm-applet:2457): Gdk-WARNING **: nm-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 83 requests (83 known processed) with 0 events remaining.
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0.0"
+      after 1149 requests (1149 known processed) with 0 events remaining.
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 502 requests (502 known processed) with 0 events remaining.
+XIO:  fatal IO error 11 (Resource temporarily unavailable) on X server ":0"
+      after 123 requests (123 known processed) with 1 events remaining.
+
+(unity-fallback-mount-helper:2444): Gdk-WARNING **: unity-fallback-mount-helper: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+
+(update-notifier:2651): Gdk-WARNING **: update-notifier: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+gnome-session[2244]: Gdk-WARNING: gnome-session: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+
+[2792:2792:0831/121954:ERROR:chrome_browser_main_extra_parts_x11.cc(62)] X IO error received (X server probably went away)
+[2860:2860:0831/121954:ERROR:x11_util.cc(82)] X IO error received (X server probably went away)
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-hkjA1z
+SSH_AUTH_SOCK=/run/user/1000/keyring-hkjA1z/ssh
+GPG_AGENT_INFO=/run/user/1000/keyring-hkjA1z/gpg:0:1
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-hkjA1z
+SSH_AUTH_SOCK=/run/user/1000/keyring-hkjA1z/ssh
+GPG_AGENT_INFO=/run/user/1000/keyring-hkjA1z/gpg:0:1
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-hkjA1z
+SSH_AUTH_SOCK=/run/user/1000/keyring-hkjA1z/ssh
+GPG_AGENT_INFO=/run/user/1000/keyring-hkjA1z/gpg:0:1
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-hkjA1z
+SSH_AUTH_SOCK=/run/user/1000/keyring-hkjA1z/ssh
+GPG_AGENT_INFO=/run/user/1000/keyring-hkjA1z/gpg:0:1
+compiz (core) - Info: Loading plugin: core
+compiz (core) - Info: Starting plugin: core
+compiz (core) - Info: Loading plugin: ccp
+compiz (core) - Info: Starting plugin: ccp
+compizconfig - Info: Backend     : gsettings
+compizconfig - Info: Integration : true
+compizconfig - Info: Profile     : unity
+compiz (core) - Info: Loading plugin: composite
+
+** (process:2400): CRITICAL **: bluez.vala:104: GDBus.Error:org.bluez.Error.NoSuchAdapter: No such adapter
+compiz (core) - Info: Starting plugin: composite
+
+(process:2394): indicator-application-service-WARNING **: Unable to get watcher name 'org.kde.StatusNotifierWatcher'
+
+(process:2394): indicator-application-service-WARNING **: Name Lost
+compiz (core) - Info: Loading plugin: opengl
+compiz (core) - Info: Unity is fully supported by your hardware.
+compiz (core) - Info: Unity is fully supported by your hardware.
+compiz (core) - Info: Starting plugin: opengl
+compiz (core) - Info: Loading plugin: vpswitch
+compiz (core) - Info: Starting plugin: vpswitch
+compiz (core) - Info: Loading plugin: move
+compiz (core) - Info: Starting plugin: move
+compiz (core) - Info: Loading plugin: regex
+compiz (core) - Info: Starting plugin: regex
+compiz (core) - Info: Loading plugin: compiztoolbox
+compiz (core) - Info: Starting plugin: compiztoolbox
+compiz (core) - Info: Loading plugin: mousepoll
+compiz (core) - Info: Starting plugin: mousepoll
+compiz (core) - Info: Loading plugin: copytex
+compiz (core) - Info: Starting plugin: copytex
+compiz (core) - Info: Loading plugin: grid
+compiz (core) - Info: Starting plugin: grid
+compiz (core) - Info: Loading plugin: commands
+compiz (core) - Info: Starting plugin: commands
+compiz (core) - Info: Loading plugin: place
+compiz (core) - Info: Starting plugin: place
+compiz (core) - Info: Loading plugin: imgpng
+compiz (core) - Info: Starting plugin: imgpng
+compiz (core) - Info: Loading plugin: wall
+compiz (core) - Info: Starting plugin: wall
+compiz (core) - Info: Loading plugin: unitymtgrabhandles
+compiz (core) - Info: Starting plugin: unitymtgrabhandles
+compiz (core) - Info: Loading plugin: resize
+compiz (core) - Info: Starting plugin: resize
+compiz (core) - Info: Loading plugin: snap
+compiz (core) - Info: Starting plugin: snap
+compiz (core) - Info: Loading plugin: animation
+compiz (core) - Info: Starting plugin: animation
+compiz (core) - Info: Loading plugin: workarounds
+compiz (core) - Info: Starting plugin: workarounds
+compiz (core) - Info: Loading plugin: session
+compiz (core) - Info: Starting plugin: session
+I/O warning : failed to load external entity "/home/eswecha/.compiz/session/103b461c74ac8fd322153569825859334900000021910001"
+compiz (core) - Info: Loading plugin: expo
+compiz (core) - Info: Starting plugin: expo
+compiz (core) - Info: Loading plugin: fade
+compiz (core) - Info: Starting plugin: fade
+compiz (core) - Info: Loading plugin: ezoom
+compiz (core) - Info: Starting plugin: ezoom
+compiz (core) - Info: Loading plugin: scale
+compiz (core) - Info: Starting plugin: scale
+compiz (core) - Info: Loading plugin: unityshell
+compiz (core) - Info: Starting plugin: unityshell
+WARN  2018-08-31 12:21:02 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'org.gnome.Shell' yet as we don't have a connection, waiting for it...
+ERROR 2018-08-31 12:21:02 unity.debug.interface DebugDBusInterface.cpp:216 Unable to load entry point in libxpathselect: libxpathselect.so.1.4: cannot open shared object file: No such file or directory
+WARN  2018-08-31 12:21:03 xim.controller XIMController.cpp:103 IBus natively supported.
+WARN  2018-08-31 12:21:03 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'com.canonical.Unity.Launcher' yet as we don't have a connection, waiting for it...
+WARN  2018-08-31 12:21:03 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'com.canonical.Unity.Dash' yet as we don't have a connection, waiting for it...
+WARN  2018-08-31 12:21:03 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'org.gnome.SessionManager.EndSessionDialog' yet as we don't have a connection, waiting for it...
+WARN  2018-08-31 12:21:03 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'com.canonical.Unity.Session' yet as we don't have a connection, waiting for it...
+WARN  2018-08-31 12:21:03 unity.glib.dbus.server GLibDBusServer.cpp:579 Can't register object 'org.gnome.ScreenSaver' yet as we don't have a connection, waiting for it...
+ERROR 2018-08-31 12:21:04 unity.glib.dbus.server GLibDBusServer.cpp:524 DBus name lost 'org.gnome.Shell'
+ERROR 2018-08-31 12:21:04 unity.glib.dbus.server GLibDBusServer.cpp:524 DBus name lost 'com.canonical.Unity'
+
+(nm-applet:2395): nm-applet-WARNING **: Could not find ShellVersion property on org.gnome.Shell after 5 tries
+[2533:2533:0831/122117:ERROR:logging.h(808)] Failed to call method: org.freedesktop.DBus.ObjectManager.GetManagedObjects: object_path= /: org.freedesktop.DBus.Error.UnknownMethod: Method "GetManagedObjects" with signature "" on interface "org.freedesktop.DBus.ObjectManager" doesn't exist
+
+[2533:2533:0831/122118:ERROR:logging.h(808)] Failed to call method: org.freedesktop.DBus.ObjectManager.GetManagedObjects: object_path= /: org.freedesktop.DBus.Error.UnknownMethod: Method "GetManagedObjects" with signature "" on interface "org.freedesktop.DBus.ObjectManager" doesn't exist
+
+
+** (zeitgeist-datahub:2710): WARNING **: zeitgeist-datahub.vala:229: Unable to get name "org.gnome.zeitgeist.datahub" on the bus!
+[2533:2533:0831/122122:ERROR:CONSOLE(1)] "Failed to set referrer policy: The value 'strict-origin' is not one of 'always', 'default', 'never', 'no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-crossorigin', or 'unsafe-url'. This document's referrer policy has been left unchanged.", source: https://www.google.co.in/_/chrome/newtab?espv=2&ie=UTF-8&client=ubuntu (1)
+WARN  2018-08-31 12:21:57 unity.iconloader IconLoader.cpp:755 Unable to load icon file:/// at size -1x22: Can't open directory
+WARN  2018-08-31 12:21:59 unity.iconloader IconLoader.cpp:262 Unable to load icon gnome-panel-force-quit at size 64
+
+(gnome-terminal:2859): GLib-GIO-CRITICAL **: g_settings_get: the format string may not contain '&' (key 'monospace-font-name' from schema 'org.gnome.desktop.interface'). This call will probably stop working with a future version of glib.
+
+** (update-notifier:2835): WARNING **: log file empty (logrotate?) /var/log/dpkg.log
+
+** (update-notifier:2835): WARNING **: log file empty (logrotate?) /var/log/apt/term.log
+[2533:2533:0831/122235:ERROR:CONSOLE(1)] "Failed to set referrer policy: The value 'strict-origin' is not one of 'always', 'default', 'never', 'no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-crossorigin', or 'unsafe-url'. This document's referrer policy has been left unchanged.", source: https://www.google.co.in/_/chrome/newtab?espv=2&ie=UTF-8&client=ubuntu (1)
+
+(firefox:3009): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::sm-connect after class was initialised
+
+(firefox:3009): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::show-crash-dialog after class was initialised
+
+(firefox:3009): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::display after class was initialised
+
+(firefox:3009): GLib-GObject-WARNING **: Attempt to add property GnomeProgram::default-icon after class was initialised
+
+###!!! [Parent][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+
+Created new window in existing browser session.
+[2533:2533:0831/122639:ERROR:CONSOLE(1)] "Failed to set referrer policy: The value 'strict-origin' is not one of 'always', 'default', 'never', 'no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-crossorigin', or 'unsafe-url'. This document's referrer policy has been left unchanged.", source: https://www.google.co.in/_/chrome/newtab?espv=2&ie=UTF-8&client=ubuntu (1)
+Fontconfig error: Cannot load default config file

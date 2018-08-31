@@ -1,0 +1,4 @@
+2018-08-24 13:29:15,342 - softwarecenter.backend.spawn_helper - WARNING - exit code 1 from helper for '['/usr/share/software-center/piston_generic_helper.py', '--datadir', '/usr/share/software-center/', 'SoftwareCenterAgentAPI', 'available_apps', '{"lang": "en", "series": "trusty", "arch": "i386"}']'
+2018-08-24 13:29:15,342 - softwarecenter.backend.spawn_helper - WARNING - got error from helper: 'WARNING:__main__:no data
+'
+2018-08-24 13:29:15,343 - softwarecenter.db.update - WARNING - update_from_software_center_agent: error: 'WARNING:__main__:no data\n'
